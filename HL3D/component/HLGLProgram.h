@@ -10,18 +10,22 @@
 
 #define kCCShader_PositionTextureColor			@"ShaderPositionTextureColor"
 #define kCCShader_PositionTexture               @"ShaderPositionTexture"
+#define kCCShader_PositionTextureLight          @"ShaderPositionTextureLight"
 #define kCCShader_PositionColor                 @"ShaderPositionColor"
 #define kCCShader_Position_uColor               @"ShaderPosition_uColor"
+#define kCCShader_PositionColorLight            @"ShaderPositionColorLight"
 #define kCCShader_Waves                         @"ShaderWaves"
 
 #define	kCCAttributeNameColor			@"a_color"
 #define	kCCAttributeNamePosition		@"a_position"
 #define	kCCAttributeNameTexCoord		@"a_texCoord"
+#define	kCCAttributeNameNormal          @"a_normal"
 
 enum {
     kCCVertexAttrib_Position,
     kCCVertexAttrib_Color,
     kCCVertexAttrib_TexCoords,
+    kCCVertexAttrib_Normal=8,
     
     kCCVertexAttrib_MAX,
 };
@@ -35,6 +39,13 @@ enum {
 	kCCUniformCosTime,
 	kCCUniformRandom01,
 	kCCUniformSampler,
+    
+    
+    kCCUniformLightPostion,
+    kCCUniformLightDirection,
+    kCCUniformLightAmbient,
+    kCCUniformLightDiffuse,
+    kCCUniformLightSpecular,
     
 	kCCUniform_MAX,
 };
@@ -77,6 +88,9 @@ enum {
 
 /** calls glUniformMatrix4fv only if the values are different than the previous call for this same shader program. */
 -(void) setUniformLocation:(GLint)location withMatrix4fv:(GLvoid*)matrix_array count:(NSUInteger)numberOfMatrix;
+
+/** calls glUniformMatrix3fv only if the values are different than the previous call for this same shader program. */
+-(void) setUniformLocation:(GLint)location withMatrix3fv:(GLvoid*)matrix_array count:(NSUInteger)numberOfMatrix;
 
 
 - (BOOL)link;

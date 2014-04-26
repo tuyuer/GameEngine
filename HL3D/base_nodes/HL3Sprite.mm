@@ -25,7 +25,14 @@
         _model = new HL3ModelMd2();
         _model->load([strFileName UTF8String]);
         
-        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureLight];
+        
+        _uniformHandles.u_lightDirection = [_shaderProgram uniformLocationForName:@"u_lightDirection"];
+        _uniformHandles.u_lightPosition = [_shaderProgram uniformLocationForName:@"u_lightPosition"];
+        _uniformHandles.u_lightAmbient = [_shaderProgram uniformLocationForName:@"u_lightAmbient"];
+        _uniformHandles.u_lightDiffuse = [_shaderProgram uniformLocationForName:@"u_lightDiffuse"];
+        _uniformHandles.u_lightSpecular = [_shaderProgram uniformLocationForName:@"u_lightSpecular"];
+        _uniformHandles.u_lightShiness = [_shaderProgram uniformLocationForName:@"u_lightShiness"];
     }
     return self;
 }
@@ -36,6 +43,22 @@
     NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);
     [_shaderProgram use];
 	[_shaderProgram setUniformsForBuiltins];
+    
+    //可以设置一些光照值
+    HL3Vector v4LightPos = [_light3D position];
+    HL3Vector v4LightDir = [_light3D direction];
+    
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightPosition with3fv:&v4LightPos.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightDirection with3fv:&v4LightDir.x count:1];
+    
+    
+    HL3Vector4 v4LightAmbient = [_light3D ambient];
+    HL3Vector4 v4LightDiffuse = [_light3D diffuse];
+    HL3Vector4 v4LightSpecular = [_light3D specular];
+    
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightAmbient with4fv:&v4LightAmbient.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightDiffuse with4fv:&v4LightDiffuse.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightSpecular with4fv:&v4LightSpecular.x count:1];
     
     if (_bIsAnimation) {
         _model->draw([_runningAnimation currentFrame]);

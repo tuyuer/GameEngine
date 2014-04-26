@@ -20,6 +20,11 @@
 		338A85ED18FBC16700E04921 /* W_Basic_pants.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E218FBC16700E04921 /* W_Basic_pants.png */; };
 		338A85EE18FBC16700E04921 /* W_Basic_Pants2.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E318FBC16700E04921 /* W_Basic_Pants2.png */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
+		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
+		338CF61D1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag in Sources */ = {isa = PBXBuildFile; fileRef = 338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */; };
+		338CF61E1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert in Sources */ = {isa = PBXBuildFile; fileRef = 338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */; };
+		338CF6201907CD070036C4DC /* ccShader_PositionTextureLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */; };
+		338CF6211907CD070036C4DC /* ccShader_PositionTextureLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */; };
 		339AA70219023E110003D7B0 /* ccShader_PositionTexture.frag in Sources */ = {isa = PBXBuildFile; fileRef = 339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */; };
 		339AA70319023E110003D7B0 /* ccShader_PositionTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */; };
 		339AA70419023FD90003D7B0 /* ccShader_PositionTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */; };
@@ -35,6 +40,10 @@
 		33B2519018FE843E0067533C /* tris.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518818FE843E0067533C /* tris.md2 */; };
 		33B2519118FE843E0067533C /* weapon.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518918FE843E0067533C /* weapon.md2 */; };
 		33B2519218FE843E0067533C /* weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518A18FE843E0067533C /* weapon.png */; };
+		33B73A081908E07E00E2A80C /* ccShader_PositionColorLight.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */; };
+		33B73A091908E07E00E2A80C /* ccShader_PositionColorLight.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */; };
+		33B73A0A1908E08A00E2A80C /* ccShader_PositionColorLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */; };
+		33B73A0B1908E08A00E2A80C /* ccShader_PositionColorLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */; };
 		33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD318F795D50061D784 /* HL3Node.mm */; };
 		33C7EADA18F7CBEB0061D784 /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD918F7CBEB0061D784 /* GameLayer.mm */; };
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
@@ -117,6 +126,10 @@
 		338A85E318FBC16700E04921 /* W_Basic_Pants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_Pants2.png; sourceTree = "<group>"; };
 		338CF6121907775E0036C4DC /* HLMD2Animation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2Animation.mm; sourceTree = "<group>"; };
 		338CF6131907775E0036C4DC /* HLMD2Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2Animation.h; sourceTree = "<group>"; };
+		338CF6181907B5510036C4DC /* HL3Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Light.h; sourceTree = "<group>"; };
+		338CF6191907B5510036C4DC /* HL3Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Light.mm; sourceTree = "<group>"; };
+		338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.frag; sourceTree = "<group>"; };
+		338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.vert; sourceTree = "<group>"; };
 		3391A2AB18EE827500783D2B /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
 		339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.frag; sourceTree = "<group>"; };
 		339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.vert; sourceTree = "<group>"; };
@@ -136,6 +149,8 @@
 		33B2518818FE843E0067533C /* tris.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tris.md2; sourceTree = "<group>"; };
 		33B2518918FE843E0067533C /* weapon.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = weapon.md2; sourceTree = "<group>"; };
 		33B2518A18FE843E0067533C /* weapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon.png; sourceTree = "<group>"; };
+		33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.frag; sourceTree = "<group>"; };
+		33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.vert; sourceTree = "<group>"; };
 		33C7EAD218F795D50061D784 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
 		33C7EAD318F795D50061D784 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
 		33C7EAD818F7CBEB0061D784 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
@@ -347,8 +362,12 @@
 				33CEC6FC18E2B8A900B889E6 /* ccShader_PositionTextureColor.vert */,
 				33CEC6F718E2B4AA00B889E6 /* ccShader_PositionColor.frag */,
 				33CEC6F818E2B4AA00B889E6 /* ccShader_PositionColor.vert */,
+				33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */,
+				33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */,
 				339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */,
 				339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */,
+				338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */,
+				338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */,
 			);
 			path = shaders;
 			sourceTree = "<group>";
@@ -377,6 +396,8 @@
 				339AC3FF18F951FB00864A39 /* HL3Camera.m */,
 				33B2518018FE77F70067533C /* HL3Model.h */,
 				33B2517F18FE77F70067533C /* HL3Model.mm */,
+				338CF6181907B5510036C4DC /* HL3Light.h */,
+				338CF6191907B5510036C4DC /* HL3Light.mm */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -660,6 +681,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B73A0A1908E08A00E2A80C /* ccShader_PositionColorLight.frag in Resources */,
+				33B73A0B1908E08A00E2A80C /* ccShader_PositionColorLight.vert in Resources */,
+				338CF6201907CD070036C4DC /* ccShader_PositionTextureLight.frag in Resources */,
+				338CF6211907CD070036C4DC /* ccShader_PositionTextureLight.vert in Resources */,
 				333619EA1906797D005A0CAD /* terran.png in Resources */,
 				339AA70419023FD90003D7B0 /* ccShader_PositionTexture.frag in Resources */,
 				339AA70519023FD90003D7B0 /* ccShader_PositionTexture.vert in Resources */,
@@ -757,6 +782,11 @@
 				339AA70219023E110003D7B0 /* ccShader_PositionTexture.frag in Sources */,
 				339AA70319023E110003D7B0 /* ccShader_PositionTexture.vert in Sources */,
 				338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */,
+				338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */,
+				338CF61D1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag in Sources */,
+				338CF61E1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert in Sources */,
+				33B73A081908E07E00E2A80C /* ccShader_PositionColorLight.frag in Sources */,
+				33B73A091908E07E00E2A80C /* ccShader_PositionColorLight.vert in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

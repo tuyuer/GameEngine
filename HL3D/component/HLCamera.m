@@ -13,7 +13,7 @@
 @implementation HLCamera
 @synthesize dirty = _dirty;
 
--(id) init
+- (id)init
 {
 	if( (self=[super init]) )
 		[self restore];
@@ -31,7 +31,7 @@
 	[super dealloc];
 }
 
--(void) restore
+- (void) restore
 {
 	_eyeX = _eyeY = 0;
 	_eyeZ = [HLCamera getZEye];
@@ -47,7 +47,7 @@
 	_dirty = NO;
 }
 
--(void) locate
+- (void)locate
 {
 	if( _dirty ) {
         
@@ -66,13 +66,13 @@
 	kmGLMultMatrix( &_lookupMatrix );
 }
 
-+(float) getZEye
++ (float)getZEye
 {
 	return FLT_EPSILON;
 }
 
 
--(void) setEyeX: (float)x eyeY:(float)y eyeZ:(float)z
+- (void)setEyeX: (float)x eyeY:(float)y eyeZ:(float)z
 {
 	_eyeX = x;
 	_eyeY = y;

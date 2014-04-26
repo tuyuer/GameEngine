@@ -12,6 +12,7 @@
 
 static BOOL		_vertexAttribPosition = NO;
 static BOOL		_vertexAttribColor = NO;
+static BOOL		_vertexAttribNormal = NO;
 static BOOL		_vertexAttribTexCoords = NO;
 
 
@@ -42,6 +43,19 @@ void ccGLEnableVertexAttribs( unsigned int flags )
 		_vertexAttribColor = enableColor;
 	}
     
+    /* Normal */
+	BOOL enableNormal = flags & kCCVertexAttribFlag_Normal;
+	
+	if( enableNormal != _vertexAttribNormal ) {
+		if( enableNormal )
+			glEnableVertexAttribArray( kCCVertexAttrib_Normal );
+		else
+			glDisableVertexAttribArray( kCCVertexAttrib_Normal );
+        
+		_vertexAttribNormal = enableNormal;
+	}
+    
+    
 	/* Tex Coords */
 	BOOL enableTexCoords = flags & kCCVertexAttribFlag_TexCoords;
 	
@@ -53,5 +67,7 @@ void ccGLEnableVertexAttribs( unsigned int flags )
         
 		_vertexAttribTexCoords = enableTexCoords;
 	}
+    
+   
 }
 

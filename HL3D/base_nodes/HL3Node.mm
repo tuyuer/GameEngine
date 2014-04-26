@@ -18,6 +18,12 @@
 @synthesize rotation3D = _rotation3D;
 @synthesize camera3D = _camera3D;
 @synthesize scale3D = _scale3D;
+@synthesize light3D = _light3D;
+
+- (void)dealloc{
+    [_light3D release];
+    [super dealloc];
+}
 
 - (id)init{
     if (self = [super init]) {
@@ -25,6 +31,8 @@
         _rotation3D = hl3v(0, 0, 0);
         _scale3D = hl3v(1.0, 1.0, 1.0);
         _camera3D = nil;
+        _light3D = [HL3Light light];
+        [_light3D retain];
         _transform3D = kHL3Matrix4x4Identity;
     }
     return self;

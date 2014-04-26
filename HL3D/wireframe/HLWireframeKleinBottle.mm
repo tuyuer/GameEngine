@@ -45,4 +45,9 @@
     return hl3v(range.x*_scale, range.y*_scale, range.z*_scale);
 }
 
+- (BOOL)InvertNormal:(CGPoint)domain{
+    
+    return domain.y > 3 * M_PI / 2;
+}
+
 @end

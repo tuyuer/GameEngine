@@ -213,6 +213,9 @@
     glUniformMatrix4fv( (GLint)location, (GLsizei)numberOfMatrices, GL_FALSE, matrixArray);
 }
 
+-(void) setUniformLocation:(GLint)location withMatrix3fv:(GLvoid*)matrix_array count:(NSUInteger)numberOfMatrix{
+    glUniformMatrix3fv( (GLint)location, (GLsizei)numberOfMatrix, GL_FALSE, matrix_array);
+}
 
 - (void)addAttribute:(NSString *)attributeName index:(GLuint)index
 {

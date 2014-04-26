@@ -94,7 +94,7 @@ static HLDirector * s_sharedDirector = nil;
 			kmGLLoadIdentity();
             
 			// issue #1334
-			kmMat4PerspectiveProjection( &matrixPerspective, 60, (GLfloat)size.width/size.height, 0.1f, zeye*2*1000);
+			kmMat4PerspectiveProjection( &matrixPerspective, 60, (GLfloat)size.width/size.height, 0.91f, zeye*2000);
 			kmGLMultMatrix(&matrixPerspective);
             
 			kmGLMatrixMode(KM_GL_MODELVIEW);
@@ -156,8 +156,10 @@ static HLDirector * s_sharedDirector = nil;
 - (void)drawScene{
     
     [EAGLContext setCurrentContext:[_openglView esContext]];
-    glClearColor(0, 0, 0, 255);
-    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+    
+    glClearColor(0.5f, 0.5f, 0.5f, 1);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   
     if (_nextScene) {
         [self setNextScene];
     }

@@ -20,6 +20,8 @@ using std::vector;
 - (void)GenerateVertices:(vector<float>&)vertices flags:(unsigned char)flags;
 - (void)GenerateLineIndices:(vector<unsigned short>&)indices;
 - (void)GenerateTriangleIndices:(vector<unsigned short>&)indices;
+- (BOOL)InvertNormal:(CGPoint)domain;
+
 
 @optional
 

@@ -43,30 +43,39 @@
         glGenRenderbuffers(1, &colorRenderbuffer);
         glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
         
+
         //为Render Buffer 分配空间
         if (![_esContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:eaglLayer]) {
             NSLog(@"failed to call context");
         }
         
+        glGetRenderbufferParameteriv(GL_RENDERBUFFER,
+                                     GL_RENDERBUFFER_WIDTH, &backingWidth);
+        glGetRenderbufferParameteriv(GL_RENDERBUFFER,
+                                     GL_RENDERBUFFER_HEIGHT, &backingHeight);
+        
         if (_depthFormat) {
             if (!depthBuffer) {
                 //创建深度缓冲
-                glGenBuffers(1, &depthBuffer);
+                glGenRenderbuffers(1, &depthBuffer);
                 NSAssert(depthBuffer, @"can not create depthBuffer...");
             }
             //绑定深度缓冲
             glBindRenderbuffer(GL_RENDERBUFFER, depthBuffer);
-            glRenderbufferStorage(GL_RENDERBUFFER, depthBuffer,backingWidth, backingHeight);
-            glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
+            glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16,backingWidth, backingHeight);
+          
         }
         
         //set up frame buffer
         glGenFramebuffers(1, &defaultFramebuffer);
         glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
-        
+        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
+
+        glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
         //开启深度
         glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LEQUAL);
         
         //EGLView Frame size
         _size=CGSizeMake(frame.size.width,frame.size.height);

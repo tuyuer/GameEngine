@@ -33,6 +33,8 @@ public:
     HL3Matrix4x4 operator*(const HL3Matrix4x4 &mat)const;
     const float* getArray()const{return  _array;}
     const float getAt(int index){ return _array[index];};
+    
+
 };
 
 #define kHL3Matrix4x4Identity HL3Matrix4x4(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)

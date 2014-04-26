@@ -14,6 +14,7 @@ enum {
 	kCCVertexAttribFlag_Position	= 1 << 0,
 	kCCVertexAttribFlag_Color		= 1 << 1,
 	kCCVertexAttribFlag_TexCoords	= 1 << 2,
+    kCCVertexAttribFlag_Normal      = 1 << 3,
 	
 	kCCVertexAttribFlag_PosColorTex = ( kCCVertexAttribFlag_Position | kCCVertexAttribFlag_Color | kCCVertexAttribFlag_TexCoords ),
 };

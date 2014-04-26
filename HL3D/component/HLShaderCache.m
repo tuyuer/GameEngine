@@ -63,15 +63,37 @@ static HLShaderCache * s_sharedShaderCache = nil;
     [_programs setObject:p forKey:kCCShader_PositionTexture];
     [p release];
     
+    //shader for Position Texture Light
+    p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_PositionTextureLight.vert" fragmentShaderFilename:@"ccShader_PositionTextureLight.frag"];
+    [p addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
+    [p addAttribute:kCCAttributeNameTexCoord index:kCCVertexAttrib_TexCoords];
+    [p addAttribute:kCCAttributeNameNormal index:kCCVertexAttrib_Normal];
+    
+    [p link];
+    [p updateUniforms];
+    [_programs setObject:p forKey:kCCShader_PositionTextureLight];
+    [p release];
+    
     
     
     //shader for Position uColor
     p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_Position_uColor.vert" fragmentShaderFilename:@"ccShader_Position_uColor.frag"];
-    [p addAttribute:@"aVertex" index:kCCVertexAttrib_Position];
+    [p addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
     
     [p link];
     [p updateUniforms];
     [_programs setObject:p forKey:kCCShader_Position_uColor];
+    [p release];
+    
+    
+    //shader for Position uColor
+    p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_PositionColorLight.vert" fragmentShaderFilename:@"ccShader_PositionColorLight.frag"];
+    [p addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
+    [p addAttribute:kCCAttributeNameNormal index:kCCVertexAttrib_Normal];
+    
+    [p link];
+    [p updateUniforms];
+    [_programs setObject:p forKey:kCCShader_PositionColorLight];
     [p release];
     
     
@@ -83,6 +105,7 @@ static HLShaderCache * s_sharedShaderCache = nil;
     [p updateUniforms];
     [_programs setObject:p forKey:kCCShader_Waves];
     [p release];
+    
     
 }
 

@@ -17,6 +17,20 @@
 
 @implementation HLParametricSurface
 
+- (id)init{
+    if (self = [super init]) {
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
+    
+        _uniformHandles.u_lightDirection = [_shaderProgram uniformLocationForName:@"u_lightDirection"];
+        _uniformHandles.u_lightPosition = [_shaderProgram uniformLocationForName:@"u_lightPosition"];
+        _uniformHandles.u_lightAmbient = [_shaderProgram uniformLocationForName:@"u_lightAmbient"];
+        _uniformHandles.u_lightDiffuse = [_shaderProgram uniformLocationForName:@"u_lightDiffuse"];
+        _uniformHandles.u_lightSpecular = [_shaderProgram uniformLocationForName:@"u_lightSpecular"];
+        _uniformHandles.u_lightShiness = [_shaderProgram uniformLocationForName:@"u_lightShiness"];
+        _uniformHandles.u_normalMatrix = [_shaderProgram uniformLocationForName:@"u_normalMatrix"];
+    }
+    return self;
+}
 
 - (int)GetVertexCount{
     return _divisions.x * _divisions.y;;
@@ -76,6 +90,8 @@
                 vertices.push_back(normal.x);
                 vertices.push_back(normal.y);
                 vertices.push_back(normal.z);
+                
+//                NSLog(@"normal(%d,%d) = {%f,%f,%f}",i,j,normal.x,normal.y,normal.z);
             }
             
             // Compute Texture Coordinates
@@ -142,35 +158,55 @@
     _slices = CGPointMake(_divisions.x-1, _divisions.y-1);
     
     //初始化绘图信息
-    [self GenerateVertices:_surfaceVertices flags:0];
-    _surfaceIndexCount = [self GetLineIndexCount];
+    [self GenerateVertices:_surfaceVertices flags:VertexFlagsNormals];
+    _surfaceIndexCount = [self GetTriangleIndexCount];
     
     glGenBuffers(1, &vertexBuffer);
     
     _surfaceIndices.resize(_surfaceIndexCount);
-    [self GenerateLineIndices:_surfaceIndices];
+    [self GenerateTriangleIndices:_surfaceIndices];
+    
     glGenBuffers(1, &indexBuffer);
-
 }
 
 - (void)draw{
-    [super draw];
+    
+    NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);
+    [_shaderProgram use];
+	[_shaderProgram setUniformsForBuiltins];
+    
+    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal);
 
-    HLGLProgram * programShader = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_Position_uColor];
-    int colorLocation_ = glGetUniformLocation([programShader program], "u_color");
-    int pointSizeLocation_ = glGetUniformLocation([programShader program], "u_pointSize");
+    //设置光照信息
+    HL3Vector v4LightPos = [_light3D position];
+    HL3Vector v4LightDir = [_light3D direction];
     
-    [programShader use];
-    [programShader setUniformsForBuiltins];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightPosition with3fv:&v4LightPos.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightDirection with3fv:&v4LightDir.x count:1];
     
-    static ccColor4F color_ = {1,0,0,1};
-    static GLfloat pointSize_ = 1;
     
-    [programShader setUniformLocation:colorLocation_ with4fv:(GLfloat*)&color_.r count:1];
-    [programShader setUniformLocation:pointSizeLocation_ withF1:pointSize_];
+    HL3Vector4 v4LightAmbient = [_light3D ambient];
+    HL3Vector4 v4LightDiffuse = [_light3D diffuse];
+    HL3Vector4 v4LightSpecular = [_light3D specular];
     
-    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position);
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightAmbient with3fv:&v4LightAmbient.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightDiffuse with3fv:&v4LightDiffuse.x count:1];
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightSpecular with3fv:&v4LightSpecular.x count:1];
 
+    [_shaderProgram setUniformLocation:_uniformHandles.u_lightShiness withF1:[_light3D shiness]];
+   
+    kmMat3 matNormal;
+    kmMat3Identity(&matNormal);
+    
+    kmMat4 matMVP ;
+    kmMat4Identity(&matMVP);
+    kmMat4Fill(&matMVP, _transform3D.getArray());
+    
+    kmMat4ExtractRotation(&matNormal, &matMVP);
+    
+//    NSLog(@"{%f,%f,%f,%f,%f,%f,%f,%f,%f}",mat3[0],mat3[1],mat3[2],mat3[3],mat3[4],mat3[5],mat3[6],mat3[7],mat3[8]);
+    
+    [_shaderProgram setUniformLocation:_uniformHandles.u_normalMatrix withMatrix3fv:matNormal.mat count:1];
     
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER,
@@ -184,8 +220,10 @@
                  &_surfaceIndices[0],
                  GL_STATIC_DRAW);
     
-    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*3, 0);
-    glDrawElements(GL_LINES, _surfaceIndexCount, GL_UNSIGNED_SHORT, 0);
+    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6, 0);
+    glVertexAttribPointer(kCCVertexAttrib_Normal, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6,  (const GLvoid*)(sizeof(GLfloat)*3));
+    
+    glDrawElements(GL_TRIANGLES, _surfaceIndexCount, GL_UNSIGNED_SHORT, 0);
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
