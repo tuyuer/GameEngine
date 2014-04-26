@@ -2,8 +2,8 @@
 //  HLMD2.cpp
 //  GameEngine
 //
-//  Created by huxiaozhou on 14-4-16.
-//  Copyright (c) 2014年 Hoolai. All rights reserved.
+//  Created by tuyuer on 14-4-16.
+//  Copyright (c) 2014年 hitjoy. All rights reserved.
 //
 
 #include "HLMD2.h"
