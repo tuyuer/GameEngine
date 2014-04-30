@@ -15,7 +15,6 @@ static BOOL		_vertexAttribColor = NO;
 static BOOL		_vertexAttribNormal = NO;
 static BOOL		_vertexAttribTexCoords = NO;
 
-
 void ccGLEnableVertexAttribs( unsigned int flags )
 {
 

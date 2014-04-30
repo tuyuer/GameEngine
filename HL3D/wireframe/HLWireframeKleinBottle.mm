@@ -46,7 +46,6 @@
 }
 
 - (BOOL)InvertNormal:(CGPoint)domain{
-    
     return domain.y > 3 * M_PI / 2;
 }
 
