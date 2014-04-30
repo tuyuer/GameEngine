@@ -1,21 +1,20 @@
-attribute vec4 a_position;			
-attribute vec2 a_texCoord;
+attribute vec4 a_position;
 attribute vec3 a_normal;
+attribute vec2 a_texCoord;	
 
-uniform vec4 u_lightPosition;
-uniform vec4 u_lightDirection;
+uniform mat3 u_normalMatrix;
+uniform vec3 u_lightDiffuse;
 
-uniform vec4 u_lightAmbient;
-uniform vec4 u_lightDiffuse;
-uniform vec4 u_lightSpecular;
+varying vec3 v_eyespaceNormal;	
+varying vec3 v_diffuse;
 
 varying vec2 v_texCoord;	
-varying vec4 v_fragmentColor;
 
 
 void main()
-{												
+{			
+    v_eyespaceNormal = u_normalMatrix * a_normal;
+    v_diffuse = u_lightDiffuse;									
     gl_Position = CC_MVPMatrix * a_position;			
     v_texCoord = a_texCoord;
-    v_fragmentColor = vec4(1,1,1,1);
 }													

@@ -62,13 +62,10 @@
         [animation1 setBRepeat:true];
         [spriteTerran2 runMD2Action:animation1];
         
-//        HLWireframeMobiusStrip * bottle = [HLWireframeMobiusStrip MobiusStripWithScale:60];
-//        HLWireframSphere * bottle = [HLWireframSphere sphereWithRadius:100];
+
         HLWireframeKleinBottle * bottle = [HLWireframeKleinBottle kleinBottleWithScale:8];
-//        HLWireframeTrefoilKnot * bottle = [HLWireframeTrefoilKnot trefoilKnotWithScale:100];
         [self addChild:bottle];
         [bottle setPosition3D:hl3v(160, 100, -40)];
-        [bottle setRotation3D:hl3v(0, 180, 00)];
         
         
         [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
@@ -92,7 +89,7 @@
         [[bottle2 light3D] setShiness:50.0];
         
         
-        HLWireframSphere * bottle3 = [HLWireframSphere sphereWithRadius:120];
+        HLWireframSphere * bottle3 = [HLWireframSphere sphereWithRadius:60];
         [self addChild:bottle3];
         [bottle3 setPosition3D:hl3v(240, 160, -40)];
         
@@ -100,9 +97,14 @@
         [[bottle3 light3D] setPosition:hl3v(0.25, 0.25, 1)];
         [[bottle3 light3D] setDirection:hl3v(0, 0, 1.0)];
         
-        [[bottle3 light3D] setAmbient:HL3Vector4Make(0.1, 0.1, 0.0, 1.0)];
+        [[bottle3 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
         [[bottle3 light3D] setSpecular:HL3Vector4Make(0.5, 0.5, 0.5, 1.0)];
-        [[bottle3 light3D] setShiness:50.0];
+        [[bottle3 light3D] setShiness:150.0];
+        
+        
+        HLSprite * spriteGrid = [HLSprite spriteWithFile:@"Grid16.png"];
+        [self addChild:spriteGrid];
+        [spriteGrid setPosition:CGPointMake(100, 100)];
     }
     return self;
 }

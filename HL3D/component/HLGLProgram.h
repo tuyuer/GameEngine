@@ -22,10 +22,10 @@
 #define	kCCAttributeNameNormal          @"a_normal"
 
 enum {
-    kCCVertexAttrib_Position,
-    kCCVertexAttrib_Color,
-    kCCVertexAttrib_TexCoords,
-    kCCVertexAttrib_Normal=8,
+    kCCVertexAttrib_Position = 1<<0,
+    kCCVertexAttrib_Color = 1<<1,
+    kCCVertexAttrib_TexCoords = 1<<2,
+    kCCVertexAttrib_Normal= 1<<3,
     
     kCCVertexAttrib_MAX,
 };

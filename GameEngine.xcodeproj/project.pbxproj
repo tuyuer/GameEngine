@@ -12,6 +12,7 @@
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
+		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
 		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
 		33B614A9190E4D71007EE82B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B614A8190E4D71007EE82B /* Cocoa.framework */; };
@@ -126,6 +127,7 @@
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
 		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
 		339AC3FF18F951FB00864A39 /* HL3Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Camera.m; sourceTree = "<group>"; };
+		33AE9FB41910C079004923C3 /* Grid16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid16.png; sourceTree = "<group>"; };
 		33B2517918FE742A0067533C /* HLMD2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2.mm; sourceTree = "<group>"; };
 		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
 		33B2517F18FE77F70067533C /* HL3Model.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Model.mm; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				33AE9FB41910C079004923C3 /* Grid16.png */,
 				33B614C4190E5006007EE82B /* Default-568h@2x.png */,
 				33B614C5190E5006007EE82B /* Default.png */,
 				33B614C6190E5006007EE82B /* Default@2x.png */,
@@ -419,12 +422,12 @@
 				33B614EF190E5006007EE82B /* ccShader_Position_uColor.vert */,
 				33B614F0190E5006007EE82B /* ccShader_PositionColor.frag */,
 				33B614F1190E5006007EE82B /* ccShader_PositionColor.vert */,
-				33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */,
-				33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */,
 				33B614F4190E5006007EE82B /* ccShader_PositionTexture.frag */,
 				33B614F5190E5006007EE82B /* ccShader_PositionTexture.vert */,
 				33B614F6190E5006007EE82B /* ccShader_PositionTextureColor.frag */,
 				33B614F7190E5006007EE82B /* ccShader_PositionTextureColor.vert */,
+				33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */,
+				33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */,
 				33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */,
 				33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */,
 				33B614FA190E5006007EE82B /* custom */,
@@ -820,6 +823,7 @@
 				33B6151C190E5006007EE82B /* weapon.png in Resources */,
 				33B6152B190E5006007EE82B /* SpaceRocksAtlas.png in Resources */,
 				33B6152C190E5006007EE82B /* test.png in Resources */,
+				33AE9FB51910C079004923C3 /* Grid16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,6 +1096,7 @@
 				33B614C1190E4D71007EE82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33E9EFEC18E0156C00A34046 /* Build configuration list for PBXProject "GameEngine" */ = {
 			isa = XCConfigurationList;

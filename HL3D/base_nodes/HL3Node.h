@@ -25,6 +25,7 @@ typedef struct _HL3NodeUniformHandles {
     GLuint u_lightShiness;
     
     GLuint u_normalMatrix;
+    GLuint u_sampler;
 }HL3NodeUniformHandles;
 
 @interface HL3Node : HLNode{

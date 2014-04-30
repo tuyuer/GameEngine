@@ -14,13 +14,18 @@
 #import "kazmath/GL/matrix.h"
 #import "HLTypes.h"
 #import "ccMacros.h"
+#import "HLTextureCache.h"
 
 @implementation HLParametricSurface
 
 - (id)init{
     if (self = [super init]) {
-        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
-    
+        _texture = [[HLTextureCache sharedTextureCache] addImage:@"Grid16.png"];
+        
+//        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
+
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureLight];
+        
         _uniformHandles.u_lightDirection = [_shaderProgram uniformLocationForName:@"u_lightDirection"];
         _uniformHandles.u_lightPosition = [_shaderProgram uniformLocationForName:@"u_lightPosition"];
         _uniformHandles.u_lightAmbient = [_shaderProgram uniformLocationForName:@"u_lightAmbient"];
@@ -28,6 +33,9 @@
         _uniformHandles.u_lightSpecular = [_shaderProgram uniformLocationForName:@"u_lightSpecular"];
         _uniformHandles.u_lightShiness = [_shaderProgram uniformLocationForName:@"u_lightShiness"];
         _uniformHandles.u_normalMatrix = [_shaderProgram uniformLocationForName:@"u_normalMatrix"];
+        _uniformHandles.u_sampler = [_shaderProgram uniformLocationForName:@"CC_Texture0"];
+        glActiveTexture(GL_TEXTURE0);
+        glUniform1i(_uniformHandles.u_sampler, 0);
     }
     return self;
 }
@@ -100,6 +108,7 @@
                 float t = _textureCount.y * j / _slices.y;
                 vertices.push_back(s);
                 vertices.push_back(t);
+//                NSLog(@"{s,t} = (%f,%f) }",s,t);
             }
         }
     }
@@ -158,7 +167,7 @@
     _slices = CGPointMake(_divisions.x-1, _divisions.y-1);
     
     //初始化绘图信息
-    [self GenerateVertices:_surfaceVertices flags:VertexFlagsNormals];
+    [self GenerateVertices:_surfaceVertices flags:VertexFlagsNormals|VertexFlagsTexCoords];
     _surfaceTriangleIndexCount = [self GetTriangleIndexCount];
     _surfaceLineIndexCount = [self GetLineIndexCount];
     
@@ -217,9 +226,14 @@
     
     
     //面的绘制
+    glBindTexture(GL_TEXTURE_2D, [_texture Name]);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    
+    
     glPolygonOffset(4, 8);
     glEnable(GL_POLYGON_OFFSET_FILL);
-    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal);
+    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal | kCCVertexAttrib_TexCoords);
     glBindBuffer(GL_ARRAY_BUFFER, trangleVertexBuffer);
     glBufferData(GL_ARRAY_BUFFER,
                  _surfaceVertices.size() * sizeof(_surfaceVertices[0]),
@@ -232,30 +246,32 @@
                  &_surfaceTriangleIndices[0],
                  GL_STATIC_DRAW);
     
-    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6, 0);
-    glVertexAttribPointer(kCCVertexAttrib_Normal, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6,  (const GLvoid*)(sizeof(GLfloat)*3));
+    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, 0);
+    glVertexAttribPointer(kCCVertexAttrib_Normal, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8,  (const GLvoid*)(sizeof(GLfloat)*3));
+    glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (const GLvoid*)(sizeof(GLfloat)*6));
     
     glDrawElements(GL_TRIANGLES, _surfaceTriangleIndexCount, GL_UNSIGNED_SHORT, 0);
     glDisable(GL_POLYGON_OFFSET_FILL);
+    glBindTexture(GL_TEXTURE_2D,0);
     
     
-    //线的绘制
-    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position );
-    glBindBuffer(GL_ARRAY_BUFFER, lineVertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER,
-                 _surfaceVertices.size() * sizeof(_surfaceVertices[0]),
-                 &_surfaceVertices[0],
-                 GL_STATIC_DRAW);
-    
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, lineIndexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER,
-                 _surfaceLineIndexCount * sizeof(GLushort),
-                 &_surfaceLineIndices[0],
-                 GL_STATIC_DRAW);
-    
-    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*6, 0);
-    
-    glDrawElements(GL_LINES, _surfaceLineIndexCount, GL_UNSIGNED_SHORT, 0);
+//    //线的绘制
+//    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position );
+//    glBindBuffer(GL_ARRAY_BUFFER, lineVertexBuffer);
+//    glBufferData(GL_ARRAY_BUFFER,
+//                 _surfaceVertices.size() * sizeof(_surfaceVertices[0]),
+//                 &_surfaceVertices[0],
+//                 GL_STATIC_DRAW);
+//    
+//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, lineIndexBuffer);
+//    glBufferData(GL_ELEMENT_ARRAY_BUFFER,
+//                 _surfaceLineIndexCount * sizeof(GLushort),
+//                 &_surfaceLineIndices[0],
+//                 GL_STATIC_DRAW);
+//    
+//    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, 0);
+//    
+//    glDrawElements(GL_LINES, _surfaceLineIndexCount, GL_UNSIGNED_SHORT, 0);
 
     
 

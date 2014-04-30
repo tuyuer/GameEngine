@@ -25,7 +25,7 @@
         _model = new HL3ModelMd2();
         _model->load([strFileName UTF8String]);
         
-        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureLight];
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
         
         _uniformHandles.u_lightDirection = [_shaderProgram uniformLocationForName:@"u_lightDirection"];
         _uniformHandles.u_lightPosition = [_shaderProgram uniformLocationForName:@"u_lightPosition"];

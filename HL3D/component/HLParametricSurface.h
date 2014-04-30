@@ -10,6 +10,7 @@
 #import "HL3Node.h"
 #import "HLSurface.h"
 #import "HL3Foundation.h"
+#import "HLTexture.h"
 
 enum VertexFlags {
     VertexFlagsNormals = 1 << 0,
@@ -42,6 +43,9 @@ struct ParametricInterval {
     
     GLuint lineIndexBuffer;
     GLuint lineVertexBuffer;
+
+    HLTexture * _texture;
+
 }
 
 - (BOOL)InvertNormal:(CGPoint)domain;
