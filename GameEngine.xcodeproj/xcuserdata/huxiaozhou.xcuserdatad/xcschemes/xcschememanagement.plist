@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GameEngine.xcscheme</key>
+		<key>GameEngine_IOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GameEngine_MacOs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>33B614A6190E4D71007EE82B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>33E9EFF018E0156C00A34046</key>
 		<dict>
 			<key>primary</key>

@@ -92,7 +92,7 @@
         [[bottle2 light3D] setShiness:50.0];
         
         
-        HLWireframSphere * bottle3 = [HLWireframSphere sphereWithRadius:40];
+        HLWireframSphere * bottle3 = [HLWireframSphere sphereWithRadius:120];
         [self addChild:bottle3];
         [bottle3 setPosition3D:hl3v(240, 160, -40)];
         
@@ -100,7 +100,7 @@
         [[bottle3 light3D] setPosition:hl3v(0.25, 0.25, 1)];
         [[bottle3 light3D] setDirection:hl3v(0, 0, 1.0)];
         
-        [[bottle3 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
+        [[bottle3 light3D] setAmbient:HL3Vector4Make(0.1, 0.1, 0.0, 1.0)];
         [[bottle3 light3D] setSpecular:HL3Vector4Make(0.5, 0.5, 0.5, 1.0)];
         [[bottle3 light3D] setShiness:50.0];
     }

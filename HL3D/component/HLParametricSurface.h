@@ -31,12 +31,17 @@ struct ParametricInterval {
     
     //for drawing
     vector<float> _surfaceVertices;
-    vector<GLushort> _surfaceIndices;
+    vector<GLushort> _surfaceTriangleIndices;
+    vector<GLushort> _surfaceLineIndices;
     int _surfaceVerticesCount;
-    int _surfaceIndexCount;
+    int _surfaceTriangleIndexCount;
+    int _surfaceLineIndexCount;
     
-    GLuint indexBuffer;
-    GLuint vertexBuffer;
+    GLuint trangleIndexBuffer;
+    GLuint trangleVertexBuffer;
+    
+    GLuint lineIndexBuffer;
+    GLuint lineVertexBuffer;
 }
 
 - (BOOL)InvertNormal:(CGPoint)domain;

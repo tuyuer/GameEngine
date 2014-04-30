@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GameEngine_MacOs' target in the 'GameEngine_MacOs' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

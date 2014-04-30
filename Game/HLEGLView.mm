@@ -77,6 +77,9 @@
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LEQUAL);
         
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
         //EGLView Frame size
         _size=CGSizeMake(frame.size.width,frame.size.height);
         

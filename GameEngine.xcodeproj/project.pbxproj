@@ -7,58 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		333619EA1906797D005A0CAD /* terran.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518518FE843E0067533C /* terran.png */; };
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
-		338A85E518FBC16700E04921 /* girl.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DA18FBC16700E04921 /* girl.fbx */; };
-		338A85E618FBC16700E04921 /* girl.max in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DB18FBC16700E04921 /* girl.max */; };
-		338A85E718FBC16700E04921 /* SDO_W1063_coat.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DC18FBC16700E04921 /* SDO_W1063_coat.png */; };
-		338A85E818FBC16700E04921 /* SDO_W1063_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DD18FBC16700E04921 /* SDO_W1063_hair.png */; };
-		338A85E918FBC16700E04921 /* SDO_W1063_pant.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DE18FBC16700E04921 /* SDO_W1063_pant.png */; };
-		338A85EA18FBC16700E04921 /* SDO_W1063_shoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85DF18FBC16700E04921 /* SDO_W1063_shoes.png */; };
-		338A85EB18FBC16700E04921 /* W_Basic_Coat2.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E018FBC16700E04921 /* W_Basic_Coat2.png */; };
-		338A85EC18FBC16700E04921 /* W_Basic_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E118FBC16700E04921 /* W_Basic_face.png */; };
-		338A85ED18FBC16700E04921 /* W_Basic_pants.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E218FBC16700E04921 /* W_Basic_pants.png */; };
-		338A85EE18FBC16700E04921 /* W_Basic_Pants2.png in Resources */ = {isa = PBXBuildFile; fileRef = 338A85E318FBC16700E04921 /* W_Basic_Pants2.png */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
-		338CF61D1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag in Sources */ = {isa = PBXBuildFile; fileRef = 338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */; };
-		338CF61E1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert in Sources */ = {isa = PBXBuildFile; fileRef = 338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */; };
-		338CF6201907CD070036C4DC /* ccShader_PositionTextureLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */; };
-		338CF6211907CD070036C4DC /* ccShader_PositionTextureLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */; };
-		339AA70219023E110003D7B0 /* ccShader_PositionTexture.frag in Sources */ = {isa = PBXBuildFile; fileRef = 339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */; };
-		339AA70319023E110003D7B0 /* ccShader_PositionTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */; };
-		339AA70419023FD90003D7B0 /* ccShader_PositionTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */; };
-		339AA70519023FD90003D7B0 /* ccShader_PositionTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
 		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
-		33B2518B18FE843E0067533C /* tris.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518318FE843E0067533C /* tris.png */; };
-		33B2518C18FE843E0067533C /* terran.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518418FE843E0067533C /* terran.md2 */; };
-		33B2518E18FE843E0067533C /* terran_weapon.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518618FE843E0067533C /* terran_weapon.md2 */; };
-		33B2518F18FE843E0067533C /* terran_weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518718FE843E0067533C /* terran_weapon.png */; };
-		33B2519018FE843E0067533C /* tris.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518818FE843E0067533C /* tris.md2 */; };
-		33B2519118FE843E0067533C /* weapon.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518918FE843E0067533C /* weapon.md2 */; };
-		33B2519218FE843E0067533C /* weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B2518A18FE843E0067533C /* weapon.png */; };
-		33B73A081908E07E00E2A80C /* ccShader_PositionColorLight.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */; };
-		33B73A091908E07E00E2A80C /* ccShader_PositionColorLight.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */; };
-		33B73A0A1908E08A00E2A80C /* ccShader_PositionColorLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */; };
-		33B73A0B1908E08A00E2A80C /* ccShader_PositionColorLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */; };
+		33B614A9190E4D71007EE82B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B614A8190E4D71007EE82B /* Cocoa.framework */; };
+		33B614B3190E4D71007EE82B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33B614B1190E4D71007EE82B /* InfoPlist.strings */; };
+		33B614B5190E4D71007EE82B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B614B4190E4D71007EE82B /* main.m */; };
+		33B614B9190E4D71007EE82B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 33B614B7190E4D71007EE82B /* Credits.rtf */; };
+		33B614BF190E4D71007EE82B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33B614BD190E4D71007EE82B /* MainMenu.xib */; };
+		33B614FF190E5006007EE82B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614C4190E5006007EE82B /* Default-568h@2x.png */; };
+		33B61500190E5006007EE82B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614C5190E5006007EE82B /* Default.png */; };
+		33B61501190E5006007EE82B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614C6190E5006007EE82B /* Default@2x.png */; };
+		33B61502190E5006007EE82B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33B614C7190E5006007EE82B /* InfoPlist.strings */; };
+		33B61503190E5006007EE82B /* girl.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 33B614CB190E5006007EE82B /* girl.fbx */; };
+		33B61504190E5006007EE82B /* girl.max in Resources */ = {isa = PBXBuildFile; fileRef = 33B614CC190E5006007EE82B /* girl.max */; };
+		33B61505190E5006007EE82B /* SDO_W1063_coat.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614CD190E5006007EE82B /* SDO_W1063_coat.png */; };
+		33B61506190E5006007EE82B /* SDO_W1063_hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614CE190E5006007EE82B /* SDO_W1063_hair.png */; };
+		33B61507190E5006007EE82B /* SDO_W1063_pant.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614CF190E5006007EE82B /* SDO_W1063_pant.png */; };
+		33B61508190E5006007EE82B /* SDO_W1063_shoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614D0190E5006007EE82B /* SDO_W1063_shoes.png */; };
+		33B61509190E5006007EE82B /* W_Basic_Coat2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614D1190E5006007EE82B /* W_Basic_Coat2.png */; };
+		33B6150A190E5006007EE82B /* W_Basic_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614D2190E5006007EE82B /* W_Basic_face.png */; };
+		33B6150B190E5006007EE82B /* W_Basic_pants.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614D3190E5006007EE82B /* W_Basic_pants.png */; };
+		33B6150C190E5006007EE82B /* W_Basic_Pants2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614D4190E5006007EE82B /* W_Basic_Pants2.png */; };
+		33B61512190E5006007EE82B /* GameEngine-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E0190E5006007EE82B /* GameEngine-Info.plist */; };
+		33B61513190E5006007EE82B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E2190E5006007EE82B /* icon.png */; };
+		33B61514190E5006007EE82B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B614E3190E5006007EE82B /* main.m */; };
+		33B61515190E5006007EE82B /* terran.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E5190E5006007EE82B /* terran.md2 */; };
+		33B61516190E5006007EE82B /* terran.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E6190E5006007EE82B /* terran.png */; };
+		33B61517190E5006007EE82B /* terran_weapon.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E7190E5006007EE82B /* terran_weapon.md2 */; };
+		33B61518190E5006007EE82B /* terran_weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E8190E5006007EE82B /* terran_weapon.png */; };
+		33B61519190E5006007EE82B /* tris.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B614E9190E5006007EE82B /* tris.md2 */; };
+		33B6151A190E5006007EE82B /* tris.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EA190E5006007EE82B /* tris.png */; };
+		33B6151B190E5006007EE82B /* weapon.md2 in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EB190E5006007EE82B /* weapon.md2 */; };
+		33B6151C190E5006007EE82B /* weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EC190E5006007EE82B /* weapon.png */; };
+		33B6152B190E5006007EE82B /* SpaceRocksAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FD190E5006007EE82B /* SpaceRocksAtlas.png */; };
+		33B6152C190E5006007EE82B /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FE190E5006007EE82B /* test.png */; };
+		33B61538190E54C3007EE82B /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B6152F190E54C3007EE82B /* GameLayer.mm */; };
+		33B6153A190E54C3007EE82B /* HLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61531190E54C3007EE82B /* HLAppDelegate.mm */; };
+		33B6153C190E54C3007EE82B /* HLEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61533190E54C3007EE82B /* HLEGLView.mm */; };
+		33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61535190E54C3007EE82B /* HLViewController.mm */; };
+		33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B61537190E54C3007EE82B /* ShaderTestLayer.m */; };
+		33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616F5190E7418007EE82B /* HLAppDelegate.m */; };
+		33B616F9190E7418007EE82B /* HLGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616F7190E7418007EE82B /* HLGLView.m */; };
+		33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616FB190E747A007EE82B /* HLDirectorMac.m */; };
+		33B616FF190E7EAA007EE82B /* ccShader_Position_uColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */; };
+		33B61700190E7EAA007EE82B /* ccShader_Position_uColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EF190E5006007EE82B /* ccShader_Position_uColor.vert */; };
+		33B61701190E7EAA007EE82B /* ccShader_PositionColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F0190E5006007EE82B /* ccShader_PositionColor.frag */; };
+		33B61702190E7EAA007EE82B /* ccShader_PositionColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F1190E5006007EE82B /* ccShader_PositionColor.vert */; };
+		33B61703190E7EAA007EE82B /* ccShader_PositionColorLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */; };
+		33B61704190E7EAA007EE82B /* ccShader_PositionColorLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */; };
+		33B61705190E7EAA007EE82B /* ccShader_PositionTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F4190E5006007EE82B /* ccShader_PositionTexture.frag */; };
+		33B61706190E7EAA007EE82B /* ccShader_PositionTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F5190E5006007EE82B /* ccShader_PositionTexture.vert */; };
+		33B61707190E7EAA007EE82B /* ccShader_PositionTextureColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F6190E5006007EE82B /* ccShader_PositionTextureColor.frag */; };
+		33B61708190E7EAA007EE82B /* ccShader_PositionTextureColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F7190E5006007EE82B /* ccShader_PositionTextureColor.vert */; };
+		33B61709190E7EAA007EE82B /* ccShader_PositionTextureLight.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */; };
+		33B6170A190E7EAA007EE82B /* ccShader_PositionTextureLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */; };
+		33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FB190E5006007EE82B /* ccShaderWaves.frag */; };
+		33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FC190E5006007EE82B /* ccShaderWaves.vert */; };
 		33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD318F795D50061D784 /* HL3Node.mm */; };
-		33C7EADA18F7CBEB0061D784 /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD918F7CBEB0061D784 /* GameLayer.mm */; };
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33CEC6F018E25F0100B889E6 /* HLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CEC6EF18E25F0100B889E6 /* HLTypes.m */; };
-		33CEC6F518E2A61200B889E6 /* SpaceRocksAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC6F418E2A61200B889E6 /* SpaceRocksAtlas.png */; };
-		33CEC6FF18E2BF5900B889E6 /* ccShader_PositionTextureColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC6FB18E2B8A900B889E6 /* ccShader_PositionTextureColor.frag */; };
-		33CEC70018E2BF5900B889E6 /* ccShader_PositionTextureColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC6FC18E2B8A900B889E6 /* ccShader_PositionTextureColor.vert */; };
-		33CEC70118E2BF5900B889E6 /* ccShader_PositionColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC6F718E2B4AA00B889E6 /* ccShader_PositionColor.frag */; };
-		33CEC70218E2BF5900B889E6 /* ccShader_PositionColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC6F818E2B4AA00B889E6 /* ccShader_PositionColor.vert */; };
-		33CEC70518E2F72400B889E6 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CEC70418E2F72300B889E6 /* test.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
-		33E8D2D018E146F500E1D735 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E8D2CF18E146F500E1D735 /* icon.png */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
 		33E8D2DA18E15D1500E1D735 /* HLDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D918E15D1500E1D735 /* HLDirector.m */; };
 		33E8D2E018E17E7F00E1D735 /* HLGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2DF18E17E7F00E1D735 /* HLGLProgram.m */; };
@@ -67,14 +83,6 @@
 		33E9EFF518E0156C00A34046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF418E0156C00A34046 /* UIKit.framework */; };
 		33E9EFF718E0156C00A34046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF618E0156C00A34046 /* Foundation.framework */; };
 		33E9EFF918E0156C00A34046 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF818E0156C00A34046 /* CoreGraphics.framework */; };
-		33E9EFFF18E0156C00A34046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33E9EFFD18E0156C00A34046 /* InfoPlist.strings */; };
-		33E9F00118E0156C00A34046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F00018E0156C00A34046 /* main.m */; };
-		33E9F00718E0156C00A34046 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E9F00618E0156C00A34046 /* Default.png */; };
-		33E9F00918E0156C00A34046 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E9F00818E0156C00A34046 /* Default@2x.png */; };
-		33E9F00B18E0156C00A34046 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E9F00A18E0156C00A34046 /* Default-568h@2x.png */; };
-		33E9F02018E01E1800A34046 /* HLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F01D18E01E1800A34046 /* HLAppDelegate.mm */; };
-		33E9F02118E01E1800A34046 /* HLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F01F18E01E1800A34046 /* HLViewController.mm */; };
-		33E9F02418E01EE400A34046 /* HLEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F02318E01EE400A34046 /* HLEGLView.mm */; };
 		33E9F04818E01F9900A34046 /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F03818E01F9900A34046 /* aabb.c */; };
 		33E9F04918E01F9900A34046 /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 33E9F03918E01F9900A34046 /* ChangeLog */; };
 		33E9F04A18E01F9900A34046 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 33E9F03A18E01F9900A34046 /* CMakeLists.txt */; };
@@ -96,13 +104,8 @@
 		33E9F07218E036A300A34046 /* HLTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F06D18E036A300A34046 /* HLTexture.mm */; };
 		33E9F07318E036A300A34046 /* HLTextureCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F06F18E036A300A34046 /* HLTextureCache.mm */; };
 		33E9F07418E036A300A34046 /* HLTextureQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F07118E036A300A34046 /* HLTextureQuad.mm */; };
-		33F45ABA18F6672E00FB5C8D /* ShaderTestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45AB918F6672E00FB5C8D /* ShaderTestLayer.m */; };
 		33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */; };
-		33F45AC218F6762800FB5C8D /* ccShader_Position_uColor.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33F45ABC18F66C0F00FB5C8D /* ccShader_Position_uColor.vert */; };
-		33F45AC318F6762800FB5C8D /* ccShader_Position_uColor.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33F45ABB18F66C0F00FB5C8D /* ccShader_Position_uColor.frag */; };
 		33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45ACA18F6943E00FB5C8D /* HLCamera.m */; };
-		33F45AD118F6BB0300FB5C8D /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33F45ACD18F6BACA00FB5C8D /* ccShaderWaves.frag */; };
-		33F45AD218F6BB0300FB5C8D /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33F45ACE18F6BACA00FB5C8D /* ccShaderWaves.vert */; };
 		33F9063D18FCD41700E2F3F7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F9063C18FCD41700E2F3F7 /* libiconv.dylib */; };
 		33F9064A18FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064118FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm */; };
 		33F9064B18FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064318FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm */; };
@@ -114,25 +117,11 @@
 /* Begin PBXFileReference section */
 		338A85D518FBB18900E04921 /* HL3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Sprite.h; sourceTree = "<group>"; };
 		338A85D618FBB18900E04921 /* HL3Sprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Sprite.mm; sourceTree = "<group>"; };
-		338A85DA18FBC16700E04921 /* girl.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.fbx; sourceTree = "<group>"; };
-		338A85DB18FBC16700E04921 /* girl.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.max; sourceTree = "<group>"; };
-		338A85DC18FBC16700E04921 /* SDO_W1063_coat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_coat.png; sourceTree = "<group>"; };
-		338A85DD18FBC16700E04921 /* SDO_W1063_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_hair.png; sourceTree = "<group>"; };
-		338A85DE18FBC16700E04921 /* SDO_W1063_pant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_pant.png; sourceTree = "<group>"; };
-		338A85DF18FBC16700E04921 /* SDO_W1063_shoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_shoes.png; sourceTree = "<group>"; };
-		338A85E018FBC16700E04921 /* W_Basic_Coat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_Coat2.png; sourceTree = "<group>"; };
-		338A85E118FBC16700E04921 /* W_Basic_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_face.png; sourceTree = "<group>"; };
-		338A85E218FBC16700E04921 /* W_Basic_pants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_pants.png; sourceTree = "<group>"; };
-		338A85E318FBC16700E04921 /* W_Basic_Pants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_Pants2.png; sourceTree = "<group>"; };
 		338CF6121907775E0036C4DC /* HLMD2Animation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2Animation.mm; sourceTree = "<group>"; };
 		338CF6131907775E0036C4DC /* HLMD2Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2Animation.h; sourceTree = "<group>"; };
 		338CF6181907B5510036C4DC /* HL3Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Light.h; sourceTree = "<group>"; };
 		338CF6191907B5510036C4DC /* HL3Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Light.mm; sourceTree = "<group>"; };
-		338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.frag; sourceTree = "<group>"; };
-		338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.vert; sourceTree = "<group>"; };
 		3391A2AB18EE827500783D2B /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
-		339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.frag; sourceTree = "<group>"; };
-		339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.vert; sourceTree = "<group>"; };
 		339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HL3Matrix4x4.cpp; sourceTree = "<group>"; };
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
 		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
@@ -141,20 +130,77 @@
 		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
 		33B2517F18FE77F70067533C /* HL3Model.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Model.mm; sourceTree = "<group>"; };
 		33B2518018FE77F70067533C /* HL3Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Model.h; sourceTree = "<group>"; };
-		33B2518318FE843E0067533C /* tris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tris.png; sourceTree = "<group>"; };
-		33B2518418FE843E0067533C /* terran.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = terran.md2; sourceTree = "<group>"; };
-		33B2518518FE843E0067533C /* terran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terran.png; sourceTree = "<group>"; };
-		33B2518618FE843E0067533C /* terran_weapon.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = terran_weapon.md2; sourceTree = "<group>"; };
-		33B2518718FE843E0067533C /* terran_weapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terran_weapon.png; sourceTree = "<group>"; };
-		33B2518818FE843E0067533C /* tris.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tris.md2; sourceTree = "<group>"; };
-		33B2518918FE843E0067533C /* weapon.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = weapon.md2; sourceTree = "<group>"; };
-		33B2518A18FE843E0067533C /* weapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon.png; sourceTree = "<group>"; };
-		33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.frag; sourceTree = "<group>"; };
-		33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.vert; sourceTree = "<group>"; };
+		33B614A7190E4D71007EE82B /* GameEngine_MacOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine_MacOs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B614A8190E4D71007EE82B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		33B614AB190E4D71007EE82B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		33B614AC190E4D71007EE82B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		33B614AD190E4D71007EE82B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		33B614B0190E4D71007EE82B /* GameEngine_MacOs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameEngine_MacOs-Info.plist"; sourceTree = "<group>"; };
+		33B614B2190E4D71007EE82B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33B614B4190E4D71007EE82B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33B614B6190E4D71007EE82B /* GameEngine_MacOs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameEngine_MacOs-Prefix.pch"; sourceTree = "<group>"; };
+		33B614B8190E4D71007EE82B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		33B614BE190E4D71007EE82B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		33B614C4190E5006007EE82B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		33B614C5190E5006007EE82B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		33B614C6190E5006007EE82B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		33B614C8190E5006007EE82B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33B614CB190E5006007EE82B /* girl.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.fbx; sourceTree = "<group>"; };
+		33B614CC190E5006007EE82B /* girl.max */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.max; sourceTree = "<group>"; };
+		33B614CD190E5006007EE82B /* SDO_W1063_coat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_coat.png; sourceTree = "<group>"; };
+		33B614CE190E5006007EE82B /* SDO_W1063_hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_hair.png; sourceTree = "<group>"; };
+		33B614CF190E5006007EE82B /* SDO_W1063_pant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_pant.png; sourceTree = "<group>"; };
+		33B614D0190E5006007EE82B /* SDO_W1063_shoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDO_W1063_shoes.png; sourceTree = "<group>"; };
+		33B614D1190E5006007EE82B /* W_Basic_Coat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_Coat2.png; sourceTree = "<group>"; };
+		33B614D2190E5006007EE82B /* W_Basic_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_face.png; sourceTree = "<group>"; };
+		33B614D3190E5006007EE82B /* W_Basic_pants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_pants.png; sourceTree = "<group>"; };
+		33B614D4190E5006007EE82B /* W_Basic_Pants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = W_Basic_Pants2.png; sourceTree = "<group>"; };
+		33B614E0190E5006007EE82B /* GameEngine-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GameEngine-Info.plist"; sourceTree = "<group>"; };
+		33B614E1190E5006007EE82B /* GameEngine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GameEngine-Prefix.pch"; sourceTree = "<group>"; };
+		33B614E2190E5006007EE82B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		33B614E3190E5006007EE82B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33B614E5190E5006007EE82B /* terran.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = terran.md2; sourceTree = "<group>"; };
+		33B614E6190E5006007EE82B /* terran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terran.png; sourceTree = "<group>"; };
+		33B614E7190E5006007EE82B /* terran_weapon.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = terran_weapon.md2; sourceTree = "<group>"; };
+		33B614E8190E5006007EE82B /* terran_weapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terran_weapon.png; sourceTree = "<group>"; };
+		33B614E9190E5006007EE82B /* tris.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tris.md2; sourceTree = "<group>"; };
+		33B614EA190E5006007EE82B /* tris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tris.png; sourceTree = "<group>"; };
+		33B614EB190E5006007EE82B /* weapon.md2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = weapon.md2; sourceTree = "<group>"; };
+		33B614EC190E5006007EE82B /* weapon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon.png; sourceTree = "<group>"; };
+		33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_Position_uColor.frag; sourceTree = "<group>"; };
+		33B614EF190E5006007EE82B /* ccShader_Position_uColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_Position_uColor.vert; sourceTree = "<group>"; };
+		33B614F0190E5006007EE82B /* ccShader_PositionColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColor.frag; sourceTree = "<group>"; };
+		33B614F1190E5006007EE82B /* ccShader_PositionColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColor.vert; sourceTree = "<group>"; };
+		33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.frag; sourceTree = "<group>"; };
+		33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLight.vert; sourceTree = "<group>"; };
+		33B614F4190E5006007EE82B /* ccShader_PositionTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.frag; sourceTree = "<group>"; };
+		33B614F5190E5006007EE82B /* ccShader_PositionTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTexture.vert; sourceTree = "<group>"; };
+		33B614F6190E5006007EE82B /* ccShader_PositionTextureColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureColor.frag; sourceTree = "<group>"; };
+		33B614F7190E5006007EE82B /* ccShader_PositionTextureColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureColor.vert; sourceTree = "<group>"; };
+		33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.frag; sourceTree = "<group>"; };
+		33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureLight.vert; sourceTree = "<group>"; };
+		33B614FB190E5006007EE82B /* ccShaderWaves.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShaderWaves.frag; sourceTree = "<group>"; };
+		33B614FC190E5006007EE82B /* ccShaderWaves.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShaderWaves.vert; sourceTree = "<group>"; };
+		33B614FD190E5006007EE82B /* SpaceRocksAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceRocksAtlas.png; sourceTree = "<group>"; };
+		33B614FE190E5006007EE82B /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		33B6152E190E54C3007EE82B /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		33B6152F190E54C3007EE82B /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
+		33B61530190E54C3007EE82B /* HLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
+		33B61531190E54C3007EE82B /* HLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLAppDelegate.mm; sourceTree = "<group>"; };
+		33B61532190E54C3007EE82B /* HLEGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLEGLView.h; sourceTree = "<group>"; };
+		33B61533190E54C3007EE82B /* HLEGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLEGLView.mm; sourceTree = "<group>"; };
+		33B61534190E54C3007EE82B /* HLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLViewController.h; sourceTree = "<group>"; };
+		33B61535190E54C3007EE82B /* HLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLViewController.mm; sourceTree = "<group>"; };
+		33B61536190E54C3007EE82B /* ShaderTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTestLayer.h; sourceTree = "<group>"; };
+		33B61537190E54C3007EE82B /* ShaderTestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderTestLayer.m; sourceTree = "<group>"; };
+		33B616F4190E7418007EE82B /* HLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
+		33B616F5190E7418007EE82B /* HLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; };
+		33B616F6190E7418007EE82B /* HLGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGLView.h; sourceTree = "<group>"; };
+		33B616F7190E7418007EE82B /* HLGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGLView.m; sourceTree = "<group>"; };
+		33B616FA190E747A007EE82B /* HLDirectorMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDirectorMac.h; sourceTree = "<group>"; };
+		33B616FB190E747A007EE82B /* HLDirectorMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDirectorMac.m; sourceTree = "<group>"; };
 		33C7EAD218F795D50061D784 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
 		33C7EAD318F795D50061D784 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
-		33C7EAD818F7CBEB0061D784 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
-		33C7EAD918F7CBEB0061D784 /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
 		33C7EADF18F7DE1F0061D784 /* HL3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Foundation.h; sourceTree = "<group>"; };
 		33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Foundation.m; sourceTree = "<group>"; };
 		33C7EAE218F7E35D0061D784 /* HLParametricSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLParametricSurface.h; sourceTree = "<group>"; };
@@ -163,17 +209,10 @@
 		33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TransformUtils.mm; sourceTree = "<group>"; };
 		33CEC6EE18E25F0100B889E6 /* HLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTypes.h; sourceTree = "<group>"; };
 		33CEC6EF18E25F0100B889E6 /* HLTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTypes.m; sourceTree = "<group>"; };
-		33CEC6F418E2A61200B889E6 /* SpaceRocksAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceRocksAtlas.png; sourceTree = "<group>"; };
-		33CEC6F718E2B4AA00B889E6 /* ccShader_PositionColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColor.frag; sourceTree = "<group>"; };
-		33CEC6F818E2B4AA00B889E6 /* ccShader_PositionColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColor.vert; sourceTree = "<group>"; };
-		33CEC6FB18E2B8A900B889E6 /* ccShader_PositionTextureColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureColor.frag; sourceTree = "<group>"; };
-		33CEC6FC18E2B8A900B889E6 /* ccShader_PositionTextureColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionTextureColor.vert; sourceTree = "<group>"; };
-		33CEC70418E2F72300B889E6 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
 		33E4A67318EEB867006CBFC3 /* HLLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLLayer.mm; sourceTree = "<group>"; };
-		33E8D2CF18E146F500E1D735 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		33E8D2D418E14B7400E1D735 /* HLSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSprite.h; sourceTree = "<group>"; };
 		33E8D2D518E14B7400E1D735 /* HLSprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLSprite.mm; sourceTree = "<group>"; };
 		33E8D2D818E15D1500E1D735 /* HLDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDirector.h; sourceTree = "<group>"; };
@@ -184,23 +223,10 @@
 		33E8D2E218E17FD300E1D735 /* HLShaderCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLShaderCache.m; sourceTree = "<group>"; };
 		33E8D4A318E1AFF100E1D735 /* HLGLStateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGLStateCache.h; sourceTree = "<group>"; };
 		33E8D4A418E1AFF100E1D735 /* HLGLStateCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGLStateCache.m; sourceTree = "<group>"; };
-		33E9EFF118E0156C00A34046 /* GameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E9EFF118E0156C00A34046 /* GameEngine_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E9EFF418E0156C00A34046 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		33E9EFF618E0156C00A34046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		33E9EFF818E0156C00A34046 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		33E9EFFC18E0156C00A34046 /* GameEngine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameEngine-Info.plist"; sourceTree = "<group>"; };
-		33E9EFFE18E0156C00A34046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		33E9F00018E0156C00A34046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		33E9F00218E0156C00A34046 /* GameEngine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameEngine-Prefix.pch"; sourceTree = "<group>"; };
-		33E9F00618E0156C00A34046 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		33E9F00818E0156C00A34046 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		33E9F00A18E0156C00A34046 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		33E9F01C18E01E1800A34046 /* HLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
-		33E9F01D18E01E1800A34046 /* HLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLAppDelegate.mm; sourceTree = "<group>"; };
-		33E9F01E18E01E1800A34046 /* HLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLViewController.h; sourceTree = "<group>"; };
-		33E9F01F18E01E1800A34046 /* HLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLViewController.mm; sourceTree = "<group>"; };
-		33E9F02218E01EE400A34046 /* HLEGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLEGLView.h; sourceTree = "<group>"; };
-		33E9F02318E01EE400A34046 /* HLEGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLEGLView.mm; sourceTree = "<group>"; };
 		33E9F02818E01F9900A34046 /* aabb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabb.h; sourceTree = "<group>"; };
 		33E9F02A18E01F9900A34046 /* mat4stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat4stack.h; sourceTree = "<group>"; };
 		33E9F02B18E01F9900A34046 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
@@ -240,16 +266,10 @@
 		33E9F06F18E036A300A34046 /* HLTextureCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLTextureCache.mm; sourceTree = "<group>"; };
 		33E9F07018E036A300A34046 /* HLTextureQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTextureQuad.h; sourceTree = "<group>"; };
 		33E9F07118E036A300A34046 /* HLTextureQuad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLTextureQuad.mm; sourceTree = "<group>"; };
-		33F45AB818F6672E00FB5C8D /* ShaderTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTestLayer.h; sourceTree = "<group>"; };
-		33F45AB918F6672E00FB5C8D /* ShaderTestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderTestLayer.m; sourceTree = "<group>"; };
-		33F45ABB18F66C0F00FB5C8D /* ccShader_Position_uColor.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_Position_uColor.frag; sourceTree = "<group>"; };
-		33F45ABC18F66C0F00FB5C8D /* ccShader_Position_uColor.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_Position_uColor.vert; sourceTree = "<group>"; };
 		33F45ABF18F66F9000FB5C8D /* HLDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDrawingPrimitives.h; sourceTree = "<group>"; };
 		33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDrawingPrimitives.m; sourceTree = "<group>"; };
 		33F45AC918F6943D00FB5C8D /* HLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCamera.h; sourceTree = "<group>"; };
 		33F45ACA18F6943E00FB5C8D /* HLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCamera.m; sourceTree = "<group>"; };
-		33F45ACD18F6BACA00FB5C8D /* ccShaderWaves.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShaderWaves.frag; sourceTree = "<group>"; };
-		33F45ACE18F6BACA00FB5C8D /* ccShaderWaves.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShaderWaves.vert; sourceTree = "<group>"; };
 		33F9063C18FCD41700E2F3F7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		33F9063F18FCD7B800E2F3F7 /* HLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSurface.h; sourceTree = "<group>"; };
 		33F9064018FCD7B800E2F3F7 /* HLWireframeKleinBottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeKleinBottle.h; sourceTree = "<group>"; };
@@ -265,6 +285,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33B614A4190E4D71007EE82B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B614A9190E4D71007EE82B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33E9EFEE18E0156C00A34046 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,31 +309,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		338A85D818FBC16700E04921 /* fbxLoader_resource */ = {
-			isa = PBXGroup;
-			children = (
-				338A85D918FBC16700E04921 /* girl */,
-			);
-			path = fbxLoader_resource;
-			sourceTree = "<group>";
-		};
-		338A85D918FBC16700E04921 /* girl */ = {
-			isa = PBXGroup;
-			children = (
-				338A85DA18FBC16700E04921 /* girl.fbx */,
-				338A85DB18FBC16700E04921 /* girl.max */,
-				338A85DC18FBC16700E04921 /* SDO_W1063_coat.png */,
-				338A85DD18FBC16700E04921 /* SDO_W1063_hair.png */,
-				338A85DE18FBC16700E04921 /* SDO_W1063_pant.png */,
-				338A85DF18FBC16700E04921 /* SDO_W1063_shoes.png */,
-				338A85E018FBC16700E04921 /* W_Basic_Coat2.png */,
-				338A85E118FBC16700E04921 /* W_Basic_face.png */,
-				338A85E218FBC16700E04921 /* W_Basic_pants.png */,
-				338A85E318FBC16700E04921 /* W_Basic_Pants2.png */,
-			);
-			path = girl;
-			sourceTree = "<group>";
-		};
 		33B2517718FE73400067533C /* MD2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,28 +320,155 @@
 			path = MD2;
 			sourceTree = "<group>";
 		};
-		33B2518218FE843E0067533C /* md2 */ = {
+		33B614AA190E4D71007EE82B /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33B2518318FE843E0067533C /* tris.png */,
-				33B2518418FE843E0067533C /* terran.md2 */,
-				33B2518518FE843E0067533C /* terran.png */,
-				33B2518618FE843E0067533C /* terran_weapon.md2 */,
-				33B2518718FE843E0067533C /* terran_weapon.png */,
-				33B2518818FE843E0067533C /* tris.md2 */,
-				33B2518918FE843E0067533C /* weapon.md2 */,
-				33B2518A18FE843E0067533C /* weapon.png */,
+				33B614AB190E4D71007EE82B /* AppKit.framework */,
+				33B614AC190E4D71007EE82B /* CoreData.framework */,
+				33B614AD190E4D71007EE82B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		33B614AE190E4D71007EE82B /* GameEngine_MacOs */ = {
+			isa = PBXGroup;
+			children = (
+				33B616F3190E7418007EE82B /* MacOS */,
+				33B614BD190E4D71007EE82B /* MainMenu.xib */,
+				33B614AF190E4D71007EE82B /* Supporting Files */,
+			);
+			path = GameEngine_MacOs;
+			sourceTree = "<group>";
+		};
+		33B614AF190E4D71007EE82B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33B614B0190E4D71007EE82B /* GameEngine_MacOs-Info.plist */,
+				33B614B1190E4D71007EE82B /* InfoPlist.strings */,
+				33B614B4190E4D71007EE82B /* main.m */,
+				33B614B6190E4D71007EE82B /* GameEngine_MacOs-Prefix.pch */,
+				33B614B7190E4D71007EE82B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
+			isa = PBXGroup;
+			children = (
+				33B614C4190E5006007EE82B /* Default-568h@2x.png */,
+				33B614C5190E5006007EE82B /* Default.png */,
+				33B614C6190E5006007EE82B /* Default@2x.png */,
+				33B614C7190E5006007EE82B /* InfoPlist.strings */,
+				33B614C9190E5006007EE82B /* fbxLoader_resource */,
+				33B614E0190E5006007EE82B /* GameEngine-Info.plist */,
+				33B614E1190E5006007EE82B /* GameEngine-Prefix.pch */,
+				33B614E2190E5006007EE82B /* icon.png */,
+				33B614E3190E5006007EE82B /* main.m */,
+				33B614E4190E5006007EE82B /* md2 */,
+				33B614ED190E5006007EE82B /* shaders */,
+				33B614FD190E5006007EE82B /* SpaceRocksAtlas.png */,
+				33B614FE190E5006007EE82B /* test.png */,
+			);
+			path = GameEngine_IOS;
+			sourceTree = "<group>";
+		};
+		33B614C9190E5006007EE82B /* fbxLoader_resource */ = {
+			isa = PBXGroup;
+			children = (
+				33B614CA190E5006007EE82B /* girl */,
+			);
+			path = fbxLoader_resource;
+			sourceTree = "<group>";
+		};
+		33B614CA190E5006007EE82B /* girl */ = {
+			isa = PBXGroup;
+			children = (
+				33B614CB190E5006007EE82B /* girl.fbx */,
+				33B614CC190E5006007EE82B /* girl.max */,
+				33B614CD190E5006007EE82B /* SDO_W1063_coat.png */,
+				33B614CE190E5006007EE82B /* SDO_W1063_hair.png */,
+				33B614CF190E5006007EE82B /* SDO_W1063_pant.png */,
+				33B614D0190E5006007EE82B /* SDO_W1063_shoes.png */,
+				33B614D1190E5006007EE82B /* W_Basic_Coat2.png */,
+				33B614D2190E5006007EE82B /* W_Basic_face.png */,
+				33B614D3190E5006007EE82B /* W_Basic_pants.png */,
+				33B614D4190E5006007EE82B /* W_Basic_Pants2.png */,
+			);
+			path = girl;
+			sourceTree = "<group>";
+		};
+		33B614E4190E5006007EE82B /* md2 */ = {
+			isa = PBXGroup;
+			children = (
+				33B614E5190E5006007EE82B /* terran.md2 */,
+				33B614E6190E5006007EE82B /* terran.png */,
+				33B614E7190E5006007EE82B /* terran_weapon.md2 */,
+				33B614E8190E5006007EE82B /* terran_weapon.png */,
+				33B614E9190E5006007EE82B /* tris.md2 */,
+				33B614EA190E5006007EE82B /* tris.png */,
+				33B614EB190E5006007EE82B /* weapon.md2 */,
+				33B614EC190E5006007EE82B /* weapon.png */,
 			);
 			path = md2;
 			sourceTree = "<group>";
 		};
-		33C7EAD118F794F90061D784 /* shadertest */ = {
+		33B614ED190E5006007EE82B /* shaders */ = {
 			isa = PBXGroup;
 			children = (
-				33F45AB818F6672E00FB5C8D /* ShaderTestLayer.h */,
-				33F45AB918F6672E00FB5C8D /* ShaderTestLayer.m */,
+				33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */,
+				33B614EF190E5006007EE82B /* ccShader_Position_uColor.vert */,
+				33B614F0190E5006007EE82B /* ccShader_PositionColor.frag */,
+				33B614F1190E5006007EE82B /* ccShader_PositionColor.vert */,
+				33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */,
+				33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */,
+				33B614F4190E5006007EE82B /* ccShader_PositionTexture.frag */,
+				33B614F5190E5006007EE82B /* ccShader_PositionTexture.vert */,
+				33B614F6190E5006007EE82B /* ccShader_PositionTextureColor.frag */,
+				33B614F7190E5006007EE82B /* ccShader_PositionTextureColor.vert */,
+				33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */,
+				33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */,
+				33B614FA190E5006007EE82B /* custom */,
 			);
-			name = shadertest;
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		33B614FA190E5006007EE82B /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				33B614FB190E5006007EE82B /* ccShaderWaves.frag */,
+				33B614FC190E5006007EE82B /* ccShaderWaves.vert */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		33B6152D190E54C3007EE82B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				33B6152E190E54C3007EE82B /* GameLayer.h */,
+				33B6152F190E54C3007EE82B /* GameLayer.mm */,
+				33B61530190E54C3007EE82B /* HLAppDelegate.h */,
+				33B61531190E54C3007EE82B /* HLAppDelegate.mm */,
+				33B61532190E54C3007EE82B /* HLEGLView.h */,
+				33B61533190E54C3007EE82B /* HLEGLView.mm */,
+				33B61534190E54C3007EE82B /* HLViewController.h */,
+				33B61535190E54C3007EE82B /* HLViewController.mm */,
+				33B61536190E54C3007EE82B /* ShaderTestLayer.h */,
+				33B61537190E54C3007EE82B /* ShaderTestLayer.m */,
+			);
+			path = Game;
+			sourceTree = SOURCE_ROOT;
+		};
+		33B616F3190E7418007EE82B /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				33B616F4190E7418007EE82B /* HLAppDelegate.h */,
+				33B616F5190E7418007EE82B /* HLAppDelegate.m */,
+				33B616F6190E7418007EE82B /* HLGLView.h */,
+				33B616F7190E7418007EE82B /* HLGLView.m */,
+				33B616FA190E747A007EE82B /* HLDirectorMac.h */,
+				33B616FB190E747A007EE82B /* HLDirectorMac.m */,
+			);
+			path = MacOS;
 			sourceTree = "<group>";
 		};
 		33C7EADB18F7DB620061D784 /* 3dMath */ = {
@@ -350,26 +480,6 @@
 				339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */,
 			);
 			path = 3dMath;
-			sourceTree = "<group>";
-		};
-		33CEC6F618E2B4AA00B889E6 /* shaders */ = {
-			isa = PBXGroup;
-			children = (
-				33F45ACC18F6BACA00FB5C8D /* custom */,
-				33F45ABC18F66C0F00FB5C8D /* ccShader_Position_uColor.vert */,
-				33F45ABB18F66C0F00FB5C8D /* ccShader_Position_uColor.frag */,
-				33CEC6FB18E2B8A900B889E6 /* ccShader_PositionTextureColor.frag */,
-				33CEC6FC18E2B8A900B889E6 /* ccShader_PositionTextureColor.vert */,
-				33CEC6F718E2B4AA00B889E6 /* ccShader_PositionColor.frag */,
-				33CEC6F818E2B4AA00B889E6 /* ccShader_PositionColor.vert */,
-				33B73A061908E07E00E2A80C /* ccShader_PositionColorLight.frag */,
-				33B73A071908E07E00E2A80C /* ccShader_PositionColorLight.vert */,
-				339AA70019023E110003D7B0 /* ccShader_PositionTexture.frag */,
-				339AA70119023E110003D7B0 /* ccShader_PositionTexture.vert */,
-				338CF61B1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag */,
-				338CF61C1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert */,
-			);
-			path = shaders;
 			sourceTree = "<group>";
 		};
 		33E8D2D718E15CFB00E1D735 /* component */ = {
@@ -405,8 +515,9 @@
 		33E9EFE818E0156C00A34046 = {
 			isa = PBXGroup;
 			children = (
-				33F9063C18FCD41700E2F3F7 /* libiconv.dylib */,
 				33E9EFFA18E0156C00A34046 /* GameEngine */,
+				33B614AE190E4D71007EE82B /* GameEngine_MacOs */,
+				33B614C3190E5006007EE82B /* GameEngine_IOS */,
 				33E9EFF318E0156C00A34046 /* Frameworks */,
 				33E9EFF218E0156C00A34046 /* Products */,
 			);
@@ -415,7 +526,8 @@
 		33E9EFF218E0156C00A34046 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33E9EFF118E0156C00A34046 /* GameEngine.app */,
+				33E9EFF118E0156C00A34046 /* GameEngine_IOS.app */,
+				33B614A7190E4D71007EE82B /* GameEngine_MacOs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,11 +535,14 @@
 		33E9EFF318E0156C00A34046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33F9063C18FCD41700E2F3F7 /* libiconv.dylib */,
 				33E9F05D18E0232B00A34046 /* OpenGLES.framework */,
 				33E9F05B18E0232000A34046 /* QuartzCore.framework */,
 				33E9EFF418E0156C00A34046 /* UIKit.framework */,
 				33E9EFF618E0156C00A34046 /* Foundation.framework */,
 				33E9EFF818E0156C00A34046 /* CoreGraphics.framework */,
+				33B614A8190E4D71007EE82B /* Cocoa.framework */,
+				33B614AA190E4D71007EE82B /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -436,30 +551,9 @@
 			isa = PBXGroup;
 			children = (
 				33E9F01A18E0173C00A34046 /* HL3D */,
-				33E9F01B18E01E1800A34046 /* Game */,
-				33E9EFFB18E0156C00A34046 /* Supporting Files */,
+				33B6152D190E54C3007EE82B /* Game */,
 			);
 			path = GameEngine;
-			sourceTree = "<group>";
-		};
-		33E9EFFB18E0156C00A34046 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				33B2518218FE843E0067533C /* md2 */,
-				338A85D818FBC16700E04921 /* fbxLoader_resource */,
-				33CEC6F618E2B4AA00B889E6 /* shaders */,
-				33CEC6F418E2A61200B889E6 /* SpaceRocksAtlas.png */,
-				33CEC70418E2F72300B889E6 /* test.png */,
-				33E8D2CF18E146F500E1D735 /* icon.png */,
-				33E9EFFC18E0156C00A34046 /* GameEngine-Info.plist */,
-				33E9EFFD18E0156C00A34046 /* InfoPlist.strings */,
-				33E9F00018E0156C00A34046 /* main.m */,
-				33E9F00218E0156C00A34046 /* GameEngine-Prefix.pch */,
-				33E9F00618E0156C00A34046 /* Default.png */,
-				33E9F00818E0156C00A34046 /* Default@2x.png */,
-				33E9F00A18E0156C00A34046 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
@@ -475,22 +569,6 @@
 			);
 			path = HL3D;
 			sourceTree = SOURCE_ROOT;
-		};
-		33E9F01B18E01E1800A34046 /* Game */ = {
-			isa = PBXGroup;
-			children = (
-				33C7EAD118F794F90061D784 /* shadertest */,
-				33C7EAD818F7CBEB0061D784 /* GameLayer.h */,
-				33C7EAD918F7CBEB0061D784 /* GameLayer.mm */,
-				33E9F01C18E01E1800A34046 /* HLAppDelegate.h */,
-				33E9F01D18E01E1800A34046 /* HLAppDelegate.mm */,
-				33E9F01E18E01E1800A34046 /* HLViewController.h */,
-				33E9F01F18E01E1800A34046 /* HLViewController.mm */,
-				33E9F02218E01EE400A34046 /* HLEGLView.h */,
-				33E9F02318E01EE400A34046 /* HLEGLView.mm */,
-			);
-			path = Game;
-			sourceTree = "<group>";
 		};
 		33E9F02518E01F9900A34046 /* kazmath */ = {
 			isa = PBXGroup;
@@ -602,15 +680,6 @@
 			path = texture;
 			sourceTree = "<group>";
 		};
-		33F45ACC18F6BACA00FB5C8D /* custom */ = {
-			isa = PBXGroup;
-			children = (
-				33F45ACD18F6BACA00FB5C8D /* ccShaderWaves.frag */,
-				33F45ACE18F6BACA00FB5C8D /* ccShaderWaves.vert */,
-			);
-			path = custom;
-			sourceTree = "<group>";
-		};
 		33F9063E18FCD7B800E2F3F7 /* wireframe */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,9 +701,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33E9EFF018E0156C00A34046 /* GameEngine */ = {
+		33B614A6190E4D71007EE82B /* GameEngine_MacOs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33E9F01718E0156C00A34046 /* Build configuration list for PBXNativeTarget "GameEngine" */;
+			buildConfigurationList = 33B614C2190E4D71007EE82B /* Build configuration list for PBXNativeTarget "GameEngine_MacOs" */;
+			buildPhases = (
+				33B614A3190E4D71007EE82B /* Sources */,
+				33B614A4190E4D71007EE82B /* Frameworks */,
+				33B614A5190E4D71007EE82B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameEngine_MacOs;
+			productName = GameEngine_MacOs;
+			productReference = 33B614A7190E4D71007EE82B /* GameEngine_MacOs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33E9EFF018E0156C00A34046 /* GameEngine_IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33E9F01718E0156C00A34046 /* Build configuration list for PBXNativeTarget "GameEngine_IOS" */;
 			buildPhases = (
 				33E9EFED18E0156C00A34046 /* Sources */,
 				33E9EFEE18E0156C00A34046 /* Frameworks */,
@@ -644,9 +730,9 @@
 			);
 			dependencies = (
 			);
-			name = GameEngine;
+			name = GameEngine_IOS;
 			productName = GameEngine;
-			productReference = 33E9EFF118E0156C00A34046 /* GameEngine.app */;
+			productReference = 33E9EFF118E0156C00A34046 /* GameEngine_IOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -671,71 +757,90 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33E9EFF018E0156C00A34046 /* GameEngine */,
+				33E9EFF018E0156C00A34046 /* GameEngine_IOS */,
+				33B614A6190E4D71007EE82B /* GameEngine_MacOs */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33B614A5190E4D71007EE82B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B614B3190E4D71007EE82B /* InfoPlist.strings in Resources */,
+				33B614B9190E4D71007EE82B /* Credits.rtf in Resources */,
+				33B614BF190E4D71007EE82B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33E9EFEF18E0156C00A34046 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33B73A0A1908E08A00E2A80C /* ccShader_PositionColorLight.frag in Resources */,
-				33B73A0B1908E08A00E2A80C /* ccShader_PositionColorLight.vert in Resources */,
-				338CF6201907CD070036C4DC /* ccShader_PositionTextureLight.frag in Resources */,
-				338CF6211907CD070036C4DC /* ccShader_PositionTextureLight.vert in Resources */,
-				333619EA1906797D005A0CAD /* terran.png in Resources */,
-				339AA70419023FD90003D7B0 /* ccShader_PositionTexture.frag in Resources */,
-				339AA70519023FD90003D7B0 /* ccShader_PositionTexture.vert in Resources */,
-				33F45AD118F6BB0300FB5C8D /* ccShaderWaves.frag in Resources */,
-				33F45AD218F6BB0300FB5C8D /* ccShaderWaves.vert in Resources */,
-				33F45AC218F6762800FB5C8D /* ccShader_Position_uColor.vert in Resources */,
-				33F45AC318F6762800FB5C8D /* ccShader_Position_uColor.frag in Resources */,
-				33CEC6FF18E2BF5900B889E6 /* ccShader_PositionTextureColor.frag in Resources */,
-				33CEC70018E2BF5900B889E6 /* ccShader_PositionTextureColor.vert in Resources */,
-				33CEC70118E2BF5900B889E6 /* ccShader_PositionColor.frag in Resources */,
-				33CEC70218E2BF5900B889E6 /* ccShader_PositionColor.vert in Resources */,
-				33E9EFFF18E0156C00A34046 /* InfoPlist.strings in Resources */,
-				33E9F00718E0156C00A34046 /* Default.png in Resources */,
-				33E9F00918E0156C00A34046 /* Default@2x.png in Resources */,
-				33E9F00B18E0156C00A34046 /* Default-568h@2x.png in Resources */,
+				33B616FF190E7EAA007EE82B /* ccShader_Position_uColor.frag in Resources */,
+				33B61700190E7EAA007EE82B /* ccShader_Position_uColor.vert in Resources */,
+				33B61701190E7EAA007EE82B /* ccShader_PositionColor.frag in Resources */,
+				33B61702190E7EAA007EE82B /* ccShader_PositionColor.vert in Resources */,
+				33B61703190E7EAA007EE82B /* ccShader_PositionColorLight.frag in Resources */,
+				33B61704190E7EAA007EE82B /* ccShader_PositionColorLight.vert in Resources */,
+				33B61705190E7EAA007EE82B /* ccShader_PositionTexture.frag in Resources */,
+				33B61706190E7EAA007EE82B /* ccShader_PositionTexture.vert in Resources */,
+				33B61707190E7EAA007EE82B /* ccShader_PositionTextureColor.frag in Resources */,
+				33B61708190E7EAA007EE82B /* ccShader_PositionTextureColor.vert in Resources */,
+				33B61709190E7EAA007EE82B /* ccShader_PositionTextureLight.frag in Resources */,
+				33B6170A190E7EAA007EE82B /* ccShader_PositionTextureLight.vert in Resources */,
+				33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */,
+				33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */,
 				33E9F04918E01F9900A34046 /* ChangeLog in Resources */,
 				33E9F04A18E01F9900A34046 /* CMakeLists.txt in Resources */,
-				33E8D2D018E146F500E1D735 /* icon.png in Resources */,
-				33CEC6F518E2A61200B889E6 /* SpaceRocksAtlas.png in Resources */,
-				33CEC70518E2F72400B889E6 /* test.png in Resources */,
-				338A85E518FBC16700E04921 /* girl.fbx in Resources */,
-				338A85E618FBC16700E04921 /* girl.max in Resources */,
-				338A85E718FBC16700E04921 /* SDO_W1063_coat.png in Resources */,
-				338A85E818FBC16700E04921 /* SDO_W1063_hair.png in Resources */,
-				338A85E918FBC16700E04921 /* SDO_W1063_pant.png in Resources */,
-				338A85EA18FBC16700E04921 /* SDO_W1063_shoes.png in Resources */,
-				338A85EB18FBC16700E04921 /* W_Basic_Coat2.png in Resources */,
-				338A85EC18FBC16700E04921 /* W_Basic_face.png in Resources */,
-				338A85ED18FBC16700E04921 /* W_Basic_pants.png in Resources */,
-				338A85EE18FBC16700E04921 /* W_Basic_Pants2.png in Resources */,
-				33B2518B18FE843E0067533C /* tris.png in Resources */,
-				33B2518C18FE843E0067533C /* terran.md2 in Resources */,
-				33B2518E18FE843E0067533C /* terran_weapon.md2 in Resources */,
-				33B2518F18FE843E0067533C /* terran_weapon.png in Resources */,
-				33B2519018FE843E0067533C /* tris.md2 in Resources */,
-				33B2519118FE843E0067533C /* weapon.md2 in Resources */,
-				33B2519218FE843E0067533C /* weapon.png in Resources */,
+				33B614FF190E5006007EE82B /* Default-568h@2x.png in Resources */,
+				33B61500190E5006007EE82B /* Default.png in Resources */,
+				33B61501190E5006007EE82B /* Default@2x.png in Resources */,
+				33B61502190E5006007EE82B /* InfoPlist.strings in Resources */,
+				33B61503190E5006007EE82B /* girl.fbx in Resources */,
+				33B61504190E5006007EE82B /* girl.max in Resources */,
+				33B61505190E5006007EE82B /* SDO_W1063_coat.png in Resources */,
+				33B61506190E5006007EE82B /* SDO_W1063_hair.png in Resources */,
+				33B61507190E5006007EE82B /* SDO_W1063_pant.png in Resources */,
+				33B61508190E5006007EE82B /* SDO_W1063_shoes.png in Resources */,
+				33B61509190E5006007EE82B /* W_Basic_Coat2.png in Resources */,
+				33B6150A190E5006007EE82B /* W_Basic_face.png in Resources */,
+				33B6150B190E5006007EE82B /* W_Basic_pants.png in Resources */,
+				33B6150C190E5006007EE82B /* W_Basic_Pants2.png in Resources */,
+				33B61512190E5006007EE82B /* GameEngine-Info.plist in Resources */,
+				33B61513190E5006007EE82B /* icon.png in Resources */,
+				33B61515190E5006007EE82B /* terran.md2 in Resources */,
+				33B61516190E5006007EE82B /* terran.png in Resources */,
+				33B61517190E5006007EE82B /* terran_weapon.md2 in Resources */,
+				33B61518190E5006007EE82B /* terran_weapon.png in Resources */,
+				33B61519190E5006007EE82B /* tris.md2 in Resources */,
+				33B6151A190E5006007EE82B /* tris.png in Resources */,
+				33B6151B190E5006007EE82B /* weapon.md2 in Resources */,
+				33B6151C190E5006007EE82B /* weapon.png in Resources */,
+				33B6152B190E5006007EE82B /* SpaceRocksAtlas.png in Resources */,
+				33B6152C190E5006007EE82B /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33B614A3190E4D71007EE82B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B614B5190E4D71007EE82B /* main.m in Sources */,
+				33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */,
+				33B616F9190E7418007EE82B /* HLGLView.m in Sources */,
+				33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33E9EFED18E0156C00A34046 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E9F00118E0156C00A34046 /* main.m in Sources */,
-				33E9F02018E01E1800A34046 /* HLAppDelegate.mm in Sources */,
-				33E9F02118E01E1800A34046 /* HLViewController.mm in Sources */,
-				33E9F02418E01EE400A34046 /* HLEGLView.mm in Sources */,
 				33E9F04818E01F9900A34046 /* aabb.c in Sources */,
 				33E9F04B18E01F9900A34046 /* mat4stack.c in Sources */,
 				33E9F04C18E01F9900A34046 /* matrix.c in Sources */,
@@ -762,11 +867,9 @@
 				33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */,
 				33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */,
 				33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */,
-				33F45ABA18F6672E00FB5C8D /* ShaderTestLayer.m in Sources */,
 				33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */,
 				33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */,
 				33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */,
-				33C7EADA18F7CBEB0061D784 /* GameLayer.mm in Sources */,
 				33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */,
 				33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */,
 				339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */,
@@ -779,24 +882,48 @@
 				33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */,
 				33B2517B18FE742A0067533C /* HLMD2.mm in Sources */,
 				33B2518118FE77F70067533C /* HL3Model.mm in Sources */,
-				339AA70219023E110003D7B0 /* ccShader_PositionTexture.frag in Sources */,
-				339AA70319023E110003D7B0 /* ccShader_PositionTexture.vert in Sources */,
 				338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */,
 				338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */,
-				338CF61D1907BF7F0036C4DC /* ccShader_PositionTextureLight.frag in Sources */,
-				338CF61E1907BF7F0036C4DC /* ccShader_PositionTextureLight.vert in Sources */,
-				33B73A081908E07E00E2A80C /* ccShader_PositionColorLight.frag in Sources */,
-				33B73A091908E07E00E2A80C /* ccShader_PositionColorLight.vert in Sources */,
+				33B61514190E5006007EE82B /* main.m in Sources */,
+				33B61538190E54C3007EE82B /* GameLayer.mm in Sources */,
+				33B6153A190E54C3007EE82B /* HLAppDelegate.mm in Sources */,
+				33B6153C190E54C3007EE82B /* HLEGLView.mm in Sources */,
+				33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */,
+				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		33E9EFFD18E0156C00A34046 /* InfoPlist.strings */ = {
+		33B614B1190E4D71007EE82B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33E9EFFE18E0156C00A34046 /* en */,
+				33B614B2190E4D71007EE82B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		33B614B7190E4D71007EE82B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33B614B8190E4D71007EE82B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		33B614BD190E4D71007EE82B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33B614BE190E4D71007EE82B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		33B614C7190E5006007EE82B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33B614C8190E5006007EE82B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -804,6 +931,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33B614C0190E4D71007EE82B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameEngine_MacOs/GameEngine_MacOs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "GameEngine_MacOs/GameEngine_MacOs-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		33B614C1190E4D71007EE82B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GameEngine_MacOs/GameEngine_MacOs-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "GameEngine_MacOs/GameEngine_MacOs-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		33E9F01518E0156C00A34046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -869,13 +1039,13 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GameEngine/GameEngine-Prefix.pch";
+				GCC_PREFIX_HEADER = "GameEngine_IOS/GameEngine-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/HL3D/kazmath/include\"",
 					"\"$(SRCROOT)/HL3D/FBXSDK/include\"",
 				);
-				INFOPLIST_FILE = "GameEngine/GameEngine-Info.plist";
+				INFOPLIST_FILE = "GameEngine_IOS/GameEngine-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -895,13 +1065,13 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GameEngine/GameEngine-Prefix.pch";
+				GCC_PREFIX_HEADER = "GameEngine_IOS/GameEngine-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/HL3D/kazmath/include\"",
 					"\"$(SRCROOT)/HL3D/FBXSDK/include\"",
 				);
-				INFOPLIST_FILE = "GameEngine/GameEngine-Info.plist";
+				INFOPLIST_FILE = "GameEngine_IOS/GameEngine-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -915,6 +1085,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33B614C2190E4D71007EE82B /* Build configuration list for PBXNativeTarget "GameEngine_MacOs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33B614C0190E4D71007EE82B /* Debug */,
+				33B614C1190E4D71007EE82B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		33E9EFEC18E0156C00A34046 /* Build configuration list for PBXProject "GameEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -924,7 +1102,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33E9F01718E0156C00A34046 /* Build configuration list for PBXNativeTarget "GameEngine" */ = {
+		33E9F01718E0156C00A34046 /* Build configuration list for PBXNativeTarget "GameEngine_IOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33E9F01818E0156C00A34046 /* Debug */,
