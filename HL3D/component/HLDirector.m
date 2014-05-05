@@ -13,6 +13,7 @@
 
 @implementation HLDirector
 @synthesize projection = _projection;
+@synthesize scheduler = _scheduler;
 
 static HLDirector * s_sharedDirector = nil;
 + (HLDirector *)sharedDirector{
@@ -30,6 +31,9 @@ static HLDirector * s_sharedDirector = nil;
         _openglView = nil;
         _runningScene = nil;
         _nextScene = nil;
+        
+        // scheduler
+		_scheduler = [[HLScheduler alloc] init];
         return self;
     }
     return nil;
@@ -38,6 +42,7 @@ static HLDirector * s_sharedDirector = nil;
 - (void)dealloc{
     [_sceneStack release];
     [_openglView release];
+    [_scheduler release];
     [super dealloc];
 }
 
@@ -153,7 +158,35 @@ static HLDirector * s_sharedDirector = nil;
 	[self drawScene];
 }
 
+-(void) calculateDeltaTime
+{
+	struct timeval now;
+    
+	if( gettimeofday( &now, NULL) != 0 ) {
+		_dt = 0;
+		return;
+	}
+    
+	// new delta time
+	if( _nextDeltaTimeZero ) {
+		_dt = 0;
+		_nextDeltaTimeZero = NO;
+	} else {
+		_dt = (now.tv_sec - _lastUpdate.tv_sec) + (now.tv_usec - _lastUpdate.tv_usec) / 1000000.0f;
+		_dt = MAX(0,_dt);
+    }
+    
+	_lastUpdate = now;
+}
+
+
 - (void)drawScene{
+    
+    /* calculate "global" dt */
+	[self calculateDeltaTime];
+    
+    //更新scheduler
+    [_scheduler update: _dt];
     
     [EAGLContext setCurrentContext:[_openglView esContext]];
     

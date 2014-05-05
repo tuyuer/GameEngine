@@ -14,6 +14,7 @@
 #import "kazmath/GL/matrix.h"
 #import "HL3Sprite.h"
 #import "HLMD2Animation.h"
+#import "HLDirector.h"
 
 @implementation GameLayer
 
@@ -61,54 +62,28 @@
         HLMD2Animation * animation1 = [HLMD2Animation animationWith:0 endFrame:180 duration:15];
         [animation1 setBRepeat:true];
         [spriteTerran2 runMD2Action:animation1];
+   
         
-
-        HLWireframeKleinBottle * bottle = [HLWireframeKleinBottle kleinBottleWithScale:8];
+        HLWireframSphere * bottle = [HLWireframSphere sphereWithRadius:60];
         [self addChild:bottle];
-        [bottle setPosition3D:hl3v(160, 100, -40)];
-        
+        [bottle setPosition3D:hl3v(240, 160, 0)];
         
         [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
         [[bottle light3D] setDirection:hl3v(0, 0, 1.0)];
-        
-        [[bottle light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
-        [[bottle light3D] setSpecular:HL3Vector4Make(0.5, 0.5, 0.5, 1.0)];
-        [[bottle light3D] setShiness:50.0];
-        
-        
-        HLWireframeTrefoilKnot * bottle2 = [HLWireframeTrefoilKnot trefoilKnotWithScale:100];
-        [self addChild:bottle2];
-        [bottle2 setPosition3D:hl3v(160, 300, -100)];
+         
+        [[bottle light3D] setAmbient:HL3Vector4Make(0, 0, 0, 1.0)];
+        [[bottle light3D] setSpecular:HL3Vector4Make(0, 0, 0, 1.0)];
+        [[bottle light3D] setShiness:10];
         
         
-        [[bottle2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
-        [[bottle2 light3D] setDirection:hl3v(0, 0, 1.0)];
-        
-        [[bottle2 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
-        [[bottle2 light3D] setSpecular:HL3Vector4Make(0.5, 0.5, 0.5, 1.0)];
-        [[bottle2 light3D] setShiness:50.0];
-        
-        
-        HLWireframSphere * bottle3 = [HLWireframSphere sphereWithRadius:60];
-        [self addChild:bottle3];
-        [bottle3 setPosition3D:hl3v(240, 160, -40)];
-        
-        
-        [[bottle3 light3D] setPosition:hl3v(0.25, 0.25, 1)];
-        [[bottle3 light3D] setDirection:hl3v(0, 0, 1.0)];
-        
-        [[bottle3 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
-        [[bottle3 light3D] setSpecular:HL3Vector4Make(0.5, 0.5, 0.5, 1.0)];
-        [[bottle3 light3D] setShiness:150.0];
-        
-        
-        HLSprite * spriteGrid = [HLSprite spriteWithFile:@"Grid16.png"];
-        [self addChild:spriteGrid];
-        [spriteGrid setPosition:CGPointMake(100, 100)];
+        [self scheduleOnce:@selector(doSomthing) delay:2.0];
     }
     return self;
 }
 
+- (void)doSomthing{
+    printf("\nasdfasdfsadfsdf\n");
+}
 @end
 
 

@@ -20,7 +20,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        _texture = [[HLTextureCache sharedTextureCache] addImage:@"Grid16.png"];
+        _texture = [[HLTextureCache sharedTextureCache] addImage:@"Tarsier.png"];
         
 //        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
 
@@ -219,20 +219,15 @@
     
     kmMat4ExtractRotation(&matNormal, &matMVP);
     
-//    NSLog(@"{%f,%f,%f,%f,%f,%f,%f,%f,%f}",mat3[0],mat3[1],mat3[2],mat3[3],mat3[4],mat3[5],mat3[6],mat3[7],mat3[8]);
-    
     [_shaderProgram setUniformLocation:_uniformHandles.u_normalMatrix withMatrix3fv:matNormal.mat count:1];
     
-    
-    
+ 
     //面的绘制
     glBindTexture(GL_TEXTURE_2D, [_texture Name]);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
     
-    
-    glPolygonOffset(4, 8);
-    glEnable(GL_POLYGON_OFFSET_FILL);
     ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal | kCCVertexAttrib_TexCoords);
     glBindBuffer(GL_ARRAY_BUFFER, trangleVertexBuffer);
     glBufferData(GL_ARRAY_BUFFER,
@@ -251,8 +246,6 @@
     glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (const GLvoid*)(sizeof(GLfloat)*6));
     
     glDrawElements(GL_TRIANGLES, _surfaceTriangleIndexCount, GL_UNSIGNED_SHORT, 0);
-    glDisable(GL_POLYGON_OFFSET_FILL);
-    glBindTexture(GL_TEXTURE_2D,0);
     
     
 //    //线的绘制

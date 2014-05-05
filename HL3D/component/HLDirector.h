@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HLEGLView.h"
 #import "HLScene.h"
+#import "HLScheduler.h"
 
 /** @typedef ccDirectorProjection
  Possible OpenGL projections used by director
@@ -32,6 +33,9 @@ typedef enum {
     HLEGLView * _openglView;
     CGSize _winSizeInPixels;
     
+    /* scheduler associated with this director */
+	HLScheduler *_scheduler;
+    
     //running scene
     HLScene * _runningScene;
     HLScene * _nextScene;
@@ -39,12 +43,21 @@ typedef enum {
     //all scenes
     NSMutableArray * _sceneStack;
     
+    
+    /* last time the main loop was updated */
+	struct timeval _lastUpdate;
+	/* delta time since last tick to main loop */
+	float _dt;
+	/* whether or not the next delta time will be zero */
+	BOOL _nextDeltaTimeZero;
+    
     /* projection used */
 	hlDirectorProjection _projection;
     
     id displayLink;
 }
 @property (nonatomic,readwrite) hlDirectorProjection projection;
+@property (nonatomic,readwrite,retain) HLScheduler *scheduler;
 + (HLDirector *)sharedDirector;
 - (CGSize)winSize;
 - (void)setOpenGLView:(HLEGLView *)view;

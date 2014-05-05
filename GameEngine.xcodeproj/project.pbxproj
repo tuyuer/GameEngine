@@ -10,6 +10,7 @@
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
+		3393A6041914A5D000602BDA /* Tarsier.png in Resources */ = {isa = PBXBuildFile; fileRef = 3393A6031914A5D000602BDA /* Tarsier.png */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
@@ -74,6 +75,7 @@
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33CEC6F018E25F0100B889E6 /* HLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CEC6EF18E25F0100B889E6 /* HLTypes.m */; };
+		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
@@ -123,6 +125,7 @@
 		338CF6181907B5510036C4DC /* HL3Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Light.h; sourceTree = "<group>"; };
 		338CF6191907B5510036C4DC /* HL3Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Light.mm; sourceTree = "<group>"; };
 		3391A2AB18EE827500783D2B /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
+		3393A6031914A5D000602BDA /* Tarsier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tarsier.png; sourceTree = "<group>"; };
 		339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HL3Matrix4x4.cpp; sourceTree = "<group>"; };
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
 		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
@@ -211,6 +214,10 @@
 		33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TransformUtils.mm; sourceTree = "<group>"; };
 		33CEC6EE18E25F0100B889E6 /* HLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTypes.h; sourceTree = "<group>"; };
 		33CEC6EF18E25F0100B889E6 /* HLTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTypes.m; sourceTree = "<group>"; };
+		33D76AFD191729F400549358 /* HLScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScheduler.h; sourceTree = "<group>"; };
+		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
+		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
+		33D76B0219172A7C00549358 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
@@ -357,6 +364,7 @@
 		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				3393A6031914A5D000602BDA /* Tarsier.png */,
 				33AE9FB41910C079004923C3 /* Grid16.png */,
 				33B614C4190E5006007EE82B /* Default-568h@2x.png */,
 				33B614C5190E5006007EE82B /* Default.png */,
@@ -485,6 +493,24 @@
 			path = 3dMath;
 			sourceTree = "<group>";
 		};
+		33D76AFC1917273300549358 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				33D76AFD191729F400549358 /* HLScheduler.h */,
+				33D76AFE191729F400549358 /* HLScheduler.mm */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		33D76B0019172A7C00549358 /* uthash */ = {
+			isa = PBXGroup;
+			children = (
+				33D76B0119172A7C00549358 /* uthash.h */,
+				33D76B0219172A7C00549358 /* utlist.h */,
+			);
+			path = uthash;
+			sourceTree = "<group>";
+		};
 		33E8D2D718E15CFB00E1D735 /* component */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +588,8 @@
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
 			isa = PBXGroup;
 			children = (
+				33D76B0019172A7C00549358 /* uthash */,
+				33D76AFC1917273300549358 /* Schedule */,
 				33B2517718FE73400067533C /* MD2 */,
 				33F9063E18FCD7B800E2F3F7 /* wireframe */,
 				33C7EADB18F7DB620061D784 /* 3dMath */,
@@ -824,6 +852,7 @@
 				33B6152B190E5006007EE82B /* SpaceRocksAtlas.png in Resources */,
 				33B6152C190E5006007EE82B /* test.png in Resources */,
 				33AE9FB51910C079004923C3 /* Grid16.png in Resources */,
+				3393A6041914A5D000602BDA /* Tarsier.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +923,7 @@
 				33B6153C190E54C3007EE82B /* HLEGLView.mm in Sources */,
 				33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */,
 				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
+				33D76AFF191729F400549358 /* HLScheduler.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,9 +1068,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GameEngine_IOS/GameEngine-Prefix.pch";
@@ -1064,9 +1094,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GameEngine_IOS/GameEngine-Prefix.pch";

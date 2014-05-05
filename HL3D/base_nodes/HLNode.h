@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HLGLProgram.h"
 #import "HLCamera.h"
+#import "HLScheduler.h"
 
 @interface HLNode : NSObject{
     float _rotationX,_rotationY;
@@ -45,6 +46,10 @@
     // userd to preserve sequence while sorting children with the same z order
     NSUInteger _orderOfArrival;
     
+    // scheduler used to schedule timers and updates
+	HLScheduler		*_scheduler;
+
+    
     //a tag. any number you want to assign to the node
     NSInteger _tag;
     
@@ -71,6 +76,7 @@
 @property (nonatomic,assign) NSUInteger orderOfArrival;
 @property (nonatomic,retain) HLGLProgram * shaderProgram;
 @property (nonatomic,assign) BOOL ignoreAnchorPointForPosition;
+@property (nonatomic, readwrite, retain) HLScheduler *scheduler;
 
 /** The rotation (angle) of the node in degrees. 0 is the default rotation angle. Positive values rotate node CW. */
 @property (nonatomic,assign) float rotation;
@@ -120,4 +126,47 @@
 - (CGAffineTransform)nodeToParentTransform;
 //performs Opengl view - matrix transformation based on position etc...
 - (void)transform;
+
+
+/** resumes all scheduled selectors and actions.
+ Called internally by onEnter
+ */
+-(void) resumeSchedulerAndActions;
+/** pauses all scheduled selectors and actions.
+ Called internally by onExit
+ */
+-(void) pauseSchedulerAndActions;
+
+
+/** schedules a selector.
+ The scheduled selector will be ticked every frame
+ */
+-(void) schedule: (SEL) s;
+/** schedules a custom selector with an interval time in seconds.
+ If time is 0 it will be ticked every frame.
+ If time is 0, it is recommended to use 'scheduleUpdate' instead.
+ 
+ If the selector is already scheduled, then the interval parameter will be updated without scheduling it again.
+ */
+-(void) schedule: (SEL) s interval:(float)seconds;
+/**
+ repeat will execute the action repeat + 1 times, for a continues action use kCCRepeatForever
+ delay is the amount of time the action will wait before execution
+ */
+-(void) schedule:(SEL)selector interval:(float)interval repeat: (uint) repeat delay:(float) delay;
+
+/**
+ Schedules a selector that runs only once, with a delay of 0 or larger
+ */
+- (void) scheduleOnce:(SEL) selector delay:(float) delay;
+
+/** unschedules a custom selector.*/
+-(void) unschedule: (SEL) s;
+
+/** unschedule all scheduled selectors: custom selectors, and the 'update' selector.
+ Actions are not affected by this method.
+ @since v0.99.3
+ */
+-(void) unscheduleAllSelectors;
+
 @end

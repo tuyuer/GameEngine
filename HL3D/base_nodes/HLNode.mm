@@ -12,6 +12,7 @@
 #import "TransformUtils.h"
 #import "HLSprite.h"
 #import "ccMacros.h"
+#import "HLDirector.h"
 
 @implementation HLNode
 
@@ -30,6 +31,7 @@ static NSUInteger globalOrderOfArrival = 1;
 @synthesize rotationX = _rotationX, rotationY = _rotationY;
 @synthesize scaleX = _scaleX, scaleY = _scaleY;
 @synthesize skewX = _skewX, skewY = _skewY;
+@synthesize scheduler = _scheduler;
 
 + (id)node{
     return [[[self alloc] init] autorelease];
@@ -38,6 +40,7 @@ static NSUInteger globalOrderOfArrival = 1;
 - (void)dealloc{
     [m_pChildren release];
     [_camera release];
+    [_scheduler release];
     [super dealloc];
 }
 
@@ -69,9 +72,20 @@ static NSUInteger globalOrderOfArrival = 1;
         m_pChildren = [[NSMutableArray alloc] initWithCapacity:100];
         _camera = nil;
         
+        self.scheduler = [[HLDirector sharedDirector] scheduler];
         return self;
     }
     return nil;
+}
+
+-(void) setScheduler:(HLScheduler *)scheduler
+{
+	if( scheduler != _scheduler ) {
+		[self unscheduleAllSelectors];
+		[_scheduler release];
+        
+		_scheduler = [scheduler retain];
+	}
 }
 
 // camera: lazy alloc
@@ -202,6 +216,7 @@ static NSUInteger globalOrderOfArrival = 1;
 
 - (void)onEnter{
     [m_pChildren makeObjectsPerformSelector:@selector(onEnter)];
+    [_scheduler resumeTarget:self];;
     _isRunning = YES;
 }
 
@@ -370,6 +385,57 @@ static NSUInteger globalOrderOfArrival = 1;
     
 
 }
+
+
+- (void) resumeSchedulerAndActions
+{
+	[_scheduler resumeTarget:self];
+}
+
+- (void) pauseSchedulerAndActions
+{
+	[_scheduler pauseTarget:self];
+}
+
+
+-(void) schedule:(SEL)selector
+{
+	[self schedule:selector interval:0 repeat:(INT_MAX-1) delay:0];
+}
+
+-(void) schedule:(SEL)selector interval:(float)interval
+{
+	[self schedule:selector interval:interval repeat:(INT_MAX-1) delay:0];
+}
+
+-(void) schedule:(SEL)selector interval:(float)interval repeat: (uint) repeat delay:(float) delay
+{
+	NSAssert( selector != nil, @"Argument must be non-nil");
+	NSAssert( interval >=0, @"Arguemnt must be positive");
+    
+	[_scheduler scheduleSelector:selector forTarget:self interval:interval repeat:repeat delay:delay paused:!_isRunning];
+}
+
+- (void) scheduleOnce:(SEL) selector delay:(float) delay
+{
+	[self schedule:selector interval:0.f repeat:0 delay:delay];
+}
+
+-(void) unschedule:(SEL)selector
+{
+	// explicit nil handling
+	if (selector == nil)
+		return;
+    
+	[_scheduler unscheduleSelector:selector forTarget:self];
+}
+
+-(void) unscheduleAllSelectors
+{
+	[_scheduler unscheduleAllForTarget:self];
+}
+
+
 
 @end
 

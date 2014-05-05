@@ -17,7 +17,7 @@
 - (id)initWithRadius:(float)radius{
     if (self = [super init]) {
         _radius = radius;
-        ParametricInterval interval = { CGPointMake(20, 20), CGPointMake(M_PI, 2*M_PI), CGPointMake(20, 35) };
+        ParametricInterval interval = { CGPointMake(40, 40), CGPointMake(M_PI, 2*M_PI), CGPointMake(3, 3) };
         [self SetInterval:interval];
     }
     return self;
