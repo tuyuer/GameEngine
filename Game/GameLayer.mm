@@ -64,7 +64,7 @@
         [spriteTerran2 runMD2Action:animation1];
    
         
-        HLWireframSphere * bottle = [HLWireframSphere sphereWithRadius:60];
+        bottle = [HLWireframSphere sphereWithRadius:60];
         [self addChild:bottle];
         [bottle setPosition3D:hl3v(240, 160, 0)];
         
@@ -75,14 +75,14 @@
         [[bottle light3D] setSpecular:HL3Vector4Make(0, 0, 0, 1.0)];
         [[bottle light3D] setShiness:10];
         
-        
-        [self scheduleOnce:@selector(doSomthing) delay:2.0];
+        [self schedule:@selector(doSomthing) interval:1.0/60.0];
     }
     return self;
 }
 
 - (void)doSomthing{
-    printf("\nasdfasdfsadfsdf\n");
+    HL3Vector currentRot = [bottle rotation3D];
+    [bottle setRotation3D:hl3v(currentRot.x+1, currentRot.y, currentRot.z)];
 }
 @end
 
