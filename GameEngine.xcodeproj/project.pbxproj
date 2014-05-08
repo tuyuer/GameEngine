@@ -76,6 +76,9 @@
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33CEC6F018E25F0100B889E6 /* HLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CEC6EF18E25F0100B889E6 /* HLTypes.m */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
+		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
+		33D76B07191765FF00549358 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76B06191765FF00549358 /* BlendLayer.mm */; };
+		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
@@ -218,6 +221,10 @@
 		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
 		33D76B0219172A7C00549358 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
+		33D76B03191763F400549358 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
+		33D76B05191765FE00549358 /* BlendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendLayer.h; sourceTree = "<group>"; };
+		33D76B06191765FF00549358 /* BlendLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlendLayer.mm; sourceTree = "<group>"; };
+		33D76B08191785D600549358 /* Grille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grille.png; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
@@ -364,6 +371,8 @@
 		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				33D76B08191785D600549358 /* Grille.png */,
+				33D76B03191763F400549358 /* Circle.png */,
 				3393A6031914A5D000602BDA /* Tarsier.png */,
 				33AE9FB41910C079004923C3 /* Grid16.png */,
 				33B614C4190E5006007EE82B /* Default-568h@2x.png */,
@@ -465,6 +474,8 @@
 				33B61535190E54C3007EE82B /* HLViewController.mm */,
 				33B61536190E54C3007EE82B /* ShaderTestLayer.h */,
 				33B61537190E54C3007EE82B /* ShaderTestLayer.m */,
+				33D76B05191765FE00549358 /* BlendLayer.h */,
+				33D76B06191765FF00549358 /* BlendLayer.mm */,
 			);
 			path = Game;
 			sourceTree = SOURCE_ROOT;
@@ -853,6 +864,8 @@
 				33B6152C190E5006007EE82B /* test.png in Resources */,
 				33AE9FB51910C079004923C3 /* Grid16.png in Resources */,
 				3393A6041914A5D000602BDA /* Tarsier.png in Resources */,
+				33D76B04191763F400549358 /* Circle.png in Resources */,
+				33D76B09191785D700549358 /* Grille.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +937,7 @@
 				33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */,
 				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
 				33D76AFF191729F400549358 /* HLScheduler.mm in Sources */,
+				33D76B07191765FF00549358 /* BlendLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

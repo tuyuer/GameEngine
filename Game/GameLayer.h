@@ -15,7 +15,7 @@
 #import "HLWireframeKleinBottle.h"
 
 @interface GameLayer : HLLayer{
-    HLWireframSphere * bottle ;
+    HLWireframeTrefoilKnot * bottle ;
 }
 
 + (HLScene*)scene;

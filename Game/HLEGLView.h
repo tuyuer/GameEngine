@@ -24,6 +24,7 @@
     GLuint defaultFramebuffer;
     GLuint colorRenderbuffer;
     GLuint depthBuffer;
+    GLuint stencilBuffer;
     
     //backing size
     GLint backingWidth;

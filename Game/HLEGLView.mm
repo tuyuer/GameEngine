@@ -62,20 +62,30 @@
             }
             //绑定深度缓冲
             glBindRenderbuffer(GL_RENDERBUFFER, depthBuffer);
-            glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16,backingWidth, backingHeight);
+            glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8_OES,backingWidth, backingHeight);
           
         }
+        
+//        glGenRenderbuffers(1, &stencilBuffer);
+//        glBindRenderbuffer(GL_RENDERBUFFER, stencilBuffer);
+//        glRenderbufferStorage(GL_RENDERBUFFER, GL_STENCIL_INDEX8, backingWidth, backingHeight);
         
         //set up frame buffer
         glGenFramebuffers(1, &defaultFramebuffer);
         glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
-
+        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
+        
         glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
         //开启深度
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LEQUAL);
+        
+    
+//        glEnable(GL_STENCIL_TEST);
+//        glStencilOp(GL_REPLACE, GL_REPLACE, GL_REPLACE);
+//        glStencilFunc(GL_ALWAYS, 0xff, 0xff);
         
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

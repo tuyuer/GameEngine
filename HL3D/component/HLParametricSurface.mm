@@ -20,7 +20,7 @@
 
 - (id)init{
     if (self = [super init]) {
-        _texture = [[HLTextureCache sharedTextureCache] addImage:@"Tarsier.png"];
+        _texture = [[HLTextureCache sharedTextureCache] addImage:@"Grille.png"];
         
 //        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
 

@@ -15,6 +15,7 @@
 #import "HLSprite.h"
 #import "ShaderTestLayer.h"
 #import "GameLayer.h"
+#import "BlendLayer.h"
 
 @implementation HLAppDelegate
 

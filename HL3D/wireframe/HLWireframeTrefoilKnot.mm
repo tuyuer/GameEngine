@@ -19,7 +19,7 @@
 - (id)initWithScale:(float)scaleValue{
     if (self = [super init]) {
         _scale = scaleValue;
-        ParametricInterval interval = { CGPointMake(60, 15), CGPointMake(2*M_PI, 2*M_PI), CGPointMake(100, 8) };
+        ParametricInterval interval = { CGPointMake(100, 15), CGPointMake(2*M_PI, 2*M_PI), CGPointMake(12, 1) };
         [self SetInterval:interval];
     }
     return self;
