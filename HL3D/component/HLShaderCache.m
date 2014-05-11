@@ -107,6 +107,17 @@ static HLShaderCache * s_sharedShaderCache = nil;
     [p release];
     
     
+    //
+	// Position, Legth(TexCoords, Color (used by Draw Node basically )
+	//
+	p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_PositionColorLengthTexture.vert"
+								   fragmentShaderFilename:@"ccShader_PositionColorLengthTexture.frag"];
+	
+	[p addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
+	[p addAttribute:kCCAttributeNameTexCoord index:kCCVertexAttrib_TexCoords];
+	[p addAttribute:kCCAttributeNameColor index:kCCVertexAttrib_Color];
+    [_programs setObject:p forKey:kCCShader_PositionColorLengthTexture];
+    [p release];
 }
 
 - (HLGLProgram *)programForKey:(NSString*)key

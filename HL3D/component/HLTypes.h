@@ -66,6 +66,125 @@ typedef struct _ccV3F_C4B_T2F_Quad{
 	ccV3F_C4B_T2F	br;
 }ccV3F_C4B_T2F_Quad;
 
+
+
+//!	A 2D Quad. 4 * 2 floats
+typedef struct _ccQuad2 {
+	ccVertex2F		tl;
+	ccVertex2F		tr;
+	ccVertex2F		bl;
+	ccVertex2F		br;
+} ccQuad2;
+
+
+//!	A 3D Quad. 4 * 3 floats
+typedef struct _ccQuad3 {
+	ccVertex3F		bl;
+	ccVertex3F		br;
+	ccVertex3F		tl;
+	ccVertex3F		tr;
+} ccQuad3;
+
+//! a Point with a vertex point, a tex coord point and a color 4B
+typedef struct _ccV2F_C4B_T2F
+{
+	//! vertices (2F)
+	ccVertex2F		vertices;
+	//! colors (4B)
+	ccColor4B		colors;
+	//! tex coords (2F)
+	ccTex2F			texCoords;
+} ccV2F_C4B_T2F;
+
+//! a Point with a vertex point, a tex coord point and a color 4F
+typedef struct _ccV2F_C4F_T2F
+{
+	//! vertices (2F)
+	ccVertex2F		vertices;
+	//! colors (4F)
+	ccColor4F		colors;
+	//! tex coords (2F)
+	ccTex2F			texCoords;
+} ccV2F_C4F_T2F;
+
+//! a Point with a vertex point, a tex coord point and a color 4F
+typedef struct _ccV3F_C4F_T2F
+{
+	//! vertices (3F)
+	ccVertex3F		vertices;
+	//! colors (4F)
+	ccColor4F		colors;
+	//! tex coords (2F)
+	ccTex2F			texCoords;
+} ccV3F_C4F_T2F;
+
+//! 4 ccV3F_C4F_T2F
+typedef struct _ccV3F_C4F_T2F_Quad
+{
+	//! top left
+	ccV3F_C4F_T2F	tl;
+	//! bottom left
+	ccV3F_C4F_T2F	bl;
+	//! top right
+	ccV3F_C4F_T2F	tr;
+	//! bottom right
+	ccV3F_C4F_T2F	br;
+} ccV3F_C4F_T2F_Quad;
+
+
+
+//! A Triangle of ccV2F_C4B_T2F
+typedef struct _ccV2F_C4B_T2F_Triangle
+{
+	//! Point A
+	ccV2F_C4B_T2F a;
+	//! Point B
+	ccV2F_C4B_T2F b;
+	//! Point B
+	ccV2F_C4B_T2F c;
+} ccV2F_C4B_T2F_Triangle;
+
+//! A Quad of ccV2F_C4B_T2F
+typedef struct _ccV2F_C4B_T2F_Quad
+{
+	//! bottom left
+	ccV2F_C4B_T2F	bl;
+	//! bottom right
+	ccV2F_C4B_T2F	br;
+	//! top left
+	ccV2F_C4B_T2F	tl;
+	//! top right
+	ccV2F_C4B_T2F	tr;
+} ccV2F_C4B_T2F_Quad;
+
+
+//! 4 ccVertex2FTex2FColor4F Quad
+typedef struct _ccV2F_C4F_T2F_Quad
+{
+	//! bottom left
+	ccV2F_C4F_T2F	bl;
+	//! bottom right
+	ccV2F_C4F_T2F	br;
+	//! top left
+	ccV2F_C4F_T2F	tl;
+	//! top right
+	ccV2F_C4F_T2F	tr;
+} ccV2F_C4F_T2F_Quad;
+
+//! Blend Function used for textures
+typedef struct _ccBlendFunc
+{
+	//! source blend function
+	GLenum src;
+	//! destination blend function
+	GLenum dst;
+} ccBlendFunc;
+
+static inline ccColor4B ccc4BFromccc4F(ccColor4F c)
+{
+	return (ccColor4B){(GLubyte)(c.r*255), (GLubyte)(c.g*255), (GLubyte)(c.b*255), (GLubyte)(c.a*255)};
+}
+
 @interface HLTypes : NSObject
 
 @end

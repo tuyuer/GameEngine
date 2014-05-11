@@ -191,7 +191,7 @@ static HLDirector * s_sharedDirector = nil;
     [EAGLContext setCurrentContext:[_openglView esContext]];
     
     glClearColor(0.5f, 0.5f, 0.5f, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
    
     if (_nextScene) {
         [self setNextScene];

@@ -273,6 +273,9 @@
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
     CHECK_GL_ERROR_DEBUG();
+    
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
+    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
 }
 
 @end

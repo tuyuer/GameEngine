@@ -16,6 +16,7 @@
 #import "ShaderTestLayer.h"
 #import "GameLayer.h"
 #import "BlendLayer.h"
+#import "StencilTestLayer.h"
 
 @implementation HLAppDelegate
 
@@ -46,7 +47,8 @@
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
     //run game scene --- 
-    [[HLDirector sharedDirector] runWithScene:[GameLayer scene]];
+    [[HLDirector sharedDirector] runWithScene:[StencilTestLayer scene]];
+    
     NSLog(@"Game Engine Runing...");
     return YES;
 }

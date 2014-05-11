@@ -83,6 +83,7 @@
         glDepthFunc(GL_LEQUAL);
         
     
+        //about stencil
 //        glEnable(GL_STENCIL_TEST);
 //        glStencilOp(GL_REPLACE, GL_REPLACE, GL_REPLACE);
 //        glStencilFunc(GL_ALWAYS, 0xff, 0xff);
@@ -92,6 +93,15 @@
         
         //EGLView Frame size
         _size=CGSizeMake(frame.size.width,frame.size.height);
+        
+        static GLint stencilBits = -1;
+        glGetIntegerv(GL_STENCIL_BITS, &stencilBits);
+        // warn if the stencil buffer is not enabled
+        if (stencilBits <= 0) {
+            NSLog(@"Stencil buffer is not enabled; enable it by passing GL_DEPTH24_STENCIL8_OES into the depthFormat parrameter when initializing CCGLView. Until then, everything will be drawn without stencil.");
+        }else{
+            NSLog(@"Stencil buffer is enabled! >o<");
+        }
         
     }
     return self;

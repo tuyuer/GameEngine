@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3307315B191F507E001A7487 /* HLClippingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 33073158191F507E001A7487 /* HLClippingNode.m */; };
+		3307315C191F507E001A7487 /* HLDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307315A191F507E001A7487 /* HLDrawNode.m */; };
+		3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
+		33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
+		33073161191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
+		33073162191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
@@ -80,6 +86,7 @@
 		33D76B07191765FF00549358 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76B06191765FF00549358 /* BlendLayer.mm */; };
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
+		33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
 		33E8D2DA18E15D1500E1D735 /* HLDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D918E15D1500E1D735 /* HLDirector.m */; };
@@ -121,6 +128,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33073157191F507E001A7487 /* HLClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLClippingNode.h; sourceTree = "<group>"; };
+		33073158191F507E001A7487 /* HLClippingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLClippingNode.m; sourceTree = "<group>"; };
+		33073159191F507E001A7487 /* HLDrawNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDrawNode.h; sourceTree = "<group>"; };
+		3307315A191F507E001A7487 /* HLDrawNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDrawNode.m; sourceTree = "<group>"; };
+		3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLengthTexture.frag; sourceTree = "<group>"; };
+		3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLengthTexture.vert; sourceTree = "<group>"; };
 		338A85D518FBB18900E04921 /* HL3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Sprite.h; sourceTree = "<group>"; };
 		338A85D618FBB18900E04921 /* HL3Sprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Sprite.mm; sourceTree = "<group>"; };
 		338CF6121907775E0036C4DC /* HLMD2Animation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2Animation.mm; sourceTree = "<group>"; };
@@ -227,6 +240,8 @@
 		33D76B08191785D600549358 /* Grille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grille.png; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
+		33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StencilTestLayer.h; sourceTree = "<group>"; };
+		33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StencilTestLayer.mm; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
 		33E4A67318EEB867006CBFC3 /* HLLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLLayer.mm; sourceTree = "<group>"; };
 		33E8D2D418E14B7400E1D735 /* HLSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSprite.h; sourceTree = "<group>"; };
@@ -325,6 +340,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33073156191F507E001A7487 /* clipping */ = {
+			isa = PBXGroup;
+			children = (
+				33073157191F507E001A7487 /* HLClippingNode.h */,
+				33073158191F507E001A7487 /* HLClippingNode.m */,
+				33073159191F507E001A7487 /* HLDrawNode.h */,
+				3307315A191F507E001A7487 /* HLDrawNode.m */,
+			);
+			path = clipping;
+			sourceTree = "<group>";
+		};
 		33B2517718FE73400067533C /* MD2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +461,8 @@
 		33B614ED190E5006007EE82B /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */,
+				3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */,
 				33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */,
 				33B614EF190E5006007EE82B /* ccShader_Position_uColor.vert */,
 				33B614F0190E5006007EE82B /* ccShader_PositionColor.frag */,
@@ -476,6 +504,8 @@
 				33B61537190E54C3007EE82B /* ShaderTestLayer.m */,
 				33D76B05191765FE00549358 /* BlendLayer.h */,
 				33D76B06191765FF00549358 /* BlendLayer.mm */,
+				33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */,
+				33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */,
 			);
 			path = Game;
 			sourceTree = SOURCE_ROOT;
@@ -599,6 +629,7 @@
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
 			isa = PBXGroup;
 			children = (
+				33073156191F507E001A7487 /* clipping */,
 				33D76B0019172A7C00549358 /* uthash */,
 				33D76AFC1917273300549358 /* Schedule */,
 				33B2517718FE73400067533C /* MD2 */,
@@ -820,6 +851,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33073161191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.frag in Resources */,
+				33073162191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.vert in Resources */,
 				33B616FF190E7EAA007EE82B /* ccShader_Position_uColor.frag in Resources */,
 				33B61700190E7EAA007EE82B /* ccShader_Position_uColor.vert in Resources */,
 				33B61701190E7EAA007EE82B /* ccShader_PositionColor.frag in Resources */,
@@ -938,6 +971,11 @@
 				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
 				33D76AFF191729F400549358 /* HLScheduler.mm in Sources */,
 				33D76B07191765FF00549358 /* BlendLayer.mm in Sources */,
+				33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */,
+				3307315B191F507E001A7487 /* HLClippingNode.m in Sources */,
+				3307315C191F507E001A7487 /* HLDrawNode.m in Sources */,
+				3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */,
+				33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
