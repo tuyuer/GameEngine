@@ -185,6 +185,47 @@ static inline ccColor4B ccc4BFromccc4F(ccColor4F c)
 	return (ccColor4B){(GLubyte)(c.r*255), (GLubyte)(c.g*255), (GLubyte)(c.b*255), (GLubyte)(c.a*255)};
 }
 
-@interface HLTypes : NSObject
+static inline CGPoint ccp( CGFloat x, CGFloat y )
+{
+	return CGPointMake(x, y);
+}
 
-@end
+
+static inline CGFloat
+ccpDot(const CGPoint v1, const CGPoint v2)
+{
+	return v1.x*v2.x + v1.y*v2.y;
+}
+
+static inline CGPoint
+ccpMult(const CGPoint v, const CGFloat s)
+{
+	return ccp(v.x*s, v.y*s);
+}
+
+static inline CGFloat
+ccpLengthSQ(const CGPoint v)
+{
+	return ccpDot(v, v);
+}
+
+static inline CGFloat
+ccpLength(const CGPoint v)
+{
+	return sqrtf(ccpLengthSQ(v));
+}
+
+static inline CGPoint
+ccpNormalize(const CGPoint v)
+{
+	return ccpMult(v, 1.0f/ccpLength(v));
+}
+
+
+
+//! helper that creates a ccColor4f type
+static inline ccColor4F ccc4f(const GLfloat r, const GLfloat g, const GLfloat b, const GLfloat a)
+{
+	return (ccColor4F){r, g, b, a};
+}
+

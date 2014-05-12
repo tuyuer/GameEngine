@@ -80,7 +80,6 @@
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
-		33CEC6F018E25F0100B889E6 /* HLTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CEC6EF18E25F0100B889E6 /* HLTypes.m */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
 		33D76B07191765FF00549358 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76B06191765FF00549358 /* BlendLayer.mm */; };
@@ -229,7 +228,6 @@
 		33CD6A3D18E50A05006AD2EC /* TransformUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformUtils.h; sourceTree = "<group>"; };
 		33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TransformUtils.mm; sourceTree = "<group>"; };
 		33CEC6EE18E25F0100B889E6 /* HLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTypes.h; sourceTree = "<group>"; };
-		33CEC6EF18E25F0100B889E6 /* HLTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTypes.m; sourceTree = "<group>"; };
 		33D76AFD191729F400549358 /* HLScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScheduler.h; sourceTree = "<group>"; };
 		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
@@ -566,7 +564,6 @@
 				33E8D4A318E1AFF100E1D735 /* HLGLStateCache.h */,
 				33E8D4A418E1AFF100E1D735 /* HLGLStateCache.m */,
 				33CEC6EE18E25F0100B889E6 /* HLTypes.h */,
-				33CEC6EF18E25F0100B889E6 /* HLTypes.m */,
 				3391A2AB18EE827500783D2B /* ccMacros.h */,
 				33F45AC918F6943D00FB5C8D /* HLCamera.h */,
 				33F45ACA18F6943E00FB5C8D /* HLCamera.m */,
@@ -942,7 +939,6 @@
 				33E8D2E018E17E7F00E1D735 /* HLGLProgram.m in Sources */,
 				33E8D2E318E17FD300E1D735 /* HLShaderCache.m in Sources */,
 				33E8D4A518E1AFF200E1D735 /* HLGLStateCache.m in Sources */,
-				33CEC6F018E25F0100B889E6 /* HLTypes.m in Sources */,
 				33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */,
 				33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */,
 				33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */,

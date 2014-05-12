@@ -35,6 +35,12 @@
 /** draw a dot at a position, with a given radius and color */
 -(void)drawDot:(CGPoint)pos radius:(CGFloat)radius color:(ccColor4F)color;
 
+/** draw a segment with a radius and color */
+-(void)drawSegmentFrom:(CGPoint)a to:(CGPoint)b radius:(CGFloat)radius color:(ccColor4F)color;
+
+/** draw a polygon with a fill color and line color */
+-(void)drawPolyWithVerts:(CGPoint*)verts count:(NSUInteger)count fillColor:(ccColor4F)fill borderWidth:(CGFloat)width  borderColor:(ccColor4F)line;
+
 /** Clear the geometry in the node's buffer. */
 - (void)clear;
 

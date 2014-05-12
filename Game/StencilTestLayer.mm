@@ -9,6 +9,7 @@
 #import "StencilTestLayer.h"
 #import "HLSprite.h"
 #import "HLDrawNode.h"
+#import "HLDirector.h"
 
 @implementation StencilTestLayer
 
@@ -46,6 +47,15 @@
         HLDrawNode * drawNode = [HLDrawNode node];
         [drawNode drawDot:CGPointMake(100, 100) radius:10 color:(ccColor4F){1.0,0,0,1.0}];
         [self addChild:drawNode];
+        
+        // Draw polygons
+        CGSize s = [[HLDirector sharedDirector] winSize];
+		CGPoint points[] = { {s.height/4,0}, {s.width,s.height/5}, {s.width/3*2,s.height} };
+		[drawNode drawPolyWithVerts:points count:sizeof(points)/sizeof(points[0]) fillColor:ccc4f(1,0,0,0.5) borderWidth:4 borderColor:ccc4f(0,0,1,1)];
+        
+        [drawNode drawSegmentFrom:ccp(20,s.height) to:ccp(20,s.height/2) radius:10 color:ccc4f(0, 1, 0, 1)];
+        
+		[drawNode drawSegmentFrom:ccp(10,s.height/2) to:ccp(s.width/2, s.height/2) radius:40 color:ccc4f(1, 0, 1, 0.5)];
         
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
     }
