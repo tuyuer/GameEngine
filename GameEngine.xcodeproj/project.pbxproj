@@ -11,12 +11,12 @@
 		3307315C191F507E001A7487 /* HLDrawNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307315A191F507E001A7487 /* HLDrawNode.m */; };
 		3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
 		33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
-		33073161191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
-		33073162191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
 		3393A6041914A5D000602BDA /* Tarsier.png in Resources */ = {isa = PBXBuildFile; fileRef = 3393A6031914A5D000602BDA /* Tarsier.png */; };
+		3398E0F61920683C00762FA9 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
+		3398E0F71920683C00762FA9 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
@@ -851,8 +851,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33073161191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.frag in Resources */,
-				33073162191F6ECC001A7487 /* ccShader_PositionColorLengthTexture.vert in Resources */,
+				3398E0F61920683C00762FA9 /* ccShader_PositionColorLengthTexture.frag in Resources */,
+				3398E0F71920683C00762FA9 /* ccShader_PositionColorLengthTexture.vert in Resources */,
 				33B616FF190E7EAA007EE82B /* ccShader_Position_uColor.frag in Resources */,
 				33B61700190E7EAA007EE82B /* ccShader_Position_uColor.vert in Resources */,
 				33B61701190E7EAA007EE82B /* ccShader_PositionColor.frag in Resources */,

@@ -15,6 +15,10 @@ static BOOL		_vertexAttribColor = NO;
 static BOOL		_vertexAttribNormal = NO;
 static BOOL		_vertexAttribTexCoords = NO;
 
+
+static GLenum	_ccBlendingSource = -1;
+static GLenum	_ccBlendingDest = -1;
+
 void ccGLEnableVertexAttribs( unsigned int flags )
 {
 
@@ -68,5 +72,25 @@ void ccGLEnableVertexAttribs( unsigned int flags )
 	}
     
    
+}
+
+
+static void SetBlending(GLenum sfactor, GLenum dfactor)
+{
+	if(sfactor == GL_ONE && dfactor == GL_ZERO){
+		glDisable(GL_BLEND);
+	} else {
+		glEnable(GL_BLEND);
+		glBlendFunc( sfactor, dfactor );
+	}
+}
+
+void ccGLBlendFunc(GLenum sfactor, GLenum dfactor)
+{
+	if( sfactor != _ccBlendingSource || dfactor != _ccBlendingDest ) {
+		_ccBlendingSource = sfactor;
+		_ccBlendingDest = dfactor;
+		SetBlending( sfactor, dfactor );
+	}
 }
 

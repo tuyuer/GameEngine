@@ -8,6 +8,7 @@
 
 #import "HLDrawNode.h"
 #import "HLShaderCache.h"
+#import "HLGLStateCache.h"
 
 // ccVertex2F == CGPoint in 32-bits, but not in 64-bits (OS X)
 // that's why the "v2f" functions are needed
@@ -71,11 +72,8 @@ static inline ccTex2F __t(ccVertex2F v )
 
 
 
-
-
-
-
 @implementation HLDrawNode
+@synthesize blendFunc = _blendFunc;
 
 
 -(void)ensureCapacity:(NSUInteger)count
@@ -84,13 +82,14 @@ static inline ccTex2F __t(ccVertex2F v )
 		_bufferCapacity += MAX(_bufferCapacity, count);
 		_buffer = realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
 		
-        //		NSLog(@"Resized vertex buffer to %d", _bufferCapacity);
+		NSLog(@"Resized vertex buffer to %d", _bufferCapacity);
 	}
 }
 
 - (id)init{
     if (self = [super init]) {
-        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+        
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLengthTexture];
         
         [self ensureCapacity:512];
         
@@ -147,12 +146,12 @@ static inline ccTex2F __t(ccVertex2F v )
 }
 
 - (void)draw{
+
     [_shaderProgram use];
     [_shaderProgram setUniformsForBuiltins];
     
     [self render];
     
-   
 }
 
 

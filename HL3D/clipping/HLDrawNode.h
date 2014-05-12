@@ -25,8 +25,12 @@
     ccV2F_C4B_T2F * _buffer;
     
     BOOL _dirty;
+    
+    ccBlendFunc _blendFunc;
 
 }
+
+@property (nonatomic,assign) ccBlendFunc blendFunc;
 
 /** draw a dot at a position, with a given radius and color */
 -(void)drawDot:(CGPoint)pos radius:(CGFloat)radius color:(ccColor4F)color;

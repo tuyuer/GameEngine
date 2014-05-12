@@ -36,6 +36,7 @@ extern "C" {
  */
 void ccGLEnableVertexAttribs( unsigned int flags );
     
+void ccGLBlendFunc(GLenum sfactor, GLenum dfactor);
 #ifdef __cplusplus
 }
 #endif
