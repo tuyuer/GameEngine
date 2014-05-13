@@ -104,8 +104,15 @@
             
             // Compute Texture Coordinates
             if (flags & VertexFlagsTexCoords) {
-                float s = _textureCount.x * i / _slices.x;
-                float t = _textureCount.y * j / _slices.y;
+                float s,t;
+                if ([self UseDomainCoords]) {
+                    s = _textureCount.x * i / _slices.x;
+                    t = _textureCount.y * j / _slices.y;
+                }else{
+                    s = 0.5 * range.x;
+                    t = 0.5 * range.z;
+                }
+                
                 vertices.push_back(s);
                 vertices.push_back(t);
 //                NSLog(@"{s,t} = (%f,%f) }",s,t);
@@ -182,6 +189,10 @@
     
     glGenBuffers(1, &trangleIndexBuffer);
     glGenBuffers(1, &lineIndexBuffer);
+}
+
+- (bool)UseDomainCoords{
+    return true;
 }
 
 - (void)draw{

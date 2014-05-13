@@ -51,6 +51,7 @@ struct ParametricInterval {
 - (BOOL)InvertNormal:(CGPoint)domain;
 - (HL3Vector)Evaluate:(CGPoint)domain;
 - (void)SetInterval:(const ParametricInterval&)interval;
+- (bool)UseDomainCoords;
 @end
 
 

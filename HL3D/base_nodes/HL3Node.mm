@@ -153,6 +153,11 @@
     
 }
 
+
+- (bool)is3DNode{
+    return true;
+}
+
 @end
 
 

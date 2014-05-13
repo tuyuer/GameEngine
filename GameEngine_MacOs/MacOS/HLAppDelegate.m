@@ -3,7 +3,7 @@
 //  GameEngine_MacOs
 //
 //  Created by huxiaozhou on 14-4-28.
-//  Copyright (c) 2014年 Hoolai. All rights reserved.
+//  Copyright (c) 2014年 Hoolai. Al rights reserved.
 //
 
 #import "HLAppDelegate.h"
@@ -18,7 +18,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    NSLog(@"hello world");
+    NSLog(@"Engine on mac is comming soon~~~~~~~~~~~~~~~~~~~~~~ ! Waitting ~~~~");
 }
 
 @end

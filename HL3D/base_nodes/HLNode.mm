@@ -435,7 +435,9 @@ static NSUInteger globalOrderOfArrival = 1;
 	[_scheduler unscheduleAllForTarget:self];
 }
 
-
+- (bool) is3DNode{
+    return false;
+}
 
 @end
 

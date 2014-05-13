@@ -19,6 +19,8 @@
 		3398E0F71920683C00762FA9 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
+		33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AB5AE11921D21800919883 /* HLWireframeCone.mm */; };
+		33AB5AE41921D63D00919883 /* Marble.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AB5AE31921D63D00919883 /* Marble.png */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
 		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
@@ -145,6 +147,9 @@
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
 		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
 		339AC3FF18F951FB00864A39 /* HL3Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Camera.m; sourceTree = "<group>"; };
+		33AB5AE01921D21800919883 /* HLWireframeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeCone.h; sourceTree = "<group>"; };
+		33AB5AE11921D21800919883 /* HLWireframeCone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeCone.mm; sourceTree = "<group>"; };
+		33AB5AE31921D63D00919883 /* Marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble.png; sourceTree = "<group>"; };
 		33AE9FB41910C079004923C3 /* Grid16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid16.png; sourceTree = "<group>"; };
 		33B2517918FE742A0067533C /* HLMD2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2.mm; sourceTree = "<group>"; };
 		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
@@ -395,6 +400,7 @@
 		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				33AB5AE31921D63D00919883 /* Marble.png */,
 				33D76B08191785D600549358 /* Grille.png */,
 				33D76B03191763F400549358 /* Circle.png */,
 				3393A6031914A5D000602BDA /* Tarsier.png */,
@@ -583,8 +589,8 @@
 			isa = PBXGroup;
 			children = (
 				33E9EFFA18E0156C00A34046 /* GameEngine */,
-				33B614AE190E4D71007EE82B /* GameEngine_MacOs */,
 				33B614C3190E5006007EE82B /* GameEngine_IOS */,
+				33B614AE190E4D71007EE82B /* GameEngine_MacOs */,
 				33E9EFF318E0156C00A34046 /* Frameworks */,
 				33E9EFF218E0156C00A34046 /* Products */,
 			);
@@ -764,6 +770,8 @@
 				33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */,
 				33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */,
 				33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */,
+				33AB5AE01921D21800919883 /* HLWireframeCone.h */,
+				33AB5AE11921D21800919883 /* HLWireframeCone.mm */,
 			);
 			path = wireframe;
 			sourceTree = "<group>";
@@ -896,6 +904,7 @@
 				3393A6041914A5D000602BDA /* Tarsier.png in Resources */,
 				33D76B04191763F400549358 /* Circle.png in Resources */,
 				33D76B09191785D700549358 /* Grille.png in Resources */,
+				33AB5AE41921D63D00919883 /* Marble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +981,7 @@
 				3307315C191F507E001A7487 /* HLDrawNode.m in Sources */,
 				3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */,
 				33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */,
+				33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

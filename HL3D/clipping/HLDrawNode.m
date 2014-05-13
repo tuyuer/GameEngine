@@ -88,7 +88,7 @@ static inline ccTex2F __t(ccVertex2F v )
 		_bufferCapacity += MAX(_bufferCapacity, count);
 		_buffer = realloc(_buffer, _bufferCapacity*sizeof(ccV2F_C4B_T2F));
 		
-		NSLog(@"Resized vertex buffer to %d", _bufferCapacity);
+		NSLog(@"HLDrawNode :: Resized vertex buffer to %d", _bufferCapacity);
 	}
 }
 

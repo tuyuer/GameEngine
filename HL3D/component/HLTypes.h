@@ -11,6 +11,8 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+#define CC_DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) * 0.01745329252f)
+
 typedef struct _ccColor4B{
     GLubyte	r;
 	GLubyte	g;

@@ -100,7 +100,7 @@
         if (stencilBits <= 0) {
             NSLog(@"Stencil buffer is not enabled; enable it by passing GL_DEPTH24_STENCIL8_OES into the depthFormat parrameter when initializing CCGLView. Until then, everything will be drawn without stencil.");
         }else{
-            NSLog(@"Stencil buffer is enabled! >o<");
+            NSLog(@"Stencil buffer is enabled! >o< ! hohoo~");
         }
         
     }

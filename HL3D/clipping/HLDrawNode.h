@@ -27,7 +27,6 @@
     BOOL _dirty;
     
     ccBlendFunc _blendFunc;
-
 }
 
 @property (nonatomic,assign) ccBlendFunc blendFunc;

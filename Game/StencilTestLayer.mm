@@ -10,8 +10,20 @@
 #import "HLSprite.h"
 #import "HLDrawNode.h"
 #import "HLDirector.h"
+#import "HLClippingNode.h"
+#import "HLWireframeCone.h"
+
+
 
 @implementation StencilTestLayer
+
+enum {
+	kTagTitleLabel = 1,
+	kTagSubtitleLabel = 2,
+	kTagStencilNode = 100,
+	kTagClipperNode = 101,
+	kTagContentNode = 102,
+};
 
 + (HLScene*)scene{
     HLScene *scene = [HLScene scene];
@@ -44,20 +56,46 @@
         [[bottle light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
         [[bottle light3D] setShiness:10];
         
-        HLDrawNode * drawNode = [HLDrawNode node];
-        [drawNode drawDot:CGPointMake(100, 100) radius:10 color:(ccColor4F){1.0,0,0,1.0}];
-        [self addChild:drawNode];
-        
-        // Draw polygons
-        CGSize s = [[HLDirector sharedDirector] winSize];
-		CGPoint points[] = { {s.height/4,0}, {s.width,s.height/5}, {s.width/3*2,s.height} };
-		[drawNode drawPolyWithVerts:points count:sizeof(points)/sizeof(points[0]) fillColor:ccc4f(1,0,0,0.5) borderWidth:4 borderColor:ccc4f(0,0,1,1)];
-        
-        [drawNode drawSegmentFrom:ccp(20,s.height) to:ccp(20,s.height/2) radius:10 color:ccc4f(0, 1, 0, 1)];
-        
-		[drawNode drawSegmentFrom:ccp(10,s.height/2) to:ccp(s.width/2, s.height/2) radius:40 color:ccc4f(1, 0, 1, 0.5)];
-        
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
+        
+        
+
+        HLClippingNode * clipper = [HLClippingNode clippingNode];
+        clipper.tag = kTagClipperNode;
+        clipper.contentSize = CGSizeMake(200, 200);
+        clipper.anchorPoint = ccp(0.5, 0.5);
+        clipper.position = ccp(self.contentSize.width / 2, self.contentSize.height / 2);
+        [self addChild:clipper];
+        
+        HLDrawNode *stencil = [HLDrawNode node];
+        
+        CGPoint circle[360];
+        for (int i=0; i<360; i++) {
+            circle[i].x = clipper.contentSize.width/2 + 100 * cos(CC_DEGREES_TO_RADIANS(i*1.0));
+            circle[i].y = clipper.contentSize.height/2 + 100 * sin(CC_DEGREES_TO_RADIANS(i*1.0));
+        }
+        
+        ccColor4F white = {1, 1, 1, 1};
+        [stencil drawPolyWithVerts:circle count:360 fillColor:white borderWidth:1 borderColor:white];
+        clipper.stencil = stencil;
+  
+        HLSprite *content = [HLSprite spriteWithFile:@"Tarsier.png"];
+        content.tag = kTagContentNode;
+        content.anchorPoint = ccp(0.5, 0.5);
+        content.position = ccp(clipper.contentSize.width / 2, clipper.contentSize.height / 2);
+        [clipper addChild:content];
+        
+        
+        HLWireframeCone * cone = [HLWireframeCone coneWithHeight:5 radius:125];
+        [self addChild:cone];
+        [cone setPosition3D:hl3v(160, 80, 0)];
+        
+        [[cone light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[cone light3D] setDirection:hl3v(0, 0, 1.0)];
+        
+        [[cone light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
+        [[cone light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
+        [[cone light3D] setShiness:10];
     }
     return self;
 }

@@ -169,4 +169,6 @@
  */
 -(void) unscheduleAllSelectors;
 
+- (bool) is3DNode;
+
 @end
