@@ -79,7 +79,6 @@ static inline ccTex2F __t(ccVertex2F v )
 
 
 @implementation HLDrawNode
-@synthesize blendFunc = _blendFunc;
 
 
 -(void)ensureCapacity:(NSUInteger)count

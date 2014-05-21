@@ -32,6 +32,7 @@ static NSUInteger globalOrderOfArrival = 1;
 @synthesize scaleX = _scaleX, scaleY = _scaleY;
 @synthesize skewX = _skewX, skewY = _skewY;
 @synthesize scheduler = _scheduler;
+@synthesize blendFunc = _blendFunc;
 
 + (id)node{
     return [[[self alloc] init] autorelease];
@@ -71,6 +72,10 @@ static NSUInteger globalOrderOfArrival = 1;
         
         m_pChildren = [[NSMutableArray alloc] initWithCapacity:100];
         _camera = nil;
+        
+        
+        _blendFunc.src = GL_ONE;
+		_blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
         
         self.scheduler = [[HLDirector sharedDirector] scheduler];
         return self;

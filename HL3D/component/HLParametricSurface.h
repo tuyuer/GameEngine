@@ -45,8 +45,15 @@ struct ParametricInterval {
     GLuint lineVertexBuffer;
 
     HLTexture * _texture;
-
+    
+    bool _bDisableDepthWhenDrawing;
+    bool _bClearDepthWhenDrawing;
+    bool _bDisableTexture;
 }
+
+@property (nonatomic,assign) bool bDisableDepthWhenDrawing;
+@property (nonatomic,assign) bool bDisableTexture;
+@property (nonatomic,assign) bool bClearDepthWhenDrawing;
 
 - (BOOL)InvertNormal:(CGPoint)domain;
 - (HL3Vector)Evaluate:(CGPoint)domain;

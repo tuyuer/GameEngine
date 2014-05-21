@@ -12,6 +12,7 @@
 
 @interface StencilTestLayer : HLLayer{
     HLWireframeTrefoilKnot * bottle ;
+    HLWireframeTrefoilKnot * bottle2 ;
 }
 + (HLScene*)scene;
 + (id)node;

@@ -38,6 +38,8 @@
 }
 
 - (void)draw{
+    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
+    
     [super draw];
     
     NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);

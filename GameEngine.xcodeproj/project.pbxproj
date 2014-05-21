@@ -88,6 +88,7 @@
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
 		33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */; };
+		33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E055A819239C6E00EDC09A /* HL3ClippingNode.m */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
 		33E8D2DA18E15D1500E1D735 /* HLDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D918E15D1500E1D735 /* HLDirector.m */; };
@@ -245,6 +246,8 @@
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
 		33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StencilTestLayer.h; sourceTree = "<group>"; };
 		33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StencilTestLayer.mm; sourceTree = "<group>"; };
+		33E055A719239C6E00EDC09A /* HL3ClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3ClippingNode.h; sourceTree = "<group>"; };
+		33E055A819239C6E00EDC09A /* HL3ClippingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3ClippingNode.m; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
 		33E4A67318EEB867006CBFC3 /* HLLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLLayer.mm; sourceTree = "<group>"; };
 		33E8D2D418E14B7400E1D735 /* HLSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSprite.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				33073158191F507E001A7487 /* HLClippingNode.m */,
 				33073159191F507E001A7487 /* HLDrawNode.h */,
 				3307315A191F507E001A7487 /* HLDrawNode.m */,
+				33E055A719239C6E00EDC09A /* HL3ClippingNode.h */,
+				33E055A819239C6E00EDC09A /* HL3ClippingNode.m */,
 			);
 			path = clipping;
 			sourceTree = "<group>";
@@ -982,6 +987,7 @@
 				3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */,
 				33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */,
 				33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */,
+				33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

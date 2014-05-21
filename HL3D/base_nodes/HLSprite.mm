@@ -61,6 +61,7 @@
 
 - (id)initWithTexture:(HLTexture*)texture rect:(CGRect)rect{
     if (self = [super init]) {
+        
         //设置program
         self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTextureColor];
         
@@ -122,6 +123,7 @@
 
 
 - (void)draw{
+    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
     
     NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);	
     [_shaderProgram use];

@@ -11,6 +11,7 @@
 #import "HLDrawNode.h"
 #import "HLDirector.h"
 #import "HLClippingNode.h"
+#import "HL3ClippingNode.h"
 #import "HLWireframeCone.h"
 
 
@@ -45,50 +46,18 @@ enum {
 - (id)init{
     if (self = [super init]) {
         
-        bottle = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
-        [self addChild:bottle];
-        [bottle setPosition3D:hl3v(160, 240, 0)];
-        
-        [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
-        [[bottle light3D] setDirection:hl3v(0, 0, 1.0)];
-        
-        [[bottle light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
-        [[bottle light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
-        [[bottle light3D] setShiness:10];
-        
-        [self schedule:@selector(doSomthing) interval:1.0/60.0];
-        
-        
-
-        HLClippingNode * clipper = [HLClippingNode clippingNode];
+        HLClippingNode * clipper = [HL3ClippingNode clippingNode];
         clipper.tag = kTagClipperNode;
         clipper.contentSize = CGSizeMake(200, 200);
         clipper.anchorPoint = ccp(0.5, 0.5);
-        clipper.position = ccp(self.contentSize.width / 2, self.contentSize.height / 2);
+        clipper.position = ccp(self.contentSize.width / 2, 80);
         [self addChild:clipper];
-        
-        HLDrawNode *stencil = [HLDrawNode node];
-        
-        CGPoint circle[360];
-        for (int i=0; i<360; i++) {
-            circle[i].x = clipper.contentSize.width/2 + 100 * cos(CC_DEGREES_TO_RADIANS(i*1.0));
-            circle[i].y = clipper.contentSize.height/2 + 100 * sin(CC_DEGREES_TO_RADIANS(i*1.0));
-        }
-        
-        ccColor4F white = {1, 1, 1, 1};
-        [stencil drawPolyWithVerts:circle count:360 fillColor:white borderWidth:1 borderColor:white];
-        clipper.stencil = stencil;
   
-        HLSprite *content = [HLSprite spriteWithFile:@"Tarsier.png"];
-        content.tag = kTagContentNode;
-        content.anchorPoint = ccp(0.5, 0.5);
-        content.position = ccp(clipper.contentSize.width / 2, clipper.contentSize.height / 2);
-        [clipper addChild:content];
-        
         
         HLWireframeCone * cone = [HLWireframeCone coneWithHeight:5 radius:125];
-        [self addChild:cone];
-        [cone setPosition3D:hl3v(160, 80, 0)];
+        cone.bDisableDepthWhenDrawing = true;
+        cone.bDisableTexture = true;
+        [cone setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
         
         [[cone light3D] setPosition:hl3v(0.25, 0.25, 1)];
         [[cone light3D] setDirection:hl3v(0, 0, 1.0)];
@@ -96,13 +65,56 @@ enum {
         [[cone light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
         [[cone light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
         [[cone light3D] setShiness:10];
+        
+        clipper.stencil = cone;
+        
+        
+        HLWireframeCone * cone2 = [HLWireframeCone coneWithHeight:5 radius:125];
+        [cone2 setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
+        
+        [[cone2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[cone2 light3D] setDirection:hl3v(0, 0, 1.0)];
+        
+        [[cone2 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
+        [[cone2 light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
+        [[cone2 light3D] setShiness:10];
+        [clipper addChild:cone2];
+        
+        bottle = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
+        bottle.bClearDepthWhenDrawing = true;
+        [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[bottle light3D] setDirection:hl3v(0, 0, 1.0)];
+        
+        [[bottle light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
+        [[bottle light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
+        [[bottle light3D] setShiness:10];
+        [bottle setPosition3D:hl3v(clipper.contentSize.width/2, 30, 0)];
+        [bottle setRotation3D:hl3v(180, 180, 0)];
+        
+        [clipper addChild:bottle];
+        
+        
+        bottle2 = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
+        [[bottle2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[bottle2 light3D] setDirection:hl3v(0, 0, 1.0)];
+        
+        [[bottle2 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
+        [[bottle2 light3D] setSpecular:HL3Vector4Make(0.2, 0.2, 0.2, 1.0)];
+        [[bottle2 light3D] setShiness:10];
+        [bottle2 setPosition3D:hl3v(160, 280, 0)];
+        
+        [self addChild:bottle2];
+        
+        [self schedule:@selector(doSomthing) interval:1.0/60.0];
+
     }
     return self;
 }
 
 - (void)doSomthing{
-    HL3Vector currentRot = [bottle rotation3D];
-    [bottle setRotation3D:hl3v(currentRot.x, currentRot.y-0.2, currentRot.z)];
+    HL3Vector currentRot1 = [bottle rotation3D];
+    [bottle setRotation3D:hl3v(currentRot1.x, currentRot1.y +0.2, currentRot1.z)];
+    [bottle2 setRotation3D:hl3v(currentRot1.x, currentRot1.y -0.2, currentRot1.z)];
 }
 
 @end

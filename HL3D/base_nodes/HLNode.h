@@ -10,6 +10,7 @@
 #import "HLGLProgram.h"
 #import "HLCamera.h"
 #import "HLScheduler.h"
+#import "HLTypes.h"
 
 @interface HLNode : NSObject{
     float _rotationX,_rotationY;
@@ -66,6 +67,8 @@
     NSMutableArray * m_pChildren;
     
     HLGLProgram * _shaderProgram;
+    
+    ccBlendFunc	_blendFunc;
 }
 @property (nonatomic,assign) CGSize contentSize;
 @property (nonatomic,assign) CGPoint anchorPoint;
@@ -77,6 +80,7 @@
 @property (nonatomic,retain) HLGLProgram * shaderProgram;
 @property (nonatomic,assign) BOOL ignoreAnchorPointForPosition;
 @property (nonatomic, readwrite, retain) HLScheduler *scheduler;
+@property (nonatomic,assign) ccBlendFunc	blendFunc;
 
 /** The rotation (angle) of the node in degrees. 0 is the default rotation angle. Positive values rotate node CW. */
 @property (nonatomic,assign) float rotation;

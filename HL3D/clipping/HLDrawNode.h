@@ -8,6 +8,7 @@
 
 #import "HLNode.h"
 #import "HLTypes.h"
+#import "HL3Foundation.h"
 
 /** HLDrawNode
  Node that draws dots, segments and polygons.
@@ -26,7 +27,6 @@
     
     BOOL _dirty;
     
-    ccBlendFunc _blendFunc;
 }
 
 @property (nonatomic,assign) ccBlendFunc blendFunc;
@@ -39,6 +39,8 @@
 
 /** draw a polygon with a fill color and line color */
 -(void)drawPolyWithVerts:(CGPoint*)verts count:(NSUInteger)count fillColor:(ccColor4F)fill borderWidth:(CGFloat)width  borderColor:(ccColor4F)line;
+
+//-(void)drawBodyWithVerts:(HL3Vector*)verts count:(NSUInteger)count fillColor:(ccColor4F)fill 
 
 /** Clear the geometry in the node's buffer. */
 - (void)clear;

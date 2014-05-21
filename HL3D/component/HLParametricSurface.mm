@@ -17,9 +17,17 @@
 #import "HLTextureCache.h"
 
 @implementation HLParametricSurface
+@synthesize bDisableDepthWhenDrawing = _bDisableDepthWhenDrawing;
+@synthesize bDisableTexture = _bDisableTexture;
+@synthesize bClearDepthWhenDrawing = _bClearDepthWhenDrawing;
 
 - (id)init{
     if (self = [super init]) {
+        
+        _bDisableDepthWhenDrawing = false;
+        _bDisableTexture = false;
+        _bClearDepthWhenDrawing = false;
+        
         _texture = [[HLTextureCache sharedTextureCache] addImage:@"Grille.png"];
         
 //        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColorLight];
@@ -198,10 +206,15 @@
 - (void)draw{
     
     NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);
+    
+    if (self.bClearDepthWhenDrawing) {
+        glClear(GL_DEPTH_BUFFER_BIT);
+    }
+    
+    ccGLBlendFunc( _blendFunc.src, _blendFunc.dst );
+
     [_shaderProgram use];
 	[_shaderProgram setUniformsForBuiltins];
-    
-
 
     //设置光照信息
     HL3Vector v4LightPos = [_light3D position];
@@ -232,13 +245,13 @@
     
     [_shaderProgram setUniformLocation:_uniformHandles.u_normalMatrix withMatrix3fv:matNormal.mat count:1];
     
- 
+    
     //面的绘制
     glBindTexture(GL_TEXTURE_2D, [_texture Name]);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal | kCCVertexAttrib_TexCoords);
+    
     glBindBuffer(GL_ARRAY_BUFFER, trangleVertexBuffer);
     glBufferData(GL_ARRAY_BUFFER,
                  _surfaceVertices.size() * sizeof(_surfaceVertices[0]),
@@ -251,33 +264,32 @@
                  &_surfaceTriangleIndices[0],
                  GL_STATIC_DRAW);
     
+    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position | kCCVertexAttrib_Normal | kCCVertexAttrib_TexCoords);
+    if (_bDisableDepthWhenDrawing) {
+        glDepthMask(GL_FALSE);
+    }
+    
+    if (_bDisableTexture) {
+        glDisable(GL_TEXTURE_2D);
+        ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position);
+    }else{
+        glVertexAttribPointer(kCCVertexAttrib_Normal, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8,  (const GLvoid*)(sizeof(GLfloat)*3));
+        glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (const GLvoid*)(sizeof(GLfloat)*6));
+    }
+    
     glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, 0);
-    glVertexAttribPointer(kCCVertexAttrib_Normal, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8,  (const GLvoid*)(sizeof(GLfloat)*3));
-    glVertexAttribPointer(kCCVertexAttrib_TexCoords, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, (const GLvoid*)(sizeof(GLfloat)*6));
+    
+    
     
     glDrawElements(GL_TRIANGLES, _surfaceTriangleIndexCount, GL_UNSIGNED_SHORT, 0);
     
+    if (_bDisableDepthWhenDrawing) {
+        glDepthMask(GL_TRUE);
+    }
     
-//    //线的绘制
-//    ccGLEnableVertexAttribs(kCCVertexAttribFlag_Position );
-//    glBindBuffer(GL_ARRAY_BUFFER, lineVertexBuffer);
-//    glBufferData(GL_ARRAY_BUFFER,
-//                 _surfaceVertices.size() * sizeof(_surfaceVertices[0]),
-//                 &_surfaceVertices[0],
-//                 GL_STATIC_DRAW);
-//    
-//    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, lineIndexBuffer);
-//    glBufferData(GL_ELEMENT_ARRAY_BUFFER,
-//                 _surfaceLineIndexCount * sizeof(GLushort),
-//                 &_surfaceLineIndices[0],
-//                 GL_STATIC_DRAW);
-//    
-//    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*8, 0);
-//    
-//    glDrawElements(GL_LINES, _surfaceLineIndexCount, GL_UNSIGNED_SHORT, 0);
-
-    
-
+    if (_bDisableTexture) {
+        glEnable(GL_TEXTURE_2D);
+    }
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -286,6 +298,7 @@
     
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
+
 }
 
 @end
