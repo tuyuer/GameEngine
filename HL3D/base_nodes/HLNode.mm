@@ -77,6 +77,7 @@ static NSUInteger globalOrderOfArrival = 1;
         _blendFunc.src = GL_ONE;
 		_blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
         
+        self.actionManager = [[HLDirector sharedDirector] actionManager];
         self.scheduler = [[HLDirector sharedDirector] scheduler];
         return self;
     }
@@ -91,6 +92,21 @@ static NSUInteger globalOrderOfArrival = 1;
         
 		_scheduler = [scheduler retain];
 	}
+}
+
+-(void) setActionManager:(HLActionManager *)actionManager
+{
+	if( actionManager != _actionManager ) {
+//		[self stopAllActions];
+		[_actionManager release];
+        
+		_actionManager = [actionManager retain];
+	}
+}
+
+-(HLActionManager*) actionManager
+{
+	return _actionManager;
 }
 
 // camera: lazy alloc
@@ -221,7 +237,8 @@ static NSUInteger globalOrderOfArrival = 1;
 
 - (void)onEnter{
     [m_pChildren makeObjectsPerformSelector:@selector(onEnter)];
-    [_scheduler resumeTarget:self];;
+    [_scheduler resumeTarget:self];
+    [_actionManager resumeTarget:self];
     _isRunning = YES;
 }
 
@@ -400,6 +417,13 @@ static NSUInteger globalOrderOfArrival = 1;
 - (void) pauseSchedulerAndActions
 {
 	[_scheduler pauseTarget:self];
+}
+
+-(HLAction*) runAction:(HLAction*) action{
+	NSAssert( action != nil, @"Argument must be non-nil");
+    
+	[_actionManager addAction:action target:self paused:!_isRunning];
+	return action;
 }
 
 

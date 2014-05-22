@@ -14,6 +14,7 @@
 @implementation HLDirector
 @synthesize projection = _projection;
 @synthesize scheduler = _scheduler;
+@synthesize actionManager = _actionManager;
 
 static HLDirector * s_sharedDirector = nil;
 + (HLDirector *)sharedDirector{
@@ -34,6 +35,10 @@ static HLDirector * s_sharedDirector = nil;
         
         // scheduler
 		_scheduler = [[HLScheduler alloc] init];
+        
+        _actionManager = [[HLActionManager alloc] init];
+        [_scheduler scheduleUpdateForTarget:_actionManager priority:kHLPrioritySystem paused:NO];
+        
         return self;
     }
     return nil;
@@ -43,6 +48,7 @@ static HLDirector * s_sharedDirector = nil;
     [_sceneStack release];
     [_openglView release];
     [_scheduler release];
+    [_actionManager release];
     [super dealloc];
 }
 

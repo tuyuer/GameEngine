@@ -11,6 +11,7 @@
 #import "HLCamera.h"
 #import "HLScheduler.h"
 #import "HLTypes.h"
+#import "HLActionManager.h"
 
 @interface HLNode : NSObject{
     float _rotationX,_rotationY;
@@ -49,6 +50,9 @@
     
     // scheduler used to schedule timers and updates
 	HLScheduler		*_scheduler;
+    
+    // ActionManager used to handle all the actions
+    HLActionManager *_actionManager;
 
     
     //a tag. any number you want to assign to the node
@@ -79,8 +83,8 @@
 @property (nonatomic,assign) NSUInteger orderOfArrival;
 @property (nonatomic,retain) HLGLProgram * shaderProgram;
 @property (nonatomic,assign) BOOL ignoreAnchorPointForPosition;
-@property (nonatomic, readwrite, retain) HLScheduler *scheduler;
-@property (nonatomic,assign) ccBlendFunc	blendFunc;
+@property (nonatomic,readwrite,retain) HLScheduler *scheduler;
+@property (nonatomic,assign) ccBlendFunc blendFunc;
 
 /** The rotation (angle) of the node in degrees. 0 is the default rotation angle. Positive values rotate node CW. */
 @property (nonatomic,assign) float rotation;
@@ -141,6 +145,13 @@
  */
 -(void) pauseSchedulerAndActions;
 
+/** Executes an action, and returns the action that is executed.
+ The node becomes the action's target.
+ @warning Starting from v0.8 actions don't retain their target anymore.
+ @since v0.7.1
+ @return An Action pointer
+ */
+-(HLAction*) runAction: (HLAction*) action;
 
 /** schedules a selector.
  The scheduled selector will be ticked every frame

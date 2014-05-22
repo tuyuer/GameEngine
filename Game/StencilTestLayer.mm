@@ -13,6 +13,7 @@
 #import "HLClippingNode.h"
 #import "HL3ClippingNode.h"
 #import "HLWireframeCone.h"
+#import "HLMoveBy.h"
 
 
 
@@ -90,7 +91,6 @@ enum {
         [[bottle light3D] setShiness:10];
         [bottle setPosition3D:hl3v(clipper.contentSize.width/2, 30, 0)];
         [bottle setRotation3D:hl3v(180, 180, 0)];
-        
         [clipper addChild:bottle];
         
         
@@ -106,6 +106,13 @@ enum {
         [self addChild:bottle2];
         
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
+        
+        
+        HLSprite * sprite1 = [HLSprite spriteWithFile:@"icon.png"];
+        [self addChild:sprite1];
+        
+        HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(320, 480)];
+        [sprite1 runAction:moveBy];
 
     }
     return self;

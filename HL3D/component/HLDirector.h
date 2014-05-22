@@ -10,6 +10,7 @@
 #import "HLEGLView.h"
 #import "HLScene.h"
 #import "HLScheduler.h"
+#import "HLActionManager.h"
 
 /** @typedef ccDirectorProjection
  Possible OpenGL projections used by director
@@ -36,6 +37,9 @@ typedef enum {
     /* scheduler associated with this director */
 	HLScheduler *_scheduler;
     
+    /* action manager associated with this director */
+    HLActionManager * _actionManager;
+    
     //running scene
     HLScene * _runningScene;
     HLScene * _nextScene;
@@ -58,6 +62,7 @@ typedef enum {
 }
 @property (nonatomic,readwrite) hlDirectorProjection projection;
 @property (nonatomic,readwrite,retain) HLScheduler *scheduler;
+@property (nonatomic,readwrite,retain) HLActionManager *actionManager;
 + (HLDirector *)sharedDirector;
 - (CGSize)winSize;
 - (void)setOpenGLView:(HLEGLView *)view;

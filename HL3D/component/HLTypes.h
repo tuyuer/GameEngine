@@ -223,6 +223,43 @@ ccpNormalize(const CGPoint v)
 	return ccpMult(v, 1.0f/ccpLength(v));
 }
 
+static inline CGPoint
+ccpAdd(const CGPoint v1, const CGPoint v2)
+{
+	return ccp(v1.x + v2.x, v1.y + v2.y);
+}
+
+/** Calculates difference of two points.
+ @return CGPoint
+ @since v0.7.2
+ */
+static inline CGPoint
+ccpSub(const CGPoint v1, const CGPoint v2)
+{
+	return ccp(v1.x - v2.x, v1.y - v2.y);
+}
+
+
+/** Calculates midpoint between two points.
+ @return CGPoint
+ @since v0.7.2
+ */
+static inline CGPoint
+ccpMidpoint(const CGPoint v1, const CGPoint v2)
+{
+	return ccpMult(ccpAdd(v1, v2), 0.5f);
+}
+
+
+/** Calculates cross product of two points.
+ @return CGFloat
+ @since v0.7.2
+ */
+static inline CGFloat
+ccpCross(const CGPoint v1, const CGPoint v2)
+{
+	return v1.x*v2.y - v1.y*v2.x;
+}
 
 
 //! helper that creates a ccColor4f type

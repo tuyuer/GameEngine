@@ -95,6 +95,11 @@
 		33E8D2E018E17E7F00E1D735 /* HLGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2DF18E17E7F00E1D735 /* HLGLProgram.m */; };
 		33E8D2E318E17FD300E1D735 /* HLShaderCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2E218E17FD300E1D735 /* HLShaderCache.m */; };
 		33E8D4A518E1AFF200E1D735 /* HLGLStateCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D4A418E1AFF100E1D735 /* HLGLStateCache.m */; };
+		33E98E0C192C726E005029E8 /* HLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E0B192C726E005029E8 /* HLAction.m */; };
+		33E98E0F192C783F005029E8 /* HLFiniteTimeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */; };
+		33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E11192C7B38005029E8 /* HLActionInterval.m */; };
+		33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E14192C7FC4005029E8 /* HLMoveBy.m */; };
+		33E98E18192C8759005029E8 /* HLActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E17192C8759005029E8 /* HLActionManager.m */; };
 		33E9EFF518E0156C00A34046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF418E0156C00A34046 /* UIKit.framework */; };
 		33E9EFF718E0156C00A34046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF618E0156C00A34046 /* Foundation.framework */; };
 		33E9EFF918E0156C00A34046 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF818E0156C00A34046 /* CoreGraphics.framework */; };
@@ -260,6 +265,16 @@
 		33E8D2E218E17FD300E1D735 /* HLShaderCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLShaderCache.m; sourceTree = "<group>"; };
 		33E8D4A318E1AFF100E1D735 /* HLGLStateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGLStateCache.h; sourceTree = "<group>"; };
 		33E8D4A418E1AFF100E1D735 /* HLGLStateCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGLStateCache.m; sourceTree = "<group>"; };
+		33E98E0A192C726E005029E8 /* HLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAction.h; sourceTree = "<group>"; };
+		33E98E0B192C726E005029E8 /* HLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAction.m; sourceTree = "<group>"; };
+		33E98E0D192C783E005029E8 /* HLFiniteTimeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFiniteTimeAction.h; sourceTree = "<group>"; };
+		33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFiniteTimeAction.m; sourceTree = "<group>"; };
+		33E98E10192C7B38005029E8 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
+		33E98E11192C7B38005029E8 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
+		33E98E13192C7FC4005029E8 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
+		33E98E14192C7FC4005029E8 /* HLMoveBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveBy.m; sourceTree = "<group>"; };
+		33E98E16192C8759005029E8 /* HLActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionManager.h; sourceTree = "<group>"; };
+		33E98E17192C8759005029E8 /* HLActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionManager.m; sourceTree = "<group>"; };
 		33E9EFF118E0156C00A34046 /* GameEngine_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E9EFF418E0156C00A34046 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		33E9EFF618E0156C00A34046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -590,6 +605,23 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		33E98E09192C7209005029E8 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				33E98E0A192C726E005029E8 /* HLAction.h */,
+				33E98E0B192C726E005029E8 /* HLAction.m */,
+				33E98E0D192C783E005029E8 /* HLFiniteTimeAction.h */,
+				33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */,
+				33E98E10192C7B38005029E8 /* HLActionInterval.h */,
+				33E98E11192C7B38005029E8 /* HLActionInterval.m */,
+				33E98E13192C7FC4005029E8 /* HLMoveBy.h */,
+				33E98E14192C7FC4005029E8 /* HLMoveBy.m */,
+				33E98E16192C8759005029E8 /* HLActionManager.h */,
+				33E98E17192C8759005029E8 /* HLActionManager.m */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		33E9EFE818E0156C00A34046 = {
 			isa = PBXGroup;
 			children = (
@@ -637,6 +669,7 @@
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
 			isa = PBXGroup;
 			children = (
+				33E98E09192C7209005029E8 /* Action */,
 				33073156191F507E001A7487 /* clipping */,
 				33D76B0019172A7C00549358 /* uthash */,
 				33D76AFC1917273300549358 /* Schedule */,
@@ -988,6 +1021,11 @@
 				33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */,
 				33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */,
 				33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */,
+				33E98E0C192C726E005029E8 /* HLAction.m in Sources */,
+				33E98E0F192C783F005029E8 /* HLFiniteTimeAction.m in Sources */,
+				33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */,
+				33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */,
+				33E98E18192C8759005029E8 /* HLActionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
