@@ -123,6 +123,8 @@
 
 
 - (void)draw{
+
+    
     ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
     
     NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);	
@@ -152,6 +154,7 @@
 
     //开始绘制
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    
 }
 
 @end

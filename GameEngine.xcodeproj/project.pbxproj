@@ -84,7 +84,6 @@
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
-		33D76B07191765FF00549358 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76B06191765FF00549358 /* BlendLayer.mm */; };
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
 		33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */; };
@@ -126,6 +125,16 @@
 		33E9F07418E036A300A34046 /* HLTextureQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F07118E036A300A34046 /* HLTextureQuad.mm */; };
 		33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */; };
 		33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45ACA18F6943E00FB5C8D /* HLCamera.m */; };
+		33F5121F1934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */; };
+		33F512201934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */; };
+		33F512211934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */; };
+		33F512221934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */; };
+		33F512271934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
+		33F512281934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
+		33F5122C19345D5800F15D29 /* blend_src.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122A19345D5800F15D29 /* blend_src.png */; };
+		33F5122D19345D5800F15D29 /* blend_src.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122A19345D5800F15D29 /* blend_src.png */; };
+		33F5122E19345D5800F15D29 /* blend_dst.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122B19345D5800F15D29 /* blend_dst.png */; };
+		33F5122F19345D5800F15D29 /* blend_dst.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122B19345D5800F15D29 /* blend_dst.png */; };
 		33F9063D18FCD41700E2F3F7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F9063C18FCD41700E2F3F7 /* libiconv.dylib */; };
 		33F9064A18FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064118FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm */; };
 		33F9064B18FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064318FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm */; };
@@ -244,8 +253,6 @@
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
 		33D76B0219172A7C00549358 /* utlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utlist.h; sourceTree = "<group>"; };
 		33D76B03191763F400549358 /* Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Circle.png; sourceTree = "<group>"; };
-		33D76B05191765FE00549358 /* BlendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendLayer.h; sourceTree = "<group>"; };
-		33D76B06191765FF00549358 /* BlendLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlendLayer.mm; sourceTree = "<group>"; };
 		33D76B08191785D600549358 /* Grille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grille.png; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
@@ -322,6 +329,12 @@
 		33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDrawingPrimitives.m; sourceTree = "<group>"; };
 		33F45AC918F6943D00FB5C8D /* HLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCamera.h; sourceTree = "<group>"; };
 		33F45ACA18F6943E00FB5C8D /* HLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCamera.m; sourceTree = "<group>"; };
+		33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_GlobalLighting.frag; sourceTree = "<group>"; };
+		33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_GlobalLighting.vert; sourceTree = "<group>"; };
+		33F512251934450800F15D29 /* BlendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendLayer.h; sourceTree = "<group>"; };
+		33F512261934450800F15D29 /* BlendLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlendLayer.mm; sourceTree = "<group>"; };
+		33F5122A19345D5800F15D29 /* blend_src.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blend_src.png; sourceTree = "<group>"; };
+		33F5122B19345D5800F15D29 /* blend_dst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blend_dst.png; sourceTree = "<group>"; };
 		33F9063C18FCD41700E2F3F7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		33F9063F18FCD7B800E2F3F7 /* HLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSurface.h; sourceTree = "<group>"; };
 		33F9064018FCD7B800E2F3F7 /* HLWireframeKleinBottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeKleinBottle.h; sourceTree = "<group>"; };
@@ -420,6 +433,7 @@
 		33B614C3190E5006007EE82B /* GameEngine_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				33F5122919345D5800F15D29 /* BlendTest */,
 				33AB5AE31921D63D00919883 /* Marble.png */,
 				33D76B08191785D600549358 /* Grille.png */,
 				33D76B03191763F400549358 /* Circle.png */,
@@ -485,6 +499,8 @@
 		33B614ED190E5006007EE82B /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */,
+				33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */,
 				3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */,
 				3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */,
 				33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */,
@@ -495,10 +511,10 @@
 				33B614F5190E5006007EE82B /* ccShader_PositionTexture.vert */,
 				33B614F6190E5006007EE82B /* ccShader_PositionTextureColor.frag */,
 				33B614F7190E5006007EE82B /* ccShader_PositionTextureColor.vert */,
-				33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */,
 				33B614F3190E5006007EE82B /* ccShader_PositionColorLight.vert */,
-				33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */,
+				33B614F2190E5006007EE82B /* ccShader_PositionColorLight.frag */,
 				33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */,
+				33B614F8190E5006007EE82B /* ccShader_PositionTextureLight.frag */,
 				33B614FA190E5006007EE82B /* custom */,
 			);
 			path = shaders;
@@ -516,6 +532,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33F512241934450800F15D29 /* BlendTest */,
 				33B6152E190E54C3007EE82B /* GameLayer.h */,
 				33B6152F190E54C3007EE82B /* GameLayer.mm */,
 				33B61530190E54C3007EE82B /* HLAppDelegate.h */,
@@ -526,8 +543,6 @@
 				33B61535190E54C3007EE82B /* HLViewController.mm */,
 				33B61536190E54C3007EE82B /* ShaderTestLayer.h */,
 				33B61537190E54C3007EE82B /* ShaderTestLayer.m */,
-				33D76B05191765FE00549358 /* BlendLayer.h */,
-				33D76B06191765FF00549358 /* BlendLayer.mm */,
 				33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */,
 				33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */,
 			);
@@ -794,6 +809,24 @@
 			path = texture;
 			sourceTree = "<group>";
 		};
+		33F512241934450800F15D29 /* BlendTest */ = {
+			isa = PBXGroup;
+			children = (
+				33F512251934450800F15D29 /* BlendLayer.h */,
+				33F512261934450800F15D29 /* BlendLayer.mm */,
+			);
+			path = BlendTest;
+			sourceTree = "<group>";
+		};
+		33F5122919345D5800F15D29 /* BlendTest */ = {
+			isa = PBXGroup;
+			children = (
+				33F5122A19345D5800F15D29 /* blend_src.png */,
+				33F5122B19345D5800F15D29 /* blend_dst.png */,
+			);
+			path = BlendTest;
+			sourceTree = "<group>";
+		};
 		33F9063E18FCD7B800E2F3F7 /* wireframe */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +920,8 @@
 				33B614B3190E4D71007EE82B /* InfoPlist.strings in Resources */,
 				33B614B9190E4D71007EE82B /* Credits.rtf in Resources */,
 				33B614BF190E4D71007EE82B /* MainMenu.xib in Resources */,
+				33F5122D19345D5800F15D29 /* blend_src.png in Resources */,
+				33F5122F19345D5800F15D29 /* blend_dst.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +978,8 @@
 				33D76B04191763F400549358 /* Circle.png in Resources */,
 				33D76B09191785D700549358 /* Grille.png in Resources */,
 				33AB5AE41921D63D00919883 /* Marble.png in Resources */,
+				33F5122C19345D5800F15D29 /* blend_src.png in Resources */,
+				33F5122E19345D5800F15D29 /* blend_dst.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +994,9 @@
 				33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */,
 				33B616F9190E7418007EE82B /* HLGLView.m in Sources */,
 				33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */,
+				33F512201934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */,
+				33F512221934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */,
+				33F512281934450800F15D29 /* BlendLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,7 +1053,6 @@
 				33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */,
 				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
 				33D76AFF191729F400549358 /* HLScheduler.mm in Sources */,
-				33D76B07191765FF00549358 /* BlendLayer.mm in Sources */,
 				33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */,
 				3307315B191F507E001A7487 /* HLClippingNode.m in Sources */,
 				3307315C191F507E001A7487 /* HLDrawNode.m in Sources */,
@@ -1026,6 +1065,9 @@
 				33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */,
 				33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */,
 				33E98E18192C8759005029E8 /* HLActionManager.m in Sources */,
+				33F5121F1934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */,
+				33F512211934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */,
+				33F512271934450800F15D29 /* BlendLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

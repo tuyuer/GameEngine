@@ -93,6 +93,8 @@ enum {
         [bottle setRotation3D:hl3v(180, 180, 0)];
         [clipper addChild:bottle];
         
+        glBlendColor(0.8, 0.8, 0.8, 0.2);
+        bottle.blendFunc = (ccBlendFunc){GL_ONE_MINUS_CONSTANT_ALPHA ,GL_DST_ALPHA};
         
         bottle2 = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
         [[bottle2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
