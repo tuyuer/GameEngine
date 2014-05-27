@@ -11,6 +11,7 @@
 #define kCCShader_PositionTextureColor			@"ShaderPositionTextureColor"
 #define kCCShader_PositionTexture               @"ShaderPositionTexture"
 #define kCCShader_PositionTextureLight          @"ShaderPositionTextureLight"
+#define kCCShader_GlobalLighting                @"ShaderGlobalLighting"
 #define kCCShader_PositionColor                 @"ShaderPositionColor"
 #define kCCShader_PositionColorLengthTexture    @"ShaderPositionColorLengthTexture"
 #define kCCShader_Position_uColor               @"ShaderPosition_uColor"

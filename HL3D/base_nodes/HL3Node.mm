@@ -21,7 +21,6 @@
 @synthesize light3D = _light3D;
 
 - (void)dealloc{
-    [_light3D release];
     [super dealloc];
 }
 
@@ -31,8 +30,6 @@
         _rotation3D = hl3v(0, 0, 0);
         _scale3D = hl3v(1.0, 1.0, 1.0);
         _camera3D = nil;
-        _light3D = [HL3Light light];
-        [_light3D retain];
         _transform3D = kHL3Matrix4x4Identity;
     }
     return self;
