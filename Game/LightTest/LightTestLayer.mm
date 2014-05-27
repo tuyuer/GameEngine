@@ -16,6 +16,7 @@
 #import "HLMoveBy.h"
 #import "HL3Light.h"
 #import "HL3Node.h"
+#import "HLMoveTo.h"
 
 @implementation LightTestLayer
 
@@ -102,8 +103,8 @@ enum {
         HLSprite * sprite1 = [HLSprite spriteWithFile:@"icon.png"];
         [self addChild:sprite1];
         
-        HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(320, 480)];
-        [sprite1 runAction:moveBy];
+        HLMoveTo * moveTo = [HLMoveTo actionWithDuration:10 position:CGPointMake(160, 240)];
+        [sprite1 runAction:moveTo];
         
     }
     return self;

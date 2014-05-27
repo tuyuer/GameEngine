@@ -13,6 +13,7 @@
 		33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		3331C20F1934ABE80004C9C3 /* LightTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */; };
 		3331C2101934ABE80004C9C3 /* LightTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */; };
+		3331C2131934BC590004C9C3 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3331C2121934BC580004C9C3 /* HLMoveTo.m */; };
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
@@ -127,10 +128,6 @@
 		33E9F07418E036A300A34046 /* HLTextureQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F07118E036A300A34046 /* HLTextureQuad.mm */; };
 		33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */; };
 		33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45ACA18F6943E00FB5C8D /* HLCamera.m */; };
-		33F5121F1934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */; };
-		33F512201934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */; };
-		33F512211934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */; };
-		33F512221934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */ = {isa = PBXBuildFile; fileRef = 33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */; };
 		33F512271934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
 		33F512281934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
 		33F5122C19345D5800F15D29 /* blend_src.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122A19345D5800F15D29 /* blend_src.png */; };
@@ -154,6 +151,8 @@
 		3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLengthTexture.vert; sourceTree = "<group>"; };
 		3331C20D1934ABE80004C9C3 /* LightTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightTestLayer.h; sourceTree = "<group>"; };
 		3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LightTestLayer.mm; sourceTree = "<group>"; };
+		3331C2111934BC580004C9C3 /* HLMoveTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveTo.h; sourceTree = "<group>"; };
+		3331C2121934BC580004C9C3 /* HLMoveTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveTo.m; sourceTree = "<group>"; };
 		338A85D518FBB18900E04921 /* HL3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Sprite.h; sourceTree = "<group>"; };
 		338A85D618FBB18900E04921 /* HL3Sprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Sprite.mm; sourceTree = "<group>"; };
 		338CF6121907775E0036C4DC /* HLMD2Animation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2Animation.mm; sourceTree = "<group>"; };
@@ -333,8 +332,6 @@
 		33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDrawingPrimitives.m; sourceTree = "<group>"; };
 		33F45AC918F6943D00FB5C8D /* HLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCamera.h; sourceTree = "<group>"; };
 		33F45ACA18F6943E00FB5C8D /* HLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCamera.m; sourceTree = "<group>"; };
-		33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_GlobalLighting.frag; sourceTree = "<group>"; };
-		33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_GlobalLighting.vert; sourceTree = "<group>"; };
 		33F512251934450800F15D29 /* BlendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendLayer.h; sourceTree = "<group>"; };
 		33F512261934450800F15D29 /* BlendLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlendLayer.mm; sourceTree = "<group>"; };
 		33F5122A19345D5800F15D29 /* blend_src.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blend_src.png; sourceTree = "<group>"; };
@@ -512,8 +509,6 @@
 		33B614ED190E5006007EE82B /* shaders */ = {
 			isa = PBXGroup;
 			children = (
-				33F5121E1934406E00F15D29 /* ccShader_GlobalLighting.vert */,
-				33F5121D1934406E00F15D29 /* ccShader_GlobalLighting.frag */,
 				3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */,
 				3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */,
 				33B614EE190E5006007EE82B /* ccShader_Position_uColor.frag */,
@@ -645,6 +640,8 @@
 				33E98E11192C7B38005029E8 /* HLActionInterval.m */,
 				33E98E13192C7FC4005029E8 /* HLMoveBy.h */,
 				33E98E14192C7FC4005029E8 /* HLMoveBy.m */,
+				3331C2111934BC580004C9C3 /* HLMoveTo.h */,
+				3331C2121934BC580004C9C3 /* HLMoveTo.m */,
 				33E98E16192C8759005029E8 /* HLActionManager.h */,
 				33E98E17192C8759005029E8 /* HLActionManager.m */,
 			);
@@ -1008,8 +1005,6 @@
 				33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */,
 				33B616F9190E7418007EE82B /* HLGLView.m in Sources */,
 				33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */,
-				33F512201934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */,
-				33F512221934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */,
 				33F512281934450800F15D29 /* BlendLayer.mm in Sources */,
 				3331C2101934ABE80004C9C3 /* LightTestLayer.mm in Sources */,
 			);
@@ -1080,10 +1075,9 @@
 				33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */,
 				33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */,
 				33E98E18192C8759005029E8 /* HLActionManager.m in Sources */,
-				33F5121F1934406E00F15D29 /* ccShader_GlobalLighting.frag in Sources */,
-				33F512211934406E00F15D29 /* ccShader_GlobalLighting.vert in Sources */,
 				33F512271934450800F15D29 /* BlendLayer.mm in Sources */,
 				3331C20F1934ABE80004C9C3 /* LightTestLayer.mm in Sources */,
+				3331C2131934BC590004C9C3 /* HLMoveTo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
