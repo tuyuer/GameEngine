@@ -17,6 +17,7 @@
 #import "HL3Light.h"
 #import "HL3Node.h"
 #import "HLMoveTo.h"
+#import "HLSequence.h"
 
 @implementation LightTestLayer
 
@@ -104,7 +105,9 @@ enum {
         [self addChild:sprite1];
         
         HLMoveTo * moveTo = [HLMoveTo actionWithDuration:10 position:CGPointMake(160, 240)];
-        [sprite1 runAction:moveTo];
+        HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(-160, -240)];
+        HLSequence * sequene = [HLSequence actionOne:moveTo two:moveBy];
+        [sprite1 runAction:sequene];
         
     }
     return self;
