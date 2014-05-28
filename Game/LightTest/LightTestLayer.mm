@@ -18,6 +18,8 @@
 #import "HL3Node.h"
 #import "HLMoveTo.h"
 #import "HLSequence.h"
+#import "HLScaleTo.h"
+#import "HLScaleBy.h"
 
 @implementation LightTestLayer
 
@@ -107,7 +109,13 @@ enum {
         HLMoveTo * moveTo = [HLMoveTo actionWithDuration:10 position:CGPointMake(160, 240)];
         HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(-160, -240)];
         HLSequence * sequene = [HLSequence actionOne:moveTo two:moveBy];
-        [sprite1 runAction:sequene];
+//        [sprite1 runAction:sequene];
+        
+        HLScaleTo * scaleTo = [HLScaleTo actionWithDuration:4.0 scale:4.0];
+//        [sprite1 runAction:scaleTo];
+        
+        HLScaleBy * scaleBy = [HLScaleBy actionWithDuration:4.0 scale:1.0];
+        [sprite1 runAction:scaleBy];
         
     }
     return self;

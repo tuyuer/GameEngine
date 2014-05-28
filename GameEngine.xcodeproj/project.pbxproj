@@ -13,7 +13,6 @@
 		33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		3331C20F1934ABE80004C9C3 /* LightTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */; };
 		3331C2101934ABE80004C9C3 /* LightTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */; };
-		3331C2131934BC590004C9C3 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3331C2121934BC580004C9C3 /* HLMoveTo.m */; };
 		3331C2171934BF210004C9C3 /* HLGrabber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C2161934BF210004C9C3 /* HLGrabber.mm */; };
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
@@ -82,7 +81,12 @@
 		33B6170A190E7EAA007EE82B /* ccShader_PositionTextureLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */; };
 		33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FB190E5006007EE82B /* ccShaderWaves.frag */; };
 		33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FC190E5006007EE82B /* ccShaderWaves.vert */; };
-		33C4010A193578BC008B5111 /* HLSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40109193578BC008B5111 /* HLSequence.m */; };
+		33C40115193580AA008B5111 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4010E193580AA008B5111 /* HLActionInterval.m */; };
+		33C40116193580AA008B5111 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40110193580AA008B5111 /* HLMoveBy.m */; };
+		33C40117193580AA008B5111 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40112193580AA008B5111 /* HLMoveTo.m */; };
+		33C40118193580AA008B5111 /* HLSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40114193580AA008B5111 /* HLSequence.m */; };
+		33C4011C19358126008B5111 /* HLScaleBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4011B19358126008B5111 /* HLScaleBy.m */; };
+		33C4011F193581C2008B5111 /* HLScaleTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4011E193581C2008B5111 /* HLScaleTo.m */; };
 		33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD318F795D50061D784 /* HL3Node.mm */; };
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
@@ -101,8 +105,6 @@
 		33E8D4A518E1AFF200E1D735 /* HLGLStateCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D4A418E1AFF100E1D735 /* HLGLStateCache.m */; };
 		33E98E0C192C726E005029E8 /* HLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E0B192C726E005029E8 /* HLAction.m */; };
 		33E98E0F192C783F005029E8 /* HLFiniteTimeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */; };
-		33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E11192C7B38005029E8 /* HLActionInterval.m */; };
-		33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E14192C7FC4005029E8 /* HLMoveBy.m */; };
 		33E98E18192C8759005029E8 /* HLActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E98E17192C8759005029E8 /* HLActionManager.m */; };
 		33E9EFF518E0156C00A34046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF418E0156C00A34046 /* UIKit.framework */; };
 		33E9EFF718E0156C00A34046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9EFF618E0156C00A34046 /* Foundation.framework */; };
@@ -153,8 +155,6 @@
 		3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLengthTexture.vert; sourceTree = "<group>"; };
 		3331C20D1934ABE80004C9C3 /* LightTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightTestLayer.h; sourceTree = "<group>"; };
 		3331C20E1934ABE80004C9C3 /* LightTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LightTestLayer.mm; sourceTree = "<group>"; };
-		3331C2111934BC580004C9C3 /* HLMoveTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveTo.h; sourceTree = "<group>"; };
-		3331C2121934BC580004C9C3 /* HLMoveTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveTo.m; sourceTree = "<group>"; };
 		3331C2151934BF210004C9C3 /* HLGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGrabber.h; sourceTree = "<group>"; };
 		3331C2161934BF210004C9C3 /* HLGrabber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGrabber.mm; sourceTree = "<group>"; };
 		338A85D518FBB18900E04921 /* HL3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Sprite.h; sourceTree = "<group>"; };
@@ -246,8 +246,18 @@
 		33B616F7190E7418007EE82B /* HLGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGLView.m; sourceTree = "<group>"; };
 		33B616FA190E747A007EE82B /* HLDirectorMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDirectorMac.h; sourceTree = "<group>"; };
 		33B616FB190E747A007EE82B /* HLDirectorMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDirectorMac.m; sourceTree = "<group>"; };
-		33C40108193578BC008B5111 /* HLSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSequence.h; sourceTree = "<group>"; };
-		33C40109193578BC008B5111 /* HLSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSequence.m; sourceTree = "<group>"; };
+		33C4010D193580AA008B5111 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
+		33C4010E193580AA008B5111 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
+		33C4010F193580AA008B5111 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
+		33C40110193580AA008B5111 /* HLMoveBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveBy.m; sourceTree = "<group>"; };
+		33C40111193580AA008B5111 /* HLMoveTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveTo.h; sourceTree = "<group>"; };
+		33C40112193580AA008B5111 /* HLMoveTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveTo.m; sourceTree = "<group>"; };
+		33C40113193580AA008B5111 /* HLSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSequence.h; sourceTree = "<group>"; };
+		33C40114193580AA008B5111 /* HLSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSequence.m; sourceTree = "<group>"; };
+		33C4011A19358126008B5111 /* HLScaleBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScaleBy.h; sourceTree = "<group>"; };
+		33C4011B19358126008B5111 /* HLScaleBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLScaleBy.m; sourceTree = "<group>"; };
+		33C4011D193581C2008B5111 /* HLScaleTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScaleTo.h; sourceTree = "<group>"; };
+		33C4011E193581C2008B5111 /* HLScaleTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLScaleTo.m; sourceTree = "<group>"; };
 		33C7EAD218F795D50061D784 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
 		33C7EAD318F795D50061D784 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
 		33C7EADF18F7DE1F0061D784 /* HL3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Foundation.h; sourceTree = "<group>"; };
@@ -285,10 +295,6 @@
 		33E98E0B192C726E005029E8 /* HLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAction.m; sourceTree = "<group>"; };
 		33E98E0D192C783E005029E8 /* HLFiniteTimeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFiniteTimeAction.h; sourceTree = "<group>"; };
 		33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFiniteTimeAction.m; sourceTree = "<group>"; };
-		33E98E10192C7B38005029E8 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
-		33E98E11192C7B38005029E8 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
-		33E98E13192C7FC4005029E8 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
-		33E98E14192C7FC4005029E8 /* HLMoveBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoveBy.m; sourceTree = "<group>"; };
 		33E98E16192C8759005029E8 /* HLActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionManager.h; sourceTree = "<group>"; };
 		33E98E17192C8759005029E8 /* HLActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionManager.m; sourceTree = "<group>"; };
 		33E9EFF118E0156C00A34046 /* GameEngine_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -586,6 +592,32 @@
 			path = MacOS;
 			sourceTree = "<group>";
 		};
+		33C4010C193580AA008B5111 /* actionInterval */ = {
+			isa = PBXGroup;
+			children = (
+				33C4010D193580AA008B5111 /* HLActionInterval.h */,
+				33C4010E193580AA008B5111 /* HLActionInterval.m */,
+				33C4010F193580AA008B5111 /* HLMoveBy.h */,
+				33C40110193580AA008B5111 /* HLMoveBy.m */,
+				33C40111193580AA008B5111 /* HLMoveTo.h */,
+				33C40112193580AA008B5111 /* HLMoveTo.m */,
+				33C40113193580AA008B5111 /* HLSequence.h */,
+				33C40114193580AA008B5111 /* HLSequence.m */,
+				33C4011A19358126008B5111 /* HLScaleBy.h */,
+				33C4011B19358126008B5111 /* HLScaleBy.m */,
+				33C4011D193581C2008B5111 /* HLScaleTo.h */,
+				33C4011E193581C2008B5111 /* HLScaleTo.m */,
+			);
+			path = actionInterval;
+			sourceTree = "<group>";
+		};
+		33C40119193580C7008B5111 /* actionInsant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = actionInsant;
+			sourceTree = "<group>";
+		};
 		33C7EADB18F7DB620061D784 /* 3dMath */ = {
 			isa = PBXGroup;
 			children = (
@@ -647,20 +679,14 @@
 		33E98E09192C7209005029E8 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				33C40119193580C7008B5111 /* actionInsant */,
+				33C4010C193580AA008B5111 /* actionInterval */,
 				33E98E0A192C726E005029E8 /* HLAction.h */,
 				33E98E0B192C726E005029E8 /* HLAction.m */,
-				33E98E0D192C783E005029E8 /* HLFiniteTimeAction.h */,
-				33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */,
-				33E98E10192C7B38005029E8 /* HLActionInterval.h */,
-				33E98E11192C7B38005029E8 /* HLActionInterval.m */,
-				33E98E13192C7FC4005029E8 /* HLMoveBy.h */,
-				33E98E14192C7FC4005029E8 /* HLMoveBy.m */,
-				3331C2111934BC580004C9C3 /* HLMoveTo.h */,
-				3331C2121934BC580004C9C3 /* HLMoveTo.m */,
 				33E98E16192C8759005029E8 /* HLActionManager.h */,
 				33E98E17192C8759005029E8 /* HLActionManager.m */,
-				33C40108193578BC008B5111 /* HLSequence.h */,
-				33C40109193578BC008B5111 /* HLSequence.m */,
+				33E98E0D192C783E005029E8 /* HLFiniteTimeAction.h */,
+				33E98E0E192C783E005029E8 /* HLFiniteTimeAction.m */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -1090,14 +1116,16 @@
 				33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */,
 				33E98E0C192C726E005029E8 /* HLAction.m in Sources */,
 				33E98E0F192C783F005029E8 /* HLFiniteTimeAction.m in Sources */,
-				33E98E12192C7B38005029E8 /* HLActionInterval.m in Sources */,
-				33E98E15192C7FC4005029E8 /* HLMoveBy.m in Sources */,
 				33E98E18192C8759005029E8 /* HLActionManager.m in Sources */,
 				33F512271934450800F15D29 /* BlendLayer.mm in Sources */,
 				3331C20F1934ABE80004C9C3 /* LightTestLayer.mm in Sources */,
-				3331C2131934BC590004C9C3 /* HLMoveTo.m in Sources */,
 				3331C2171934BF210004C9C3 /* HLGrabber.mm in Sources */,
-				33C4010A193578BC008B5111 /* HLSequence.m in Sources */,
+				33C40115193580AA008B5111 /* HLActionInterval.m in Sources */,
+				33C40116193580AA008B5111 /* HLMoveBy.m in Sources */,
+				33C40117193580AA008B5111 /* HLMoveTo.m in Sources */,
+				33C40118193580AA008B5111 /* HLSequence.m in Sources */,
+				33C4011C19358126008B5111 /* HLScaleBy.m in Sources */,
+				33C4011F193581C2008B5111 /* HLScaleTo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
