@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
+#import "HLTexture.h"
 
 @interface HLGrabber : NSObject{
     GLuint      _FBO;
     GLint       _oldFBO;
     GLfloat     _oldClearColor[4];
 }
+
+-(void)grab:(HLTexture*)texture;
+-(void)beforeRender:(HLTexture*)texture;
+-(void)afterRender:(HLTexture*)texture;
 
 @end

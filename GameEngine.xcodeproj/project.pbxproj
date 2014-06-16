@@ -17,11 +17,14 @@
 		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
 		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
+		338E02541941EBA60005789C /* FBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338E02531941EBA60005789C /* FBOTestLayer.mm */; };
+		338E02571941F8FB0005789C /* HLGridBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338E02561941F8FB0005789C /* HLGridBase.mm */; };
 		3393A6041914A5D000602BDA /* Tarsier.png in Resources */ = {isa = PBXBuildFile; fileRef = 3393A6031914A5D000602BDA /* Tarsier.png */; };
 		3398E0F61920683C00762FA9 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
 		3398E0F71920683C00762FA9 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
+		33A517CF194ECEA000DD6A11 /* HLWave3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A517CE194ECEA000DD6A11 /* HLWave3D.m */; };
 		33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AB5AE11921D21800919883 /* HLWireframeCone.mm */; };
 		33AB5AE41921D63D00919883 /* Marble.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AB5AE31921D63D00919883 /* Marble.png */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
@@ -87,6 +90,10 @@
 		33C40118193580AA008B5111 /* HLSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40114193580AA008B5111 /* HLSequence.m */; };
 		33C4011C19358126008B5111 /* HLScaleBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4011B19358126008B5111 /* HLScaleBy.m */; };
 		33C4011F193581C2008B5111 /* HLScaleTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4011E193581C2008B5111 /* HLScaleTo.m */; };
+		33C401261935938C008B5111 /* HLProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C401251935938C008B5111 /* HLProgressTimer.m */; };
+		33C5465D1944010400CC95FC /* HLGridAction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C5465C1944010400CC95FC /* HLGridAction.mm */; };
+		33C5466619440AC900CC95FC /* HLGrid3DAction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C5466519440AC900CC95FC /* HLGrid3DAction.mm */; };
+		33C5466919440EB700CC95FC /* HLGrid3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5466819440EB700CC95FC /* HLGrid3D.m */; };
 		33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD318F795D50061D784 /* HL3Node.mm */; };
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
@@ -163,12 +170,18 @@
 		338CF6131907775E0036C4DC /* HLMD2Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2Animation.h; sourceTree = "<group>"; };
 		338CF6181907B5510036C4DC /* HL3Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Light.h; sourceTree = "<group>"; };
 		338CF6191907B5510036C4DC /* HL3Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Light.mm; sourceTree = "<group>"; };
+		338E02521941EBA60005789C /* FBOTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOTestLayer.h; sourceTree = "<group>"; };
+		338E02531941EBA60005789C /* FBOTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBOTestLayer.mm; sourceTree = "<group>"; };
+		338E02551941F8FB0005789C /* HLGridBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGridBase.h; sourceTree = "<group>"; };
+		338E02561941F8FB0005789C /* HLGridBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGridBase.mm; sourceTree = "<group>"; };
 		3391A2AB18EE827500783D2B /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
 		3393A6031914A5D000602BDA /* Tarsier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tarsier.png; sourceTree = "<group>"; };
 		339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HL3Matrix4x4.cpp; sourceTree = "<group>"; };
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
 		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
 		339AC3FF18F951FB00864A39 /* HL3Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Camera.m; sourceTree = "<group>"; };
+		33A517CD194ECEA000DD6A11 /* HLWave3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWave3D.h; sourceTree = "<group>"; };
+		33A517CE194ECEA000DD6A11 /* HLWave3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWave3D.m; sourceTree = "<group>"; };
 		33AB5AE01921D21800919883 /* HLWireframeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeCone.h; sourceTree = "<group>"; };
 		33AB5AE11921D21800919883 /* HLWireframeCone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeCone.mm; sourceTree = "<group>"; };
 		33AB5AE31921D63D00919883 /* Marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble.png; sourceTree = "<group>"; };
@@ -258,6 +271,14 @@
 		33C4011B19358126008B5111 /* HLScaleBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLScaleBy.m; sourceTree = "<group>"; };
 		33C4011D193581C2008B5111 /* HLScaleTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScaleTo.h; sourceTree = "<group>"; };
 		33C4011E193581C2008B5111 /* HLScaleTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLScaleTo.m; sourceTree = "<group>"; };
+		33C401241935938C008B5111 /* HLProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLProgressTimer.h; sourceTree = "<group>"; };
+		33C401251935938C008B5111 /* HLProgressTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLProgressTimer.m; sourceTree = "<group>"; };
+		33C5465B1944010400CC95FC /* HLGridAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGridAction.h; sourceTree = "<group>"; };
+		33C5465C1944010400CC95FC /* HLGridAction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGridAction.mm; sourceTree = "<group>"; };
+		33C5466419440AC900CC95FC /* HLGrid3DAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGrid3DAction.h; sourceTree = "<group>"; };
+		33C5466519440AC900CC95FC /* HLGrid3DAction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGrid3DAction.mm; sourceTree = "<group>"; };
+		33C5466719440EB700CC95FC /* HLGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGrid3D.h; sourceTree = "<group>"; };
+		33C5466819440EB700CC95FC /* HLGrid3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGrid3D.m; sourceTree = "<group>"; };
 		33C7EAD218F795D50061D784 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
 		33C7EAD318F795D50061D784 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
 		33C7EADF18F7DE1F0061D784 /* HL3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Foundation.h; sourceTree = "<group>"; };
@@ -414,8 +435,21 @@
 			children = (
 				3331C2151934BF210004C9C3 /* HLGrabber.h */,
 				3331C2161934BF210004C9C3 /* HLGrabber.mm */,
+				338E02551941F8FB0005789C /* HLGridBase.h */,
+				338E02561941F8FB0005789C /* HLGridBase.mm */,
+				33C5466719440EB700CC95FC /* HLGrid3D.h */,
+				33C5466819440EB700CC95FC /* HLGrid3D.m */,
 			);
 			path = grid;
+			sourceTree = "<group>";
+		};
+		338E02511941EB510005789C /* FBOTest */ = {
+			isa = PBXGroup;
+			children = (
+				338E02521941EBA60005789C /* FBOTestLayer.h */,
+				338E02531941EBA60005789C /* FBOTestLayer.mm */,
+			);
+			path = FBOTest;
 			sourceTree = "<group>";
 		};
 		33B2517718FE73400067533C /* MD2 */ = {
@@ -561,6 +595,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				338E02511941EB510005789C /* FBOTest */,
 				3331C20C1934AB7A0004C9C3 /* LightTest */,
 				33F512241934450800F15D29 /* BlendTest */,
 				33B6152E190E54C3007EE82B /* GameLayer.h */,
@@ -616,6 +651,35 @@
 			children = (
 			);
 			path = actionInsant;
+			sourceTree = "<group>";
+		};
+		33C4012019358A11008B5111 /* actionGrid */ = {
+			isa = PBXGroup;
+			children = (
+				33C5465B1944010400CC95FC /* HLGridAction.h */,
+				33C5465C1944010400CC95FC /* HLGridAction.mm */,
+				33C5466419440AC900CC95FC /* HLGrid3DAction.h */,
+				33C5466519440AC900CC95FC /* HLGrid3DAction.mm */,
+				33A517CD194ECEA000DD6A11 /* HLWave3D.h */,
+				33A517CE194ECEA000DD6A11 /* HLWave3D.m */,
+			);
+			path = actionGrid;
+			sourceTree = "<group>";
+		};
+		33C4012119358A11008B5111 /* actionGrid3D */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = actionGrid3D;
+			sourceTree = "<group>";
+		};
+		33C4012319359357008B5111 /* actionProgress */ = {
+			isa = PBXGroup;
+			children = (
+				33C401241935938C008B5111 /* HLProgressTimer.h */,
+				33C401251935938C008B5111 /* HLProgressTimer.m */,
+			);
+			path = actionProgress;
 			sourceTree = "<group>";
 		};
 		33C7EADB18F7DB620061D784 /* 3dMath */ = {
@@ -679,6 +743,9 @@
 		33E98E09192C7209005029E8 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				33C4012319359357008B5111 /* actionProgress */,
+				33C4012019358A11008B5111 /* actionGrid */,
+				33C4012119358A11008B5111 /* actionGrid3D */,
 				33C40119193580C7008B5111 /* actionInsant */,
 				33C4010C193580AA008B5111 /* actionInterval */,
 				33E98E0A192C726E005029E8 /* HLAction.h */,
@@ -1126,6 +1193,13 @@
 				33C40118193580AA008B5111 /* HLSequence.m in Sources */,
 				33C4011C19358126008B5111 /* HLScaleBy.m in Sources */,
 				33C4011F193581C2008B5111 /* HLScaleTo.m in Sources */,
+				33C401261935938C008B5111 /* HLProgressTimer.m in Sources */,
+				338E02541941EBA60005789C /* FBOTestLayer.mm in Sources */,
+				338E02571941F8FB0005789C /* HLGridBase.mm in Sources */,
+				33C5465D1944010400CC95FC /* HLGridAction.mm in Sources */,
+				33C5466619440AC900CC95FC /* HLGrid3DAction.mm in Sources */,
+				33C5466919440EB700CC95FC /* HLGrid3D.m in Sources */,
+				33A517CF194ECEA000DD6A11 /* HLWave3D.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

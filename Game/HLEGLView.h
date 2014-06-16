@@ -31,6 +31,7 @@
     GLint backingHeight;
 }
 @property (nonatomic,readonly) EAGLContext * esContext;
+@property (nonatomic,readonly) NSString * pixelformat;
 
 - (void)swapBuffers;
 

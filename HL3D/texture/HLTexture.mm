@@ -7,10 +7,15 @@
 //
 
 #import "HLTexture.h"
+#import "TransformUtils.h"
+#import "HLShaderCache.h"
 
 @implementation HLTexture
 @synthesize contentSize = _tContentSize;
 @synthesize Name = _uName;
+@synthesize shaderProgram = _shaderProgram;
+@synthesize width = _width;
+@synthesize height = _height;
 
 - (id) initWithImage:(UIImage *)uiImage{
     if (self = [super init]) {
@@ -53,9 +58,74 @@
         glEnable(GL_BLEND);
         
         _uName = textureName;
+        _format = kHLTexture2DPixelFormat_Default;
         return self;
     }
     return nil;
 }
 
+
+- (id)initWithData:(const void*)data pixelFormat:(HLTexture2DPixelFormat)pixelFormat
+         pixelWide:(NSUInteger)width pixelHigh:(NSUInteger)high contentSize:(CGSize)size{
+
+    if (self = [super init]) {
+        // XXX: 32 bits or POT textures uses UNPACK of 4 (is this correct ??)
+        if (pixelFormat == kHLTexture2DPixelFormat_RGBA8888 ||
+            pixelFormat == (hlNextPOT(width)==width && hlNextPOT(high)==high)) {
+            glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+        }else{
+            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+        }
+        
+        glGenTextures(1, &_uName);
+        glBindTexture(GL_TEXTURE_2D, _uName);
+        
+        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
+        
+        // Specify OpenGL texture image
+        switch (pixelFormat) {
+            case kHLTexture2DPixelFormat_RGBA8888:
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei) width, (GLsizei) high, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+                break;
+                
+            default:
+                break;
+        }
+        
+        _size = size;
+        _tContentSize = size;
+        _width = width;
+        _height = high;
+        _format = pixelFormat;
+        
+        _hasPremultipliedAlpha = NO;
+		_hasMipmaps = NO;
+        
+        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionTexture];
+    }
+    return self;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

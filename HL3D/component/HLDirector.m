@@ -72,6 +72,10 @@ static HLDirector * s_sharedDirector = nil;
 	}
 }
 
+- (HLEGLView *)view{
+    return _openglView;
+}
+
 -(void) setViewport{
 	CGSize size = _winSizeInPixels;
 	glViewport(0, 0, size.width, size.height );

@@ -66,6 +66,7 @@ typedef enum {
 + (HLDirector *)sharedDirector;
 - (CGSize)winSize;
 - (void)setOpenGLView:(HLEGLView *)view;
+- (HLEGLView *)view;
 - (void)startAnimation;
 - (void)runWithScene:(HLScene*)scene;
 -(float)getZEye;

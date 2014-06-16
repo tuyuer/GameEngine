@@ -16,7 +16,7 @@
 	_deltaY = _startScaleY * (_startScaleY + _endScaleY) - _startScaleY;
 }
 
--(HLActionInterval*) reverse
+-(HLActionInterval*)reverse
 {
 	return [[self class] actionWithDuration:_duration scaleX:1/_endScaleX scaleY:1/_endScaleY];
 }

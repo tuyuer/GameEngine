@@ -47,6 +47,17 @@ void GLToCGAffine(const GLfloat *m, CGAffineTransform *t)
 	t->b = m[1]; t->d = m[5]; t->ty = m[13];
 }
 
+unsigned long hlNextPOT(unsigned long x)
+{
+    x = x - 1;
+    x = x | (x >> 1);
+    x = x | (x >> 2);
+    x = x | (x >> 4);
+    x = x | (x >> 8);
+    x = x | (x >>16);
+    return x + 1;
+}
+
 
 
 

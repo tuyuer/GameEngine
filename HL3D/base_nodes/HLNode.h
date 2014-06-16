@@ -13,6 +13,8 @@
 #import "HLTypes.h"
 #import "HLActionManager.h"
 
+@class HLGridBase;
+
 @interface HLNode : NSObject{
     float _rotationX,_rotationY;
     
@@ -38,6 +40,9 @@
     
     //a camera
     HLCamera * _camera;
+    
+    // a grid
+    HLGridBase * _grid;
     
     // z-order value
     NSInteger _zOrder;
@@ -85,6 +90,7 @@
 @property (nonatomic,assign) BOOL ignoreAnchorPointForPosition;
 @property (nonatomic,readwrite,retain) HLScheduler *scheduler;
 @property (nonatomic,assign) ccBlendFunc blendFunc;
+@property (nonatomic,readonly) CGPoint anchorPointInPoints;
 
 /** The rotation (angle) of the node in degrees. 0 is the default rotation angle. Positive values rotate node CW. */
 @property (nonatomic,assign) float rotation;
@@ -118,6 +124,8 @@
 /** A CCCamera object that lets you move the node using a gluLookAt */
 @property(nonatomic,readonly) HLCamera * camera;
 
+//
+@property(nonatomic,readwrite,retain) HLGridBase * grid;
  
 + (id)node;
 - (void)addChild:(HLNode*)child;

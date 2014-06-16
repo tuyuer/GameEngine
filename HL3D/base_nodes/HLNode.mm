@@ -13,6 +13,7 @@
 #import "HLSprite.h"
 #import "ccMacros.h"
 #import "HLDirector.h"
+#import "HLGridBase.h"
 
 @implementation HLNode
 
@@ -22,6 +23,7 @@ static NSUInteger globalOrderOfArrival = 1;
 @synthesize contentSize = _contentSize;
 @synthesize shaderProgram = _shaderProgram;
 @synthesize anchorPoint = _anchorPoint;
+@synthesize anchorPointInPoints = _anchorPointInPoints;
 @synthesize position = _position;
 @synthesize parent = _parent;
 @synthesize tag = _tag;
@@ -33,6 +35,7 @@ static NSUInteger globalOrderOfArrival = 1;
 @synthesize skewX = _skewX, skewY = _skewY;
 @synthesize scheduler = _scheduler;
 @synthesize blendFunc = _blendFunc;
+@synthesize grid = _grid;
 
 + (id)node{
     return [[[self alloc] init] autorelease];
@@ -42,6 +45,7 @@ static NSUInteger globalOrderOfArrival = 1;
     [m_pChildren release];
     [_camera release];
     [_scheduler release];
+    [_grid release];
     [super dealloc];
 }
 
@@ -72,7 +76,7 @@ static NSUInteger globalOrderOfArrival = 1;
         
         m_pChildren = [[NSMutableArray alloc] initWithCapacity:100];
         _camera = nil;
-        
+        _grid = nil;
         
         _blendFunc.src = GL_ONE;
 		_blendFunc.dst = GL_ONE_MINUS_SRC_ALPHA;
@@ -198,6 +202,10 @@ static NSUInteger globalOrderOfArrival = 1;
     
     kmGLPushMatrix();
     
+    if (_grid && _grid.active) {
+        [_grid  beforeDraw];
+    }
+    
     [self transform];
     
     if ([m_pChildren count]> 0) {
@@ -227,6 +235,10 @@ static NSUInteger globalOrderOfArrival = 1;
     }
     
     _orderOfArrival = 0;
+    
+    if (_grid && _grid.active) {
+        [_grid afterDraw:self];
+    }
     
     kmGLPopMatrix();
 }

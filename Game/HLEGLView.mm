@@ -13,6 +13,7 @@
 
 @implementation HLEGLView
 @synthesize esContext = _esContext;
+@synthesize pixelformat = _pixelformat;
 
 + (Class) layerClass
 {

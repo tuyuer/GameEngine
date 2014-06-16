@@ -28,3 +28,5 @@
 
 void CGAffineToGL(const CGAffineTransform *t, GLfloat *m);
 void GLToCGAffine(const GLfloat *m, CGAffineTransform *t);
+unsigned long hlNextPOT(unsigned long x);
+
