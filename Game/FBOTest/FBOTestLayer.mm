@@ -58,19 +58,19 @@ enum {
 - (id)init{
     if (self = [super init]) {
         
-//        HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
-//        
-//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
-//        [self addChild:spriteTest];
-//        [spriteTest setPosition:CGPointMake(160, 240)];
-//        [spriteTest runAction:waves];
-        
-        HLFlipX3D * flipx3D= [HLFlipX3D actionWithDuration:10];
+        HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
         
         HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
         [self addChild:spriteTest];
         [spriteTest setPosition:CGPointMake(160, 240)];
-        [spriteTest runAction:flipx3D];
+        [spriteTest runAction:waves];
+        
+//        HLFlipX3D * flipx3D= [HLFlipX3D actionWithDuration:10];
+//        
+//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+//        [self addChild:spriteTest];
+//        [spriteTest setPosition:CGPointMake(160, 240)];
+//        [spriteTest runAction:flipx3D];
     }
     return self;
 }

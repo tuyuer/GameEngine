@@ -20,6 +20,7 @@
 #import "HLSequence.h"
 #import "HLScaleTo.h"
 #import "HLScaleBy.h"
+#import "HLFlipX3D.h"
 
 @implementation LightTestLayer
 
@@ -103,8 +104,7 @@ enum {
         [self addChild:bottle2];
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
         
-        HLSprite * sprite1 = [HLSprite spriteWithFile:@"icon.png"];
-        [self addChild:sprite1];
+       
         
         HLMoveTo * moveTo = [HLMoveTo actionWithDuration:10 position:CGPointMake(160, 240)];
         HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(-160, -240)];
@@ -114,9 +114,21 @@ enum {
         HLScaleTo * scaleTo = [HLScaleTo actionWithDuration:4.0 scale:4.0];
 //        [sprite1 runAction:scaleTo];
         
-        HLScaleBy * scaleBy = [HLScaleBy actionWithDuration:4.0 scale:1.0];
-        [sprite1 runAction:scaleBy];
+       
         
+        
+//        HLFlipX3D * flipx3D= [HLFlipX3D actionWithDuration:10];
+//        
+//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+//        [self addChild:spriteTest];
+//        [spriteTest setPosition:CGPointMake(160, 240)];
+//        [self runAction:flipx3D];
+        
+//        HLSprite * sprite1 = [HLSprite spriteWithFile:@"icon.png"];
+//        [self addChild:sprite1];
+//        [sprite1 setPosition:CGPointMake(160, 240)];
+//        HLScaleBy * scaleBy = [HLScaleBy actionWithDuration:4.0 scale:1.0];
+//        [sprite1 runAction:scaleBy];
     }
     return self;
 }

@@ -30,9 +30,6 @@
 	return [super initWithDuration:d size:gSize];
 }
 
-
-
-
 -(void)update:(float)time
 {
 	CGFloat angle = (CGFloat)M_PI * time; // 180 degrees

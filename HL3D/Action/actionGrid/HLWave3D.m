@@ -40,7 +40,7 @@
 		{
 			ccVertex3F	v = [self originalVertex:ccp(i,j)];
 			v.z += (sinf((CGFloat)M_PI*time*_waves*2 + (v.y+v.x) * .01f) * _amplitude * _amplitudeRate);
-			[self setVertex:ccp(i,j) vertex:v];
+            [self setVertex:ccp(i,j) vertex:v];
 		}
 	}
 }
