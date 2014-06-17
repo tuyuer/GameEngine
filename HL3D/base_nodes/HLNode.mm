@@ -158,7 +158,7 @@ static NSUInteger globalOrderOfArrival = 1;
 }
 
 -(void) addChild:(HLNode*)child z:(NSInteger)z{
-    NSAssert( child!= nil, @"");
+    NSAssert( child!= nil, @"child is nil~");
     [self addChild:child z:z tag:child.tag];
 }
 
@@ -405,7 +405,7 @@ static NSUInteger globalOrderOfArrival = 1;
     
     kmGLMultMatrix(&transfrom4x4);
     
-    if (_camera) {
+    if (_camera && !(_grid && _grid.active)) {
         //锚点移动
         BOOL translate = (_anchorPointInPoints.x != 0.0f || _anchorPointInPoints.y != 0.0f);
         if( translate )

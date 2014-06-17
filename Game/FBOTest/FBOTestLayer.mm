@@ -21,6 +21,7 @@
 #import "HLScaleTo.h"
 #import "HLScaleBy.h"
 #import "HLWave3D.h"
+#import "HLFlipX3D.h"
 
 @implementation FBOTestLayer
 
@@ -57,13 +58,19 @@ enum {
 - (id)init{
     if (self = [super init]) {
         
-        HLWave3D * c5= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
+//        HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
+//        
+//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+//        [self addChild:spriteTest];
+//        [spriteTest setPosition:CGPointMake(160, 240)];
+//        [spriteTest runAction:waves];
+        
+        HLFlipX3D * flipx3D= [HLFlipX3D actionWithDuration:10];
         
         HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
         [self addChild:spriteTest];
         [spriteTest setPosition:CGPointMake(160, 240)];
-        [spriteTest runAction:c5];
-        
+        [spriteTest runAction:flipx3D];
     }
     return self;
 }
@@ -72,9 +79,4 @@ enum {
     [super draw];
 }
 
-- (void)doSomthing{
-    HL3Vector currentRot1 = [bottle rotation3D];
-    [bottle setRotation3D:hl3v(currentRot1.x, currentRot1.y +0.2, currentRot1.z)];
-    [bottle2 setRotation3D:hl3v(currentRot1.x, currentRot1.y -0.2, currentRot1.z)];
-}
 @end

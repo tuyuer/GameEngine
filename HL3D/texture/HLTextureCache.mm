@@ -37,7 +37,7 @@ static HLTextureCache * s_sharedTextureCache=nil;
 
 - (HLTexture*)addImage:(NSString*)strImageName{
     NSString * imgPath=[[NSBundle mainBundle] pathForResource:strImageName ofType:nil];
-    NSAssert(imgPath, @"");
+    NSAssert(imgPath, @"imgPath is nil ~");
     HLTexture * tex = [_dicTextures objectForKey:imgPath];
    
     if (!tex) {

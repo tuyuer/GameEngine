@@ -43,6 +43,7 @@
         _isTextureFlipped = flipped;
         
         CGSize texSize = [_texture contentSize];
+//        CGSize texSize = CGSizeMake(_texture.width, _texture.height);
         _step.x = texSize.width / _gridSize.width;
         _step.y = texSize.height / _gridSize.height;
         
