@@ -67,7 +67,6 @@
           
         }
         
-        
         //set up frame buffer
         glGenFramebuffers(1, &defaultFramebuffer);
         glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
@@ -75,7 +74,6 @@
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
         glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
     
-        
         glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
         //开启深度
         glEnable(GL_DEPTH_TEST);

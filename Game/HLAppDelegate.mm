@@ -49,7 +49,7 @@
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
     //run game scene --- 
-    [[HLDirector sharedDirector] runWithScene:[FBOTestLayer scene]];
+    [[HLDirector sharedDirector] runWithScene:[LightTestLayer scene]];
     
     NSLog(@"Game Engine Runing...");
     return YES;

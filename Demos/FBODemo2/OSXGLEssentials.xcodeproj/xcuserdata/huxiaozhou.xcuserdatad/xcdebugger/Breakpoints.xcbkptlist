@@ -7,52 +7,65 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HL3D/FBXManager/HLFBXOneLoad.mm"
-         timestampString = "419323133.202425"
+         filePath = "Classes/OSX/NSGLView.m"
+         timestampString = "424752823.019285"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
+         landmarkName = "-prepareOpenGL"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/OSX/NSGLView.m"
+         timestampString = "424754622.482847"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "143"
          endingLineNumber = "143"
-         landmarkName = "-loadScene:document:fileName:"
+         landmarkName = "-initGL"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HL3D/FBXManager/HLFBXOneLoad.mm"
-         timestampString = "419323152.546389"
+         filePath = "Classes/OpenGLRenderer.m"
+         timestampString = "424754790.571131"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "169"
-         endingLineNumber = "169"
-         landmarkName = "-loadScene:document:fileName:"
+         startingLineNumber = "958"
+         endingLineNumber = "958"
+         landmarkName = "-initWithDefaultFBO:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HL3D/FBXManager/HLFBXOneLoad.mm"
-         timestampString = "419325344.833995"
+         filePath = "Classes/OpenGLRenderer.m"
+         timestampString = "424755156.694966"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85"
-         landmarkName = "-loadScene:document:fileName:"
+         startingLineNumber = "325"
+         endingLineNumber = "325"
+         landmarkName = "-buildVAO:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HL3D/grid/HLGrabber.mm"
-         timestampString = "424756387.527498"
+         filePath = "Classes/OpenGLRenderer.m"
+         timestampString = "424755508.277977"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
-         landmarkName = "-logError:"
+         startingLineNumber = "1073"
+         endingLineNumber = "1073"
+         landmarkName = "-initWithDefaultFBO:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

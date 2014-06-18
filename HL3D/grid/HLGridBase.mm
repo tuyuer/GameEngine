@@ -114,7 +114,7 @@
     _directorProjection = [director projection];
     
     //
-    [self set2DProjection];
+//    [self set2DProjection];
     
     [_grabber beforeRender:_texture];
 }
@@ -124,7 +124,7 @@
     
     //restore projection
     HLDirector * director = [HLDirector sharedDirector];
-    [director setProjection:_directorProjection];
+//    [director setProjection:_directorProjection];
     
     if ( target.camera.dirty ) {
         CGPoint offset = [target anchorPointInPoints];

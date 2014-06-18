@@ -21,6 +21,7 @@
 #import "HLScaleTo.h"
 #import "HLScaleBy.h"
 #import "HLFlipX3D.h"
+#import "HLWave3D.h"
 
 @implementation LightTestLayer
 
@@ -74,61 +75,25 @@ enum {
         [globalLight setShiness:10];
         
         
-        HLWireframeCone * cone = [HLWireframeCone coneWithHeight:5 radius:125];
-        cone.bDisableDepthWhenDrawing = true;
-        cone.bDisableTexture = true;
-        [cone setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
-        clipper.stencil = cone;
-        
-        
-        HLWireframeCone * cone2 = [HLWireframeCone coneWithHeight:5 radius:125];
-        [cone2 setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
-        [cone2 setLight3D:globalLight];
-        [clipper addChild:cone2];
-        
         bottle = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
         bottle.bClearDepthWhenDrawing = true;
         
         [bottle setLight3D:globalLight];
-        [bottle setPosition3D:hl3v(clipper.contentSize.width/2, 30, 0)];
+        [bottle setPosition3D:hl3v(160, 240, 0)];
         [bottle setRotation3D:hl3v(180, 180, 0)];
-        [clipper addChild:bottle];
-        
-        glBlendColor(0, 0, 0, 0.2);
-        bottle.blendFunc = (ccBlendFunc){GL_ONE_MINUS_CONSTANT_ALPHA ,GL_DST_ALPHA};
-        
-        bottle2 = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
-        [bottle2 setLight3D:globalLight];
-        [bottle2 setPosition3D:hl3v(160, 280, 0)];
-        
-        [self addChild:bottle2];
+        [self addChild:bottle];
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
         
-       
-        
-        HLMoveTo * moveTo = [HLMoveTo actionWithDuration:10 position:CGPointMake(160, 240)];
-        HLMoveBy * moveBy = [HLMoveBy actionWithDuration:10 position:CGPointMake(-160, -240)];
-        HLSequence * sequene = [HLSequence actionOne:moveTo two:moveBy];
-//        [sprite1 runAction:sequene];
-        
-        HLScaleTo * scaleTo = [HLScaleTo actionWithDuration:4.0 scale:4.0];
-//        [sprite1 runAction:scaleTo];
-        
-       
         
         
-//        HLFlipX3D * flipx3D= [HLFlipX3D actionWithDuration:10];
-//        
-//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
-//        [self addChild:spriteTest];
-//        [spriteTest setPosition:CGPointMake(160, 240)];
-//        [self runAction:flipx3D];
+        HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
         
-//        HLSprite * sprite1 = [HLSprite spriteWithFile:@"icon.png"];
-//        [self addChild:sprite1];
-//        [sprite1 setPosition:CGPointMake(160, 240)];
-//        HLScaleBy * scaleBy = [HLScaleBy actionWithDuration:4.0 scale:1.0];
-//        [sprite1 runAction:scaleBy];
+        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+        [self addChild:spriteTest];
+        [spriteTest setPosition:CGPointMake(160, 240)];
+//        [spriteTest runAction:waves];
+        
+        [self runAction:waves];
     }
     return self;
 }
@@ -140,7 +105,7 @@ enum {
 - (void)doSomthing{
     HL3Vector currentRot1 = [bottle rotation3D];
     [bottle setRotation3D:hl3v(currentRot1.x, currentRot1.y +0.2, currentRot1.z)];
-    [bottle2 setRotation3D:hl3v(currentRot1.x, currentRot1.y -0.2, currentRot1.z)];
+//    [bottle2 setRotation3D:hl3v(currentRot1.x, currentRot1.y -0.2, currentRot1.z)];
 }
 
 @end

@@ -65,6 +65,7 @@ typedef enum {
 - (id)initWithData:(const void*)data pixelFormat:(HLTexture2DPixelFormat)pixelFormat
          pixelWide:(NSUInteger)width pixelHigh:(NSUInteger)high contentSize:(CGSize)size;
 
+
 @end
 
 
