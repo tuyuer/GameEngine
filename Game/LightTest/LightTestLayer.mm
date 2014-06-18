@@ -22,6 +22,7 @@
 #import "HLScaleBy.h"
 #import "HLFlipX3D.h"
 #import "HLWave3D.h"
+#import "HLFBXManager.h"
 
 @implementation LightTestLayer
 
@@ -84,8 +85,6 @@ enum {
         [self addChild:bottle];
         [self schedule:@selector(doSomthing) interval:1.0/60.0];
         
-        
-        
         HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
         
         HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
@@ -94,6 +93,8 @@ enum {
 //        [spriteTest runAction:waves];
         
         [self runAction:waves];
+        
+        [[HLFBXManager sharedManager] addFBXObjectFromFile:"girl.fbx"];
     }
     return self;
 }

@@ -53,8 +53,6 @@
     glGetIntegerv(GL_FRAMEBUFFER_BINDING, &_oldFBO);
     
     // bind
-    
-    
     GLuint depthBuffer;
     glGenRenderbuffers(1, &depthBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, depthBuffer);
