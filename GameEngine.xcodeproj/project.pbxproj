@@ -36,6 +36,7 @@
 		33AE1E0E195167D30016D17E /* HLFBXObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E08195167D30016D17E /* HLFBXObject.mm */; };
 		33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0A195167D30016D17E /* HLFBXOneLoad.mm */; };
 		33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0C195167D30016D17E /* HLFBXStream.mm */; };
+		33AE1E1219518A2E0016D17E /* c3dExtension in Resources */ = {isa = PBXBuildFile; fileRef = 33AE1E1119518A2D0016D17E /* c3dExtension */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
 		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
@@ -437,6 +438,7 @@
 		33AE1E0A195167D30016D17E /* HLFBXOneLoad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLFBXOneLoad.mm; sourceTree = "<group>"; };
 		33AE1E0B195167D30016D17E /* HLFBXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFBXStream.h; sourceTree = "<group>"; };
 		33AE1E0C195167D30016D17E /* HLFBXStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLFBXStream.mm; sourceTree = "<group>"; };
+		33AE1E1119518A2D0016D17E /* c3dExtension */ = {isa = PBXFileReference; lastKnownFileType = folder; name = c3dExtension; path = "../../../../Downloads/c3dEngine2-2/c3dEngine2/c3dExtension"; sourceTree = "<group>"; };
 		33AE9FB41910C079004923C3 /* Grid16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid16.png; sourceTree = "<group>"; };
 		33B2517918FE742A0067533C /* HLMD2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2.mm; sourceTree = "<group>"; };
 		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
@@ -1494,6 +1496,7 @@
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
 			isa = PBXGroup;
 			children = (
+				33AE1E1119518A2D0016D17E /* c3dExtension */,
 				33AE1E04195167D20016D17E /* FBXManager */,
 				33AE1CFF1951644B0016D17E /* FBX */,
 				3331C2141934BEF70004C9C3 /* grid */,
@@ -1793,6 +1796,7 @@
 				33AB5AE41921D63D00919883 /* Marble.png in Resources */,
 				33F5122C19345D5800F15D29 /* blend_src.png in Resources */,
 				33F5122E19345D5800F15D29 /* blend_dst.png in Resources */,
+				33AE1E1219518A2E0016D17E /* c3dExtension in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

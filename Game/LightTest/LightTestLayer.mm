@@ -23,6 +23,7 @@
 #import "HLFlipX3D.h"
 #import "HLWave3D.h"
 #import "HLFBXManager.h"
+#import "HLFBXObject.h"
 
 @implementation LightTestLayer
 
@@ -82,19 +83,24 @@ enum {
         [bottle setLight3D:globalLight];
         [bottle setPosition3D:hl3v(160, 240, 0)];
         [bottle setRotation3D:hl3v(180, 180, 0)];
-        [self addChild:bottle];
-        [self schedule:@selector(doSomthing) interval:1.0/60.0];
+//        [self addChild:bottle];
+//        [self schedule:@selector(doSomthing) interval:1.0/60.0];
         
         HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
         
-        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
-        [self addChild:spriteTest];
-        [spriteTest setPosition:CGPointMake(160, 240)];
+//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+//        [self addChild:spriteTest];
+//        [spriteTest setPosition:CGPointMake(160, 240)];
 //        [spriteTest runAction:waves];
         
-        [self runAction:waves];
+//        [self runAction:waves];
         
-        [[HLFBXManager sharedManager] addFBXObjectFromFile:"girl.fbx"];
+        HLFBXObject * girlObject = [[HLFBXManager sharedManager] addFBXObjectFromFile:"girl.fbx"];
+        [self addChild:girlObject];
+        
+        [girlObject setPosition3D:hl3v(160, 240, 0)];
+        [girlObject setScale3D:hl3v(4, 4, 4)];
+        [girlObject setRotation3D:hl3v(90, 0, 0)];
     }
     return self;
 }

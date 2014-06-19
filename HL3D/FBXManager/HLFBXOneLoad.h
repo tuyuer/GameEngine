@@ -14,6 +14,7 @@
 @interface HLFBXOneLoad : NSObject{
     FbxManager * _fbxManager;
     FbxScene * _fbxScene;
+    HLFBXObject * _fbxObject;
     char * _fbxFileName;
 }
 + (id)oneLoad;
@@ -21,7 +22,8 @@
 - (void)initSdkObjects:(FbxManager*&)pSdkManager scene:(FbxScene*&)pScene;
 - (bool)loadScene:(FbxManager*)pSdkManager document:(FbxDocument*)pScene fileName:(const char*)pFilename;
 - (void)readVertex:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vector:(HL3Vector&)pVector;
-- (void)processMesh:(FbxNode*)pNode;
+- (void)readColor:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vertexCounter:(int)vertexCounter vector:(HL3Vector4&)pVector;
+
 // Triangulate all NURBS, patch and mesh under this node recursively.
 - (void)triangulateRecursive:(FbxNode*)pNode;
 - (void)makeSubMeshSetForEachNode:(FbxNode*)pNode;

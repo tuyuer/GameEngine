@@ -9,8 +9,14 @@
 #import "HLFBXOneLoad.h"
 #include <iostream>
 #include "HLFBXStream.h"
+#import "HL3Foundation.h"
 using namespace std;
 @implementation HLFBXOneLoad
+
+- (void)dealloc{
+    [_fbxObject release];
+    [super dealloc];
+}
 
 + (id)oneLoad{
     return [[[self alloc] init] autorelease];
@@ -20,6 +26,7 @@ using namespace std;
     if (self = [super init]) {
         _fbxManager = nil;
         _fbxScene = nil;
+        _fbxObject = [[HLFBXObject alloc] init];
         _fbxFileName = nil;
     }
     return self;
@@ -46,9 +53,9 @@ using namespace std;
     FbxIOSettings * ios = FbxIOSettings::Create(pSdkManager, IOSROOT);
     pSdkManager->SetIOSettings(ios);
     
-//    // Load plugins from the executable directory
-//    FbxString lPath = FbxGetApplicationDirectory();
-//    pSdkManager->LoadPluginsDirectory(lPath.Buffer());
+    // Load plugins from the executable directory
+    FbxString lPath = FbxGetApplicationDirectory();
+    pSdkManager->LoadPluginsDirectory(lPath.Buffer());
     
     // Create the entity that will hold the scene.
     pScene = FbxScene::Create(pSdkManager, "");
@@ -66,6 +73,7 @@ using namespace std;
     //int lFileFormat = -1;
     int i, lAnimStackCount;
     bool lStatus;
+    char lPassword[1024];
     
     // Get the file version number generate by the FBX SDK.
     FbxManager::GetFileFormatVersion(lSDKMajor, lSDKMinor, lSDKRevision);
@@ -79,15 +87,23 @@ using namespace std;
     // initialize the importer with a stream
     const bool lImportStatus = lImporter->Initialize( fbxStream, NULL, -1,pSdkManager->GetIOSettings());
     lImporter->GetFileVersion(lFileMajor, lFileMinor, lFileRevision);
-    
+
+//    const bool lImportStatus = lImporter->Initialize(pFilename, -1, pSdkManager->GetIOSettings());
+//    lImporter->GetFileVersion(lFileMajor, lFileMinor, lFileRevision);
     
     if( !lImportStatus )
     {
+        FbxString error = lImporter->GetStatus().GetErrorString();
         FBXSDK_printf("Call to FbxImporter::Initialize() failed.\n");
+        FBXSDK_printf("Error returned: %s\n\n", error.Buffer());
         FbxStatus status =  lImporter->GetStatus();
 
         FBXSDK_printf("Error returned: %s\n\n", status.GetErrorString());
-    
+        if (lImporter->GetStatus().GetCode() == FbxStatus::eInvalidFileVersion)
+        {
+            FBXSDK_printf("FBX file format version for this FBX SDK is %d.%d.%d\n", lSDKMajor, lSDKMinor, lSDKRevision);
+            FBXSDK_printf("FBX file format version for file '%s' is %d.%d.%d\n\n", pFilename, lFileMajor, lFileMinor, lFileRevision);
+        }
         
         return false;
     }
@@ -102,9 +118,9 @@ using namespace std;
         // the expense of loading the entire file.
         
         FBXSDK_printf("Animation Stack Information\n");
-        lAnimStackCount = lImporter->GetDstObjectCount(FbxCriteria::ObjectType(FbxObject::ClassId));
-//        lImporter->GetDstObjectCount(<#const fbxsdk_2014_2_1::FbxCriteria &pCriteria#>)
-//        FbxTypeComponentCount(<#const fbxsdk_2014_2_1::EFbxType pType#>)
+        
+        lAnimStackCount = lImporter->GetAnimStackCount();
+        
         FBXSDK_printf("    Number of Animation Stacks: %d\n", lAnimStackCount);
         FBXSDK_printf("    Current Animation Stack: \"%s\"\n", lImporter->GetActiveAnimStackName().Buffer());
         FBXSDK_printf("\n");
@@ -141,6 +157,29 @@ using namespace std;
     // Import the scene.
     lStatus = lImporter->Import(pScene);
     
+    if(lStatus == false && lImporter->GetStatus().GetCode() == FbxStatus::ePasswordError)
+    {
+        FBXSDK_printf("Please enter password: ");
+        
+        lPassword[0] = '\0';
+        
+        FBXSDK_CRT_SECURE_NO_WARNING_BEGIN
+        scanf("%s", lPassword);
+        FBXSDK_CRT_SECURE_NO_WARNING_END
+        
+        FbxString lString(lPassword);
+        
+        IOS_REF.SetStringProp(IMP_FBX_PASSWORD,      lString);
+        IOS_REF.SetBoolProp(IMP_FBX_PASSWORD_ENABLE, true);
+        
+        lStatus = lImporter->Import(pScene);
+        
+        if(lStatus == false && lImporter->GetStatus().GetCode() == FbxStatus::ePasswordError)
+        {
+            FBXSDK_printf("\nPassword is wrong, import aborted.\n");
+        }
+    }
+    
     // Destroy the importer.
     lImporter->Destroy();
     delete fbxStream;
@@ -149,12 +188,74 @@ using namespace std;
 
 //读取节点
 - (void)readVertex:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vector:(HL3Vector&)pVector{
-  
+    FbxVector4 * pControlPoints = pMesh->GetControlPoints();
+    pVector.x = pControlPoints[ctrlPIndex][0];
+    pVector.y = pControlPoints[ctrlPIndex][1];
+    pVector.z = pControlPoints[ctrlPIndex][2];
 }
 
-//处理mesh
-- (void)processMesh:(FbxNode*)pNode{
-    
+- (void)readColor:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vertexCounter:(int)vertexCounter vector:(HL3Vector4&)pVector{
+    if (pMesh->GetElementVertexColorCount() < 1) {
+        return;
+    }
+
+    FbxGeometryElementVertexColor* pVertexColor = pMesh->GetElementVertexColor(0);
+    switch (pVertexColor->GetMappingMode()) {
+        case FbxLayerElement::eByControlPoint:{
+            switch (pVertexColor->GetReferenceMode()) {
+                    
+                case FbxLayerElement::eDirect:{
+                    pVector.x = pVertexColor->GetDirectArray().GetAt(ctrlPIndex).mRed;
+                    pVector.y = pVertexColor->GetDirectArray().GetAt(ctrlPIndex).mGreen;
+                    pVector.z = pVertexColor->GetDirectArray().GetAt(ctrlPIndex).mBlue;
+                    pVector.w = pVertexColor->GetDirectArray().GetAt(ctrlPIndex).mAlpha;
+                }
+                    break;
+                case FbxLayerElement::eIndexToDirect:{
+                    int idValue = pVertexColor->GetIndexArray().GetAt(ctrlPIndex);
+                    pVector.x = pVertexColor->GetDirectArray().GetAt(idValue).mRed;
+                    pVector.y = pVertexColor->GetDirectArray().GetAt(idValue).mGreen;
+                    pVector.z = pVertexColor->GetDirectArray().GetAt(idValue).mBlue;
+                    pVector.w = pVertexColor->GetDirectArray().GetAt(idValue).mAlpha;
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        
+        }
+            break;
+            
+        case FbxLayerElement::eByPolygonVertex:{
+            switch (pVertexColor->GetReferenceMode()) {
+                    
+                case FbxLayerElement::eDirect:{
+                    pVector.x = pVertexColor->GetDirectArray().GetAt(vertexCounter).mRed;
+                    pVector.y = pVertexColor->GetDirectArray().GetAt(vertexCounter).mGreen;
+                    pVector.z = pVertexColor->GetDirectArray().GetAt(vertexCounter).mBlue;
+                    pVector.w = pVertexColor->GetDirectArray().GetAt(vertexCounter).mAlpha;
+                }
+                    break;
+                case FbxLayerElement::eIndexToDirect:{
+                    int idValue = pVertexColor->GetIndexArray().GetAt(vertexCounter);
+                    pVector.x = pVertexColor->GetDirectArray().GetAt(idValue).mRed;
+                    pVector.y = pVertexColor->GetDirectArray().GetAt(idValue).mGreen;
+                    pVector.z = pVertexColor->GetDirectArray().GetAt(idValue).mBlue;
+                    pVector.w = pVertexColor->GetDirectArray().GetAt(idValue).mAlpha;
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 // Triangulate all NURBS, patch and mesh under this node recursively.
@@ -203,12 +304,34 @@ using namespace std;
         cout<<"error: lMesh==NULL!"<<endl;
         return;
     }
-
+    
+    HL3Vector vertex[3];
+    HL3Vector4 color[3];
+    HL3Vector normal[3];
+    HL3Vector tangent[3];
+    
     const int triangleCount = lMesh->GetPolygonCount();
+    int vertexCounter = 0;
     for (int i = 0; i < triangleCount; i++)
     {
-        
+        for (int j = 0; j < 3; j++) {
+            int ctrlPointIndex = lMesh->GetPolygonVertex(i, j);
+            
+            //读取顶点信息
+            [self readVertex:lMesh ctrlPointIndex:ctrlPointIndex vector:vertex[j]];
+            
+            //读取每个顶点的颜色信息
+            [self readColor:lMesh ctrlPointIndex:ctrlPointIndex vertexCounter:vertexCounter vector:color[j]];
+            
+//            NSLog(@"%f,%f,%f,%f",color[j].x,color[j].y,color[j].z,color[j].w);
+            
+            _fbxObject.vertices->push_back(vertex[j]);
+            _fbxObject.colors->push_back(color[j]);
+            vertexCounter++;
+        }
     }
+    NSLog(@"vertice count = %ld",_fbxObject.vertices->size());
+    NSLog(@"vertice color count = %ld",_fbxObject.colors->size());
 }
 
 //读取fbx object
@@ -220,7 +343,7 @@ using namespace std;
     //makeSubMeshes
     [self makeSubMeshSetForEachNode:_fbxScene->GetRootNode()];
     
-    return nil;
+    return _fbxObject;
 }
 
 
