@@ -32,12 +32,16 @@
         self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
         [self ensureCapacity:1024];
  
+        
+        glGenVertexArraysOES(1, &_vao);
+        glBindVertexArrayOES(_vao);
+        
         //vbo setup
         glGenBuffers(1, &_vboVertex);
         glBindBuffer(GL_ARRAY_BUFFER, _vboVertex);
         glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_bufferCapacity, _bufferVertex, GL_STREAM_DRAW);
         
-        ccGLEnableVertexAttribs( kCCVertexAttrib_Position | kCCVertexAttrib_Color);
+        glEnableVertexAttribArray(kCCVertexAttrib_Position);
         glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, 0, 0);
         
         
@@ -45,8 +49,12 @@
         glBindBuffer(GL_ARRAY_BUFFER, _vboColor);
         glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_bufferCapacity, _bufferColor, GL_STREAM_DRAW);
         
+        glEnableVertexAttribArray(kCCVertexAttrib_Color);
         glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_FLOAT, GL_FALSE, 0, 0);
         
+        
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        glBindVertexArrayOES(0);
         
         _bufferVertex[0] = -100;
         _bufferVertex[1] = -100;
@@ -85,7 +93,7 @@
         _bufferColor[14] = 0;
         _bufferColor[15] = 1.0;
         
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        
         _dirty = YES;
     }
     return self;
@@ -96,17 +104,19 @@
         
         glBindBuffer(GL_ARRAY_BUFFER, _vboVertex);
         glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_bufferCapacity, _bufferVertex, GL_STREAM_DRAW);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
         
         glBindBuffer(GL_ARRAY_BUFFER, _vboColor);
         glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_bufferCapacity, _bufferColor, GL_STREAM_DRAW);
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
+       
         
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
         _dirty = NO;
     }
-    
+
     //开始绘制
+    glBindVertexArrayOES(_vao);
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glBindVertexArrayOES(0);;
 }
 
 

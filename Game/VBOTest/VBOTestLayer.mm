@@ -65,6 +65,15 @@ enum {
         VBOTestObject * vo = [VBOTestObject node];
         [vo setPosition:CGPointMake(160, 240)];
         [self addChild:vo];
+        [vo setRotation:45];
+        
+        VBOTestObject * vo2 = [VBOTestObject node];
+        [vo2 setPosition:CGPointMake(100, 100)];
+        [self addChild:vo2];
+        
+        HLSprite * sprite = [HLSprite spriteWithFile:@"Marble.png"];
+        [sprite setPosition:CGPointMake(20, 20)];
+        [self addChild:sprite];
     }
     return self;
 }
