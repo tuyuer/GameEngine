@@ -98,6 +98,8 @@
 		33C177C91953CC030090405F /* HLSubMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C81953CC030090405F /* HLSubMesh.mm */; };
 		33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177CD1953DAC30090405F /* MipmapTestLayer.mm */; };
 		33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C177CF1953DD0F0090405F /* Marble_nomipmap.png */; };
+		33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D31953E5500090405F /* VBOTestLayer.mm */; };
+		33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D61953E6BD0090405F /* VBOTestObject.mm */; };
 		33C40115193580AA008B5111 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4010E193580AA008B5111 /* HLActionInterval.m */; };
 		33C40116193580AA008B5111 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40110193580AA008B5111 /* HLMoveBy.m */; };
 		33C40117193580AA008B5111 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40112193580AA008B5111 /* HLMoveTo.m */; };
@@ -524,6 +526,10 @@
 		33C177CC1953DAC30090405F /* MipmapTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MipmapTestLayer.h; sourceTree = "<group>"; };
 		33C177CD1953DAC30090405F /* MipmapTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MipmapTestLayer.mm; sourceTree = "<group>"; };
 		33C177CF1953DD0F0090405F /* Marble_nomipmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble_nomipmap.png; sourceTree = "<group>"; };
+		33C177D21953E5500090405F /* VBOTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOTestLayer.h; sourceTree = "<group>"; };
+		33C177D31953E5500090405F /* VBOTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestLayer.mm; sourceTree = "<group>"; };
+		33C177D51953E6BD0090405F /* VBOTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOTestObject.h; sourceTree = "<group>"; };
+		33C177D61953E6BD0090405F /* VBOTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestObject.mm; sourceTree = "<group>"; };
 		33C4010D193580AA008B5111 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
 		33C4010E193580AA008B5111 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
 		33C4010F193580AA008B5111 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
@@ -1304,6 +1310,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33C177D11953E5350090405F /* VBOTest */,
 				33C177CB1953DAAF0090405F /* MipmapTest */,
 				338E02511941EB510005789C /* FBOTest */,
 				3331C20C1934AB7A0004C9C3 /* LightTest */,
@@ -1355,6 +1362,17 @@
 				33C177CD1953DAC30090405F /* MipmapTestLayer.mm */,
 			);
 			path = MipmapTest;
+			sourceTree = "<group>";
+		};
+		33C177D11953E5350090405F /* VBOTest */ = {
+			isa = PBXGroup;
+			children = (
+				33C177D51953E6BD0090405F /* VBOTestObject.h */,
+				33C177D61953E6BD0090405F /* VBOTestObject.mm */,
+				33C177D21953E5500090405F /* VBOTestLayer.h */,
+				33C177D31953E5500090405F /* VBOTestLayer.mm */,
+			);
+			path = VBOTest;
 			sourceTree = "<group>";
 		};
 		33C4010C193580AA008B5111 /* actionInterval */ = {
@@ -1938,6 +1956,8 @@
 				33C177C61953CBDB0090405F /* HLMesh.mm in Sources */,
 				33C177C91953CC030090405F /* HLSubMesh.mm in Sources */,
 				33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */,
+				33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */,
+				33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
