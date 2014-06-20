@@ -65,6 +65,28 @@ typedef enum {
 - (id)initWithData:(const void*)data pixelFormat:(HLTexture2DPixelFormat)pixelFormat
          pixelWide:(NSUInteger)width pixelHigh:(NSUInteger)high contentSize:(CGSize)size;
 
+/** sets alias texture parameters:
+ - GL_TEXTURE_MIN_FILTER = GL_NEAREST
+ - GL_TEXTURE_MAG_FILTER = GL_NEAREST
+ 
+ @warning Calling this method could allocate additional texture memory.
+ 
+ @since v0.8
+ */
+- (void) setAliasTexParameters;
+
+
+/** sets antialias texture parameters:
+ - GL_TEXTURE_MIN_FILTER = GL_LINEAR
+ - GL_TEXTURE_MAG_FILTER = GL_LINEAR
+ 
+ @warning Calling this method could allocate additional texture memory.
+ 
+ @since v0.8
+ */
+- (void) setAntiAliasTexParameters;
+
+-(void) generateMipmap;
 
 @end
 

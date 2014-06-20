@@ -50,7 +50,6 @@
         vertices[i*3] = vv.x;
         vertices[i*3+1] = vv.y;
         vertices[i*3+2] = vv.z;
-//        NSLog(@"vert = {%f,%f,%f}",vv.x,vv.y,vv.z);
     }
     
     for (int i = 0; i<_colors->size(); i++) {
@@ -59,7 +58,6 @@
         colors[i*4+1] = vv.y;
         colors[i*4+2] = vv.z;
         colors[i*4+3] = 1.0;
-//        NSLog(@"color = {%f,%f,%f,%f}",vv.x,vv.y,vv.z,vv.w);
     }
 
     glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, 0, vertices);

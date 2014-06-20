@@ -94,6 +94,10 @@
 		33B6170A190E7EAA007EE82B /* ccShader_PositionTextureLight.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614F9190E5006007EE82B /* ccShader_PositionTextureLight.vert */; };
 		33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FB190E5006007EE82B /* ccShaderWaves.frag */; };
 		33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FC190E5006007EE82B /* ccShaderWaves.vert */; };
+		33C177C61953CBDB0090405F /* HLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C51953CBDB0090405F /* HLMesh.mm */; };
+		33C177C91953CC030090405F /* HLSubMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C81953CC030090405F /* HLSubMesh.mm */; };
+		33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177CD1953DAC30090405F /* MipmapTestLayer.mm */; };
+		33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C177CF1953DD0F0090405F /* Marble_nomipmap.png */; };
 		33C40115193580AA008B5111 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4010E193580AA008B5111 /* HLActionInterval.m */; };
 		33C40116193580AA008B5111 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40110193580AA008B5111 /* HLMoveBy.m */; };
 		33C40117193580AA008B5111 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40112193580AA008B5111 /* HLMoveTo.m */; };
@@ -513,6 +517,13 @@
 		33B616F7190E7418007EE82B /* HLGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGLView.m; sourceTree = "<group>"; };
 		33B616FA190E747A007EE82B /* HLDirectorMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDirectorMac.h; sourceTree = "<group>"; };
 		33B616FB190E747A007EE82B /* HLDirectorMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDirectorMac.m; sourceTree = "<group>"; };
+		33C177C41953CBDB0090405F /* HLMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMesh.h; sourceTree = "<group>"; };
+		33C177C51953CBDB0090405F /* HLMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMesh.mm; sourceTree = "<group>"; };
+		33C177C71953CC030090405F /* HLSubMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSubMesh.h; sourceTree = "<group>"; };
+		33C177C81953CC030090405F /* HLSubMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLSubMesh.mm; sourceTree = "<group>"; };
+		33C177CC1953DAC30090405F /* MipmapTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MipmapTestLayer.h; sourceTree = "<group>"; };
+		33C177CD1953DAC30090405F /* MipmapTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MipmapTestLayer.mm; sourceTree = "<group>"; };
+		33C177CF1953DD0F0090405F /* Marble_nomipmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble_nomipmap.png; sourceTree = "<group>"; };
 		33C4010D193580AA008B5111 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
 		33C4010E193580AA008B5111 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
 		33C4010F193580AA008B5111 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
@@ -1197,6 +1208,7 @@
 			children = (
 				33F5122919345D5800F15D29 /* BlendTest */,
 				33AB5AE31921D63D00919883 /* Marble.png */,
+				33C177CF1953DD0F0090405F /* Marble_nomipmap.png */,
 				33D76B08191785D600549358 /* Grille.png */,
 				33D76B03191763F400549358 /* Circle.png */,
 				3393A6031914A5D000602BDA /* Tarsier.png */,
@@ -1292,6 +1304,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33C177CB1953DAAF0090405F /* MipmapTest */,
 				338E02511941EB510005789C /* FBOTest */,
 				3331C20C1934AB7A0004C9C3 /* LightTest */,
 				33F512241934450800F15D29 /* BlendTest */,
@@ -1322,6 +1335,26 @@
 				33B616FB190E747A007EE82B /* HLDirectorMac.m */,
 			);
 			path = MacOS;
+			sourceTree = "<group>";
+		};
+		33C177C31953CB450090405F /* mesh */ = {
+			isa = PBXGroup;
+			children = (
+				33C177C41953CBDB0090405F /* HLMesh.h */,
+				33C177C51953CBDB0090405F /* HLMesh.mm */,
+				33C177C71953CC030090405F /* HLSubMesh.h */,
+				33C177C81953CC030090405F /* HLSubMesh.mm */,
+			);
+			path = mesh;
+			sourceTree = "<group>";
+		};
+		33C177CB1953DAAF0090405F /* MipmapTest */ = {
+			isa = PBXGroup;
+			children = (
+				33C177CC1953DAC30090405F /* MipmapTestLayer.h */,
+				33C177CD1953DAC30090405F /* MipmapTestLayer.mm */,
+			);
+			path = MipmapTest;
 			sourceTree = "<group>";
 		};
 		33C4010C193580AA008B5111 /* actionInterval */ = {
@@ -1497,6 +1530,7 @@
 			isa = PBXGroup;
 			children = (
 				33AE1E1119518A2D0016D17E /* c3dExtension */,
+				33C177C31953CB450090405F /* mesh */,
 				33AE1E04195167D20016D17E /* FBXManager */,
 				33AE1CFF1951644B0016D17E /* FBX */,
 				3331C2141934BEF70004C9C3 /* grid */,
@@ -1797,6 +1831,7 @@
 				33F5122C19345D5800F15D29 /* blend_src.png in Resources */,
 				33F5122E19345D5800F15D29 /* blend_dst.png in Resources */,
 				33AE1E1219518A2E0016D17E /* c3dExtension in Resources */,
+				33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1900,6 +1935,9 @@
 				33AE1E0E195167D30016D17E /* HLFBXObject.mm in Sources */,
 				33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */,
 				33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */,
+				33C177C61953CBDB0090405F /* HLMesh.mm in Sources */,
+				33C177C91953CC030090405F /* HLSubMesh.mm in Sources */,
+				33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

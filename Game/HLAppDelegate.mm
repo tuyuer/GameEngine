@@ -19,6 +19,7 @@
 #import "StencilTestLayer.h"
 #import "LightTestLayer.h"
 #import "FBOTestLayer.h"
+#import "MipmapTestLayer.h"
 
 @implementation HLAppDelegate
 
@@ -49,7 +50,7 @@
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
     //run game scene --- 
-    [[HLDirector sharedDirector] runWithScene:[LightTestLayer scene]];
+    [[HLDirector sharedDirector] runWithScene:[MipmapTestLayer scene]];
     
     NSLog(@"Game Engine Runing...");
     return YES;

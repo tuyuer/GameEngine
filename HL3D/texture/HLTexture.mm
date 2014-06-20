@@ -9,6 +9,7 @@
 #import "HLTexture.h"
 #import "TransformUtils.h"
 #import "HLShaderCache.h"
+#import "HLGLStateCache.h"
 
 @implementation HLTexture
 @synthesize contentSize = _tContentSize;
@@ -36,29 +37,8 @@
         CGContextDrawImage(spriteContext, CGRectMake(0, 0, imgWidth, imgHeight), spriteImage);
         CGContextRelease(spriteContext);
         
-        GLuint textureName;
-        glGenTextures(1, &textureName);
-        glBindTexture(GL_TEXTURE_2D, textureName);
-        
-        //如果启用NPOT，设置如下参数 ...
-        glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
-		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE );
-		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE );
-        
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, _tContentSize.width, _tContentSize.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
+        self = [self initWithData:imageData pixelFormat:kHLTexture2DPixelFormat_RGBA8888 pixelWide:imgWidth pixelHigh:imgHeight contentSize:_tContentSize];
 
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-        
-        //开启纹理
-        glEnable(GL_TEXTURE_2D);
-        //纹理混合
-        glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-        glEnable(GL_BLEND);
-        
-        _uName = textureName;
-        _format = kHLTexture2DPixelFormat_Default;
         return self;
     }
     return nil;
@@ -108,6 +88,40 @@
     }
     return self;
 }
+
+-(void) generateMipmap
+{
+	NSAssert( _width == hlNextPOT(_width) && _height == hlNextPOT(_height), @"Mimpap texture only works in POT textures");
+	glBindTexture(GL_TEXTURE_2D, _uName );
+	glGenerateMipmap(GL_TEXTURE_2D);
+	_hasMipmaps = YES;
+}
+
+
+-(void) setAliasTexParameters
+{
+	glBindTexture(GL_TEXTURE_2D, _uName );
+	
+	if( ! _hasMipmaps )
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST );
+	else
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST );
+    
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST );
+}
+
+-(void) setAntiAliasTexParameters
+{
+	glBindTexture(GL_TEXTURE_2D, _uName );
+	
+	if( ! _hasMipmaps )
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+	else
+		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST );
+    
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+}
+
 
 @end
 

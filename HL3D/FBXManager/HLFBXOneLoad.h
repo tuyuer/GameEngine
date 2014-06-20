@@ -23,6 +23,8 @@
 - (bool)loadScene:(FbxManager*)pSdkManager document:(FbxDocument*)pScene fileName:(const char*)pFilename;
 - (void)readVertex:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vector:(HL3Vector&)pVector;
 - (void)readColor:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex vertexCounter:(int)vertexCounter vector:(HL3Vector4&)pVector;
+- (void)readUV:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex textureUVIndex:(int)textureUVIndex uvLayer:(int)uvLayer vector:(HL3Vector2&)pVector;
+
 
 // Triangulate all NURBS, patch and mesh under this node recursively.
 - (void)triangulateRecursive:(FbxNode*)pNode;

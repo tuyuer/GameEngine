@@ -16,6 +16,7 @@ typedef struct {
 	GLfloat z;			/**< The Z-componenent of the vector. */
 } HL3Vector;
 
+typedef CGPoint HL3Vector2;
 
 
 /** A HL3Vector of zero length at the origin. */

@@ -88,19 +88,19 @@ enum {
         
         HLWave3D * waves= [HLWave3D actionWithDuration:100 size:CGSizeMake(40,40) waves:100 amplitude:10];
         
-//        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
-//        [self addChild:spriteTest];
-//        [spriteTest setPosition:CGPointMake(160, 240)];
-//        [spriteTest runAction:waves];
+        HLSprite * spriteTest = [HLSprite spriteWithFile:@"Tarsier.png"];
+        [self addChild:spriteTest];
+        [spriteTest setPosition:CGPointMake(160, 240)];
+
         
 //        [self runAction:waves];
         
-        HLFBXObject * girlObject = [[HLFBXManager sharedManager] addFBXObjectFromFile:"girl.fbx"];
-        [self addChild:girlObject];
-        
-        [girlObject setPosition3D:hl3v(160, 240, 0)];
-        [girlObject setScale3D:hl3v(4, 4, 4)];
-        [girlObject setRotation3D:hl3v(90, 0, 0)];
+//        HLFBXObject * girlObject = [[HLFBXManager sharedManager] addFBXObjectFromFile:"girl.fbx"];
+//        [self addChild:girlObject];
+//        
+//        [girlObject setPosition3D:hl3v(160, 240, 0)];
+//        [girlObject setScale3D:hl3v(4, 4, 4)];
+//        [girlObject setRotation3D:hl3v(90, 0, 0)];
     }
     return self;
 }

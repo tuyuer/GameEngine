@@ -258,6 +258,58 @@ using namespace std;
     }
 }
 
+- (void)readUV:(FbxMesh*)pMesh ctrlPointIndex:(int)ctrlPIndex textureUVIndex:(int)textureUVIndex
+       uvLayer:(int)uvLayer vector:(HL3Vector2&)pVector
+{
+    if(uvLayer >= 2 || pMesh->GetElementUVCount() <= uvLayer)
+    {
+        return ;
+    }
+    
+    FbxGeometryElementUV * pVertexUV =  pMesh->GetElementUV(uvLayer);
+    switch (pVertexUV->GetMappingMode()) {
+        case FbxLayerElement::eByControlPoint:{
+            switch (pVertexUV->GetReferenceMode()) {
+                case FbxLayerElement::eDirect:{
+                    pVector.x = pVertexUV->GetDirectArray().GetAt(ctrlPIndex)[0];
+                    pVector.y = pVertexUV->GetDirectArray().GetAt(ctrlPIndex)[1];
+                }
+                    break;
+                case FbxLayerElement::eIndexToDirect:{
+                    int idValue = pVertexUV->GetIndexArray().GetAt(ctrlPIndex);
+                    pVector.x = pVertexUV->GetDirectArray().GetAt(idValue)[0];
+                    pVector.y = pVertexUV->GetDirectArray().GetAt(idValue)[1];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+            
+        case FbxLayerElement::eByPolygonVertex:{
+            switch (pVertexUV->GetReferenceMode()) {
+                case FbxLayerElement::eDirect:{
+
+                }
+                    break;
+                case FbxLayerElement::eIndexToDirect:{
+                    pVector.x = pVertexUV->GetDirectArray().GetAt(textureUVIndex)[0];
+                    pVector.y = pVertexUV->GetDirectArray().GetAt(textureUVIndex)[1];
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
 // Triangulate all NURBS, patch and mesh under this node recursively.
 - (void)triangulateRecursive:(FbxNode*)pNode{
     FbxNodeAttribute* lNodeAttribute = pNode->GetNodeAttribute();
@@ -307,23 +359,31 @@ using namespace std;
     
     HL3Vector vertex[3];
     HL3Vector4 color[3];
+    HL3Vector2 uv[3][2];
     HL3Vector normal[3];
     HL3Vector tangent[3];
-    
+    uv;
+    normal;
     const int triangleCount = lMesh->GetPolygonCount();
     int vertexCounter = 0;
     for (int i = 0; i < triangleCount; i++)
     {
         for (int j = 0; j < 3; j++) {
             int ctrlPointIndex = lMesh->GetPolygonVertex(i, j);
-            
+
             //读取顶点信息
             [self readVertex:lMesh ctrlPointIndex:ctrlPointIndex vector:vertex[j]];
             
             //读取每个顶点的颜色信息
             [self readColor:lMesh ctrlPointIndex:ctrlPointIndex vertexCounter:vertexCounter vector:color[j]];
             
-//            NSLog(@"%f,%f,%f,%f",color[j].x,color[j].y,color[j].z,color[j].w);
+            //读取每个顶点的UV
+            for (int k = 0; k < 2; k++) {
+                [self readUV:lMesh ctrlPointIndex:ctrlPointIndex textureUVIndex:lMesh->GetTextureUVIndex(i, j) uvLayer:k vector:uv[j][k]];
+                
+//                NSLog(@"uv = {%f,%f}",uv[j][k].x,uv[j][k].y);
+            }
+            
             
             _fbxObject.vertices->push_back(vertex[j]);
             _fbxObject.colors->push_back(color[j]);
