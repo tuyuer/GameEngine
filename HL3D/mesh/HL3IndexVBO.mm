@@ -132,24 +132,13 @@
 }
 
 - (void)drawVBOData{
-
-    [self bindVertexBuffer];
-    glEnableVertexAttribArray(kCCVertexAttrib_Position);
-    glEnableVertexAttribArray(kCCVertexAttrib_Color);
     
-    NSInteger diff = offsetof( ccV3F_C4F_T2F_N3F, vertices);
-    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(ccV3F_C4F_T2F_N3F), (void*)diff);
-    
-    diff = offsetof( ccV3F_C4F_T2F_N3F, colors);
-    glVertexAttribPointer(kCCVertexAttrib_Color, 3, GL_FLOAT, GL_FALSE, sizeof(ccV3F_C4F_T2F_N3F), (void*)diff);
-    
-    [self unBindVertexBuffer];
-    
-
+    [self bindVAO];
     [self bindIndexBuffer];
     glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_INT, 0);
     [self unBindIndexBuffer];
-
+    [self unBindVAO];
+    
 }
 
 @end

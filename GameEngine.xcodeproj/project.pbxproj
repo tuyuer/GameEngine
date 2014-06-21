@@ -42,7 +42,6 @@
 		33AE1E0E195167D30016D17E /* HLFBXObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E08195167D30016D17E /* HLFBXObject.mm */; };
 		33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0A195167D30016D17E /* HLFBXOneLoad.mm */; };
 		33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0C195167D30016D17E /* HLFBXStream.mm */; };
-		33AE1E1219518A2E0016D17E /* c3dExtension in Resources */ = {isa = PBXBuildFile; fileRef = 33AE1E1119518A2D0016D17E /* c3dExtension */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
 		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
@@ -174,6 +173,8 @@
 		33F9064C18FCD7B800E2F3F7 /* HLWireframeTorus.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */; };
 		33F9064D18FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */; };
 		33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */; };
+		99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */; };
+		99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -463,7 +464,6 @@
 		33AE1E0A195167D30016D17E /* HLFBXOneLoad.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLFBXOneLoad.mm; sourceTree = "<group>"; };
 		33AE1E0B195167D30016D17E /* HLFBXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFBXStream.h; sourceTree = "<group>"; };
 		33AE1E0C195167D30016D17E /* HLFBXStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLFBXStream.mm; sourceTree = "<group>"; };
-		33AE1E1119518A2D0016D17E /* c3dExtension */ = {isa = PBXFileReference; lastKnownFileType = folder; name = c3dExtension; path = "../../../../Downloads/c3dEngine2-2/c3dEngine2/c3dExtension"; sourceTree = "<group>"; };
 		33AE9FB41910C079004923C3 /* Grid16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid16.png; sourceTree = "<group>"; };
 		33B2517918FE742A0067533C /* HLMD2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2.mm; sourceTree = "<group>"; };
 		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
@@ -673,6 +673,10 @@
 		33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeTrefoilKnot.mm; sourceTree = "<group>"; };
 		33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframSphere.h; sourceTree = "<group>"; };
 		33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframSphere.mm; sourceTree = "<group>"; };
+		99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestLayer.h; sourceTree = "<group>"; };
+		99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestLayer.mm; sourceTree = "<group>"; };
+		99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestObject.h; sourceTree = "<group>"; };
+		99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestObject.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1342,6 +1346,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				99E2BCD41955C1C10048E5E8 /* VaoVboIndexTest */,
 				33A9A75B19554B7B00BFE052 /* IndexBufferTest */,
 				33C177D11953E5350090405F /* VBOTest */,
 				33C177CB1953DAAF0090405F /* MipmapTest */,
@@ -1590,7 +1595,6 @@
 		33E9F01A18E0173C00A34046 /* HL3D */ = {
 			isa = PBXGroup;
 			children = (
-				33AE1E1119518A2D0016D17E /* c3dExtension */,
 				33C177C31953CB450090405F /* mesh */,
 				33AE1E04195167D20016D17E /* FBXManager */,
 				33AE1CFF1951644B0016D17E /* FBX */,
@@ -1758,6 +1762,17 @@
 			path = wireframe;
 			sourceTree = "<group>";
 		};
+		99E2BCD41955C1C10048E5E8 /* VaoVboIndexTest */ = {
+			isa = PBXGroup;
+			children = (
+				99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */,
+				99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */,
+				99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */,
+				99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */,
+			);
+			path = VaoVboIndexTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1891,7 +1906,6 @@
 				33AB5AE41921D63D00919883 /* Marble.png in Resources */,
 				33F5122C19345D5800F15D29 /* blend_src.png in Resources */,
 				33F5122E19345D5800F15D29 /* blend_dst.png in Resources */,
-				33AE1E1219518A2E0016D17E /* c3dExtension in Resources */,
 				33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2008,6 +2022,8 @@
 				33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */,
 				33A9A75E19554BBA00BFE052 /* IndexBufferTestLayer.mm in Sources */,
 				33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */,
+				99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */,
+				99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

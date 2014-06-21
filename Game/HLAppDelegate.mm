@@ -23,6 +23,7 @@
 #import "VBOTestLayer.h"
 #import "IndexBufferTestObject.h"
 #import "IndexBufferTestLayer.h"
+#import "VaoVboIndexBufferTestLayer.h"
 
 @implementation HLAppDelegate
 
@@ -53,7 +54,7 @@
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
     //run game scene --- 
-    [[HLDirector sharedDirector] runWithScene:[IndexBufferTestLayer scene]];
+    [[HLDirector sharedDirector] runWithScene:[VaoVboIndexBufferTestLayer scene]];
     
     NSLog(@"Game Engine Runing...");
     return YES;
