@@ -44,6 +44,12 @@ typedef struct _ccTex2F {
     GLfloat v;
 } ccTex2F;
 
+typedef struct _ccNormal3F {
+    GLfloat x;
+    GLfloat y;
+    GLfloat z;
+} ccNormal3F;
+
 typedef struct _ccV3F_C4B_T2F{
 	//! vertices (3F)
 	ccVertex3F		vertices;			// 12 bytes
@@ -119,6 +125,19 @@ typedef struct _ccV3F_C4F_T2F
 	//! tex coords (2F)
 	ccTex2F			texCoords;
 } ccV3F_C4F_T2F;
+
+
+typedef struct _ccV3F_C4F_T2F_N3F
+{
+	//! vertices (3F)
+	ccVertex3F		vertices;
+	//! colors (4F)
+	ccColor4F		colors;
+	//! tex coords (2F)
+	ccTex2F			texCoords;
+    //! normal
+    ccNormal3F      normals;
+} ccV3F_C4F_T2F_N3F;
 
 //! 4 ccV3F_C4F_T2F
 typedef struct _ccV3F_C4F_T2F_Quad

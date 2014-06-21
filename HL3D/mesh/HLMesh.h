@@ -7,10 +7,10 @@
 //
 
 #import "HL3Node.h"
+#import "HL3Material.h"
 
 @interface HLMesh : HL3Node{
-
-
+    HL3Material * _material;
 }
 
 @end

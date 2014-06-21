@@ -1,0 +1,127 @@
+//
+//  HL3IndexVBO.m
+//  GameEngine
+//
+//  Created by huxiaozhou on 14-6-21.
+//  Copyright (c) 2014年 Hoolai. All rights reserved.
+//
+
+#import "HL3IndexVBO.h"
+#import "HLTypes.h"
+#import "HL3Vertex.h"
+#import "HL3IndexTriangle.h"
+
+@implementation HL3IndexVBO
+@synthesize vertexBuffer = _vertexBuffer;
+@synthesize indexBuffer = _indexBuffer;
+@synthesize vertexCount = _vertexCount;
+@synthesize indexCount = _indexCount;
+
+- (void)dealloc{
+    if (_vertexBuffer != 0 ) {
+        glDeleteBuffers(1, &_vertexBuffer);
+    }
+    if (_indexBuffer != 0 ) {
+        glDeleteBuffers(1, &_indexBuffer);
+    }
+    
+    [super dealloc];
+}
+
++ (id)indexVBO{
+    return [[[self alloc] init] autorelease];
+}
+
+- (id)init{
+    if (self = [super init]) {
+        
+        _vertexBuffer = 0;
+        _indexBuffer = 0;
+        
+        _vertexCount = 0;
+        _indexCount = 0;
+        
+        [self genBuffers];
+    }
+    return self;
+}
+
+- (void)genBuffers{
+    assert(_vertexCount == 0);
+    assert(_indexBuffer == 0);
+    
+    glGenBuffers(1, &_vertexBuffer);
+    glGenBuffers(1, &_indexBuffer);
+}
+
+- (void)submitVertex:(NSArray*)vertexArray usage:(GLenum)usage{
+    int vertexCount = [vertexArray count];
+    _vertexCount = vertexCount;
+    if(_vertexCount==0)return;
+    
+    ccV3F_C4F_T2F_N3F vertexs[_vertexCount];
+    for (int i=0; i<[vertexArray count]; i++) {
+        HL3Vertex * vertexValue = [vertexArray objectAtIndex:i];
+        
+        vertexs[i].vertices.x = vertexValue.position.x;
+        vertexs[i].vertices.y = vertexValue.position.y;
+        vertexs[i].vertices.z = vertexValue.position.z;
+        
+        vertexs[i].colors.r = vertexValue.color.x;
+        vertexs[i].colors.g = vertexValue.color.y;
+        vertexs[i].colors.b = vertexValue.color.z;
+        vertexs[i].colors.a = vertexValue.color.w;
+        
+        vertexs[i].texCoords.u = vertexValue.textureCoord.x;
+        vertexs[i].texCoords.v = vertexValue.textureCoord.y;
+        
+        vertexs[i].normals.x = vertexValue.normal.x;
+        vertexs[i].normals.y = vertexValue.normal.y;
+        vertexs[i].normals.z = vertexValue.normal.z;
+    }
+    
+    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_vertexCount*(3+4+2+3), vertexs, usage);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+- (void)submitIndex:(NSArray*)indexTriangleArray usage:(GLenum)usage{
+    int indexTriangleCount = [indexTriangleArray count];
+    int indexCount = indexTriangleCount * 3;
+    _indexCount = indexCount;
+    
+    if(_indexCount==0)return;
+    
+    int vertexIndexes[_indexCount];
+    for (int i=0; i<indexTriangleCount; i++) {
+        HL3IndexTriangle * indexTriangle = [indexTriangleArray objectAtIndex:i];
+        int * indexVertex = [indexTriangle vertexIndex];
+        vertexIndexes[i*3+0] = indexVertex[0];
+        vertexIndexes[i*3+1] = indexVertex[1];
+        vertexIndexes[i*3+2] = indexVertex[2];
+    }
+    
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int)*_indexCount, vertexIndexes, usage);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

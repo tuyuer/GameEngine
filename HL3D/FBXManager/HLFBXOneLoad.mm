@@ -84,6 +84,7 @@ using namespace std;
     NSString * filePath = [[NSBundle mainBundle] pathForResource:[NSString stringWithUTF8String:"girl.fbx"] ofType:nil];
     HLFBXStream * fbxStream = new HLFBXStream( pSdkManager, "rb",[filePath UTF8String]);
     fbxStream->Open(NULL);
+    
     // initialize the importer with a stream
     const bool lImportStatus = lImporter->Initialize( fbxStream, NULL, -1,pSdkManager->GetIOSettings());
     lImporter->GetFileVersion(lFileMajor, lFileMinor, lFileRevision);
@@ -337,7 +338,7 @@ using namespace std;
 - (void)makeSubMeshSetForEachNode:(FbxNode*)pNode{
     FbxNodeAttribute* lNodeAttribute = pNode->GetNodeAttribute();
     if (lNodeAttribute
-        &&lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh//ÇÒÊôÐÔ½ÚµãÎªµÄÀàÐÍÎªeMesh
+        &&lNodeAttribute->GetAttributeType() == FbxNodeAttribute::eMesh
         )
     {
         [self makeSubMeshSetForThisNode:pNode];
@@ -362,8 +363,7 @@ using namespace std;
     HL3Vector2 uv[3][2];
     HL3Vector normal[3];
     HL3Vector tangent[3];
-    uv;
-    normal;
+
     const int triangleCount = lMesh->GetPolygonCount();
     int vertexCounter = 0;
     for (int i = 0; i < triangleCount; i++)
@@ -380,10 +380,7 @@ using namespace std;
             //读取每个顶点的UV
             for (int k = 0; k < 2; k++) {
                 [self readUV:lMesh ctrlPointIndex:ctrlPointIndex textureUVIndex:lMesh->GetTextureUVIndex(i, j) uvLayer:k vector:uv[j][k]];
-                
-//                NSLog(@"uv = {%f,%f}",uv[j][k].x,uv[j][k].y);
             }
-            
             
             _fbxObject.vertices->push_back(vertex[j]);
             _fbxObject.colors->push_back(color[j]);

@@ -26,6 +26,10 @@
 		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
 		33A517CF194ECEA000DD6A11 /* HLWave3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A517CE194ECEA000DD6A11 /* HLWave3D.m */; };
 		33A52252194FF0D300779080 /* HLFlipX3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A52251194FF0D300779080 /* HLFlipX3D.m */; };
+		33A9A74B195529BB00BFE052 /* HL3Vertex.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A74A195529BB00BFE052 /* HL3Vertex.mm */; };
+		33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A74D19552CD800BFE052 /* HL3Material.mm */; };
+		33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A750195536E600BFE052 /* HL3IndexVBO.mm */; };
+		33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */; };
 		33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AB5AE11921D21800919883 /* HLWireframeCone.mm */; };
 		33AB5AE41921D63D00919883 /* Marble.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AB5AE31921D63D00919883 /* Marble.png */; };
 		33AE1E00195165190016D17E /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AE1DF8195165190016D17E /* libfbxsdk.a */; };
@@ -100,6 +104,7 @@
 		33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C177CF1953DD0F0090405F /* Marble_nomipmap.png */; };
 		33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D31953E5500090405F /* VBOTestLayer.mm */; };
 		33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D61953E6BD0090405F /* VBOTestObject.mm */; };
+		33C177DB195457430090405F /* HL3Identifiable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177DA195457420090405F /* HL3Identifiable.mm */; };
 		33C40115193580AA008B5111 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4010E193580AA008B5111 /* HLActionInterval.m */; };
 		33C40116193580AA008B5111 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40110193580AA008B5111 /* HLMoveBy.m */; };
 		33C40117193580AA008B5111 /* HLMoveTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40112193580AA008B5111 /* HLMoveTo.m */; };
@@ -200,6 +205,14 @@
 		33A517CE194ECEA000DD6A11 /* HLWave3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWave3D.m; sourceTree = "<group>"; };
 		33A52250194FF0D300779080 /* HLFlipX3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFlipX3D.h; sourceTree = "<group>"; };
 		33A52251194FF0D300779080 /* HLFlipX3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFlipX3D.m; sourceTree = "<group>"; };
+		33A9A749195529BB00BFE052 /* HL3Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Vertex.h; sourceTree = "<group>"; };
+		33A9A74A195529BB00BFE052 /* HL3Vertex.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Vertex.mm; sourceTree = "<group>"; };
+		33A9A74C19552CD800BFE052 /* HL3Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Material.h; sourceTree = "<group>"; };
+		33A9A74D19552CD800BFE052 /* HL3Material.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Material.mm; sourceTree = "<group>"; };
+		33A9A74F195536E600BFE052 /* HL3IndexVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3IndexVBO.h; sourceTree = "<group>"; };
+		33A9A750195536E600BFE052 /* HL3IndexVBO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexVBO.mm; sourceTree = "<group>"; };
+		33A9A75819553C1300BFE052 /* HL3IndexTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3IndexTriangle.h; sourceTree = "<group>"; };
+		33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexTriangle.mm; sourceTree = "<group>"; };
 		33AB5AE01921D21800919883 /* HLWireframeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeCone.h; sourceTree = "<group>"; };
 		33AB5AE11921D21800919883 /* HLWireframeCone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeCone.mm; sourceTree = "<group>"; };
 		33AB5AE31921D63D00919883 /* Marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble.png; sourceTree = "<group>"; };
@@ -530,6 +543,8 @@
 		33C177D31953E5500090405F /* VBOTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestLayer.mm; sourceTree = "<group>"; };
 		33C177D51953E6BD0090405F /* VBOTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOTestObject.h; sourceTree = "<group>"; };
 		33C177D61953E6BD0090405F /* VBOTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestObject.mm; sourceTree = "<group>"; };
+		33C177D9195457420090405F /* HL3Identifiable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Identifiable.h; sourceTree = "<group>"; };
+		33C177DA195457420090405F /* HL3Identifiable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Identifiable.mm; sourceTree = "<group>"; };
 		33C4010D193580AA008B5111 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
 		33C4010E193580AA008B5111 /* HLActionInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLActionInterval.m; sourceTree = "<group>"; };
 		33C4010F193580AA008B5111 /* HLMoveBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoveBy.h; sourceTree = "<group>"; };
@@ -1351,6 +1366,16 @@
 				33C177C51953CBDB0090405F /* HLMesh.mm */,
 				33C177C71953CC030090405F /* HLSubMesh.h */,
 				33C177C81953CC030090405F /* HLSubMesh.mm */,
+				33C177D9195457420090405F /* HL3Identifiable.h */,
+				33C177DA195457420090405F /* HL3Identifiable.mm */,
+				33A9A749195529BB00BFE052 /* HL3Vertex.h */,
+				33A9A74A195529BB00BFE052 /* HL3Vertex.mm */,
+				33A9A74C19552CD800BFE052 /* HL3Material.h */,
+				33A9A74D19552CD800BFE052 /* HL3Material.mm */,
+				33A9A74F195536E600BFE052 /* HL3IndexVBO.h */,
+				33A9A750195536E600BFE052 /* HL3IndexVBO.mm */,
+				33A9A75819553C1300BFE052 /* HL3IndexTriangle.h */,
+				33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */,
 			);
 			path = mesh;
 			sourceTree = "<group>";
@@ -1958,6 +1983,11 @@
 				33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */,
 				33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */,
 				33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */,
+				33C177DB195457430090405F /* HL3Identifiable.mm in Sources */,
+				33A9A74B195529BB00BFE052 /* HL3Vertex.mm in Sources */,
+				33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */,
+				33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */,
+				33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
