@@ -10,6 +10,8 @@
 #import "HLTypes.h"
 #import "HL3Vertex.h"
 #import "HL3IndexTriangle.h"
+#import "HLGLStateCache.h"
+#import "HLGLProgram.h"
 
 @implementation HL3IndexVBO
 @synthesize vertexBuffer = _vertexBuffer;
@@ -41,6 +43,8 @@
         _vertexCount = 0;
         _indexCount = 0;
         
+        _vao = 0;
+        
         [self genBuffers];
     }
     return self;
@@ -49,7 +53,9 @@
 - (void)genBuffers{
     assert(_vertexCount == 0);
     assert(_indexBuffer == 0);
+    assert(_vao == 0);
     
+    glGenVertexArraysOES(1, &_vao);
     glGenBuffers(1, &_vertexBuffer);
     glGenBuffers(1, &_indexBuffer);
 }
@@ -79,10 +85,7 @@
         vertexs[i].normals.y = vertexValue.normal.y;
         vertexs[i].normals.z = vertexValue.normal.z;
     }
-    
-    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_vertexCount*(3+4+2+3), vertexs, usage);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
 - (void)submitIndex:(NSArray*)indexTriangleArray usage:(GLenum)usage{
@@ -100,10 +103,53 @@
         vertexIndexes[i*3+1] = indexVertex[1];
         vertexIndexes[i*3+2] = indexVertex[2];
     }
-    
+
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint)*_indexCount, vertexIndexes, usage);
+}
+
+- (void)bindVAO{
+    glBindVertexArrayOES(_vao);
+}
+
+- (void)unBindVAO{
+    glBindVertexArrayOES(0);
+}
+
+- (void)bindVertexBuffer{
+    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
+}
+
+- (void)unBindVertexBuffer{
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+- (void)bindIndexBuffer{
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(int)*_indexCount, vertexIndexes, usage);
+}
+
+- (void)unBindIndexBuffer{
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}
+
+- (void)drawVBOData{
+
+    [self bindVertexBuffer];
+    glEnableVertexAttribArray(kCCVertexAttrib_Position);
+    glEnableVertexAttribArray(kCCVertexAttrib_Color);
+    
+    NSInteger diff = offsetof( ccV3F_C4F_T2F_N3F, vertices);
+    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, sizeof(ccV3F_C4F_T2F_N3F), (void*)diff);
+    
+    diff = offsetof( ccV3F_C4F_T2F_N3F, colors);
+    glVertexAttribPointer(kCCVertexAttrib_Color, 3, GL_FLOAT, GL_FALSE, sizeof(ccV3F_C4F_T2F_N3F), (void*)diff);
+    
+    [self unBindVertexBuffer];
+    
+
+    [self bindIndexBuffer];
+    glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_INT, 0);
+    [self unBindIndexBuffer];
+
 }
 
 @end

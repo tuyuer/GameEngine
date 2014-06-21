@@ -30,6 +30,8 @@
 		33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A74D19552CD800BFE052 /* HL3Material.mm */; };
 		33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A750195536E600BFE052 /* HL3IndexVBO.mm */; };
 		33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */; };
+		33A9A75E19554BBA00BFE052 /* IndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */; };
+		33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */; };
 		33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AB5AE11921D21800919883 /* HLWireframeCone.mm */; };
 		33AB5AE41921D63D00919883 /* Marble.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AB5AE31921D63D00919883 /* Marble.png */; };
 		33AE1E00195165190016D17E /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AE1DF8195165190016D17E /* libfbxsdk.a */; };
@@ -213,6 +215,10 @@
 		33A9A750195536E600BFE052 /* HL3IndexVBO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexVBO.mm; sourceTree = "<group>"; };
 		33A9A75819553C1300BFE052 /* HL3IndexTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3IndexTriangle.h; sourceTree = "<group>"; };
 		33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexTriangle.mm; sourceTree = "<group>"; };
+		33A9A75C19554BBA00BFE052 /* IndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBufferTestLayer.h; sourceTree = "<group>"; };
+		33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexBufferTestLayer.mm; sourceTree = "<group>"; };
+		33A9A75F19554CD200BFE052 /* IndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBufferTestObject.h; sourceTree = "<group>"; };
+		33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexBufferTestObject.mm; sourceTree = "<group>"; };
 		33AB5AE01921D21800919883 /* HLWireframeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeCone.h; sourceTree = "<group>"; };
 		33AB5AE11921D21800919883 /* HLWireframeCone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeCone.mm; sourceTree = "<group>"; };
 		33AB5AE31921D63D00919883 /* Marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble.png; sourceTree = "<group>"; };
@@ -740,6 +746,17 @@
 				338E02531941EBA60005789C /* FBOTestLayer.mm */,
 			);
 			path = FBOTest;
+			sourceTree = "<group>";
+		};
+		33A9A75B19554B7B00BFE052 /* IndexBufferTest */ = {
+			isa = PBXGroup;
+			children = (
+				33A9A75C19554BBA00BFE052 /* IndexBufferTestLayer.h */,
+				33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */,
+				33A9A75F19554CD200BFE052 /* IndexBufferTestObject.h */,
+				33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */,
+			);
+			path = IndexBufferTest;
 			sourceTree = "<group>";
 		};
 		33AE1CFF1951644B0016D17E /* FBX */ = {
@@ -1325,6 +1342,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33A9A75B19554B7B00BFE052 /* IndexBufferTest */,
 				33C177D11953E5350090405F /* VBOTest */,
 				33C177CB1953DAAF0090405F /* MipmapTest */,
 				338E02511941EB510005789C /* FBOTest */,
@@ -1988,6 +2006,8 @@
 				33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */,
 				33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */,
 				33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */,
+				33A9A75E19554BBA00BFE052 /* IndexBufferTestLayer.mm in Sources */,
+				33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

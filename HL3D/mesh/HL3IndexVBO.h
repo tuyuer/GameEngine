@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface HL3IndexVBO : NSObject{
+    GLuint      _vao;
     GLuint      _vertexBuffer;
     GLuint      _indexBuffer;
     
@@ -24,5 +25,19 @@
 + (id)indexVBO;
 - (void)submitVertex:(NSArray*)vertexArray usage:(GLenum)usage;
 - (void)submitIndex:(NSArray*)indexTriangleArray usage:(GLenum)usage;
+
+
+// About Binding
+
+- (void)bindVAO;
+- (void)unBindVAO;
+
+- (void)bindVertexBuffer;
+- (void)unBindVertexBuffer;
+
+- (void)bindIndexBuffer;
+- (void)unBindIndexBuffer;
+
+- (void)drawVBOData;
 
 @end
