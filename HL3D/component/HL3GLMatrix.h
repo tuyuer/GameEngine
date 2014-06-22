@@ -8,6 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HL3GLMatrix : NSObject
+
+/*
+ 一个4x4矩阵的的数据封装
+ */
+
+@interface HL3GLMatrix : NSObject{
+    BOOL isIdentity;
+}
+
+/*代表此矩阵是否是单位矩阵
+ **/
+@property (nonatomic,readonly) BOOL isIdentity;
+
+/*Returns a pointer to the underlying array of 16 GLfloats stored in column-major order.
+ */
+@property (nonatomic,assign) GLfloat *glMatrix;
+
+
 
 @end
+
+
+
+

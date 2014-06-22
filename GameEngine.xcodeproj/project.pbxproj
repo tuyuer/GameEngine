@@ -171,8 +171,8 @@
 		33F9064C18FCD7B800E2F3F7 /* HLWireframeTorus.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */; };
 		33F9064D18FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */; };
 		33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */; };
-		99CCCED01956A6B3006A2DF6 /* HL3Frustum.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */; };
-		99CCCED41956BD19006A2DF6 /* HL3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */; };
+		99CCCED01956A6B3006A2DF6 /* HL3Frustum.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCECF1956A6B3006A2DF6 /* HL3Frustum.mm */; };
+		99CCCED41956BD19006A2DF6 /* HL3GLMatrix.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCED31956BD19006A2DF6 /* HL3GLMatrix.mm */; };
 		99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */; };
 		99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */; };
 /* End PBXBuildFile section */
@@ -670,10 +670,10 @@
 		33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframSphere.h; sourceTree = "<group>"; };
 		33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframSphere.mm; sourceTree = "<group>"; };
 		99CCCECE1956A6B3006A2DF6 /* HL3Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Frustum.h; sourceTree = "<group>"; };
-		99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Frustum.m; sourceTree = "<group>"; };
+		99CCCECF1956A6B3006A2DF6 /* HL3Frustum.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Frustum.mm; sourceTree = "<group>"; };
 		99CCCED11956AA66006A2DF6 /* HL3Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Plane.h; sourceTree = "<group>"; };
 		99CCCED21956BD18006A2DF6 /* HL3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3GLMatrix.h; sourceTree = "<group>"; };
-		99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3GLMatrix.m; sourceTree = "<group>"; };
+		99CCCED31956BD19006A2DF6 /* HL3GLMatrix.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3GLMatrix.mm; sourceTree = "<group>"; };
 		99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestLayer.h; sourceTree = "<group>"; };
 		99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestLayer.mm; sourceTree = "<group>"; };
 		99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestObject.h; sourceTree = "<group>"; };
@@ -1505,9 +1505,9 @@
 			isa = PBXGroup;
 			children = (
 				99CCCED21956BD18006A2DF6 /* HL3GLMatrix.h */,
-				99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */,
+				99CCCED31956BD19006A2DF6 /* HL3GLMatrix.mm */,
 				99CCCECE1956A6B3006A2DF6 /* HL3Frustum.h */,
-				99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */,
+				99CCCECF1956A6B3006A2DF6 /* HL3Frustum.mm */,
 				33CD6A3D18E50A05006AD2EC /* TransformUtils.h */,
 				33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */,
 				33E8D2D818E15D1500E1D735 /* HLDirector.h */,
@@ -2024,8 +2024,8 @@
 				33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */,
 				99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */,
 				99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */,
-				99CCCED01956A6B3006A2DF6 /* HL3Frustum.m in Sources */,
-				99CCCED41956BD19006A2DF6 /* HL3GLMatrix.m in Sources */,
+				99CCCED01956A6B3006A2DF6 /* HL3Frustum.mm in Sources */,
+				99CCCED41956BD19006A2DF6 /* HL3GLMatrix.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

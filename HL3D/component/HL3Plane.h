@@ -27,7 +27,7 @@ static inline NSString* NSStringFromHL3Plane(HL3Plane p) {
 	return [NSString stringWithFormat: @"(%.3f, %.3f, %.3f, %.3f)", p.a, p.b, p.c, p.d];
 }
 
-static inline HL3PlaneMake(GLfloat a, GLfloat b, GLfloat c, GLfloat d){
+static inline HL3Plane HL3PlaneMake(GLfloat a, GLfloat b, GLfloat c, GLfloat d){
     HL3Plane p;
     p.a = a;
     p.b = b;
