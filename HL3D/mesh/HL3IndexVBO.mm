@@ -131,15 +131,6 @@
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
-- (void)drawVBOData{
-    
-    [self bindVAO];
-    [self bindIndexBuffer];
-    glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_INT, 0);
-    [self unBindIndexBuffer];
-    [self unBindVAO];
-    
-}
 
 @end
 

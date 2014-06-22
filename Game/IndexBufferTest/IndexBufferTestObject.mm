@@ -64,7 +64,20 @@
         
         _dirty = NO;
     }
-    [_indexVBO drawVBOData];
+    
+    [_indexVBO bindVertexBuffer];
+    
+    glEnableVertexAttribArray(kCCVertexAttribFlag_Position);
+    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE,sizeof(ccV3F_C4F_T2F_N3F), (GLvoid *)offsetof(ccV3F_C4F_T2F_N3F, vertices));
+    
+    glEnableVertexAttribArray(kCCVertexAttribFlag_Color);
+    glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_FLOAT, GL_FALSE,sizeof(ccV3F_C4F_T2F_N3F), (GLvoid *)offsetof(ccV3F_C4F_T2F_N3F, colors));
+
+    [_indexVBO unBindVertexBuffer];
+    
+    [_indexVBO bindIndexBuffer];
+    glDrawElements(GL_TRIANGLES, [_indexVBO indexCount], GL_UNSIGNED_INT, 0);
+    [_indexVBO unBindIndexBuffer];
 }
 
 - (void)draw{

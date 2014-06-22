@@ -38,6 +38,4 @@
 - (void)bindIndexBuffer;
 - (void)unBindIndexBuffer;
 
-- (void)drawVBOData;
-
 @end

@@ -66,6 +66,10 @@ enum {
         VaoVboIndexBufferTestObject * ibto = [[[VaoVboIndexBufferTestObject alloc] init] autorelease];
         [self addChild:ibto];
         [ibto setPosition:CGPointMake(160, 240)];
+        
+        HLSprite * sprite = [HLSprite spriteWithFile:@"Marble.png"];
+        [sprite setPosition:CGPointMake(160, 100)];
+        [self addChild:sprite];
     }
     return self;
 }

@@ -67,7 +67,7 @@ enum {
         [ibto setPosition:CGPointMake(160, 240)];
         
         HLSprite * sprite = [HLSprite spriteWithFile:@"Marble.png"];
-        [sprite setPosition:CGPointMake(20, 20)];
+        [sprite setPosition:CGPointMake(160, 240)];
         [self addChild:sprite];
     }
     return self;

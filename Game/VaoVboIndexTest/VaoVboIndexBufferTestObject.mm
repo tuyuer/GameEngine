@@ -83,7 +83,12 @@
         
         _dirty = NO;
     }
-    [_indexVBO drawVBOData];
+
+    [_indexVBO bindVAO];
+    [_indexVBO bindIndexBuffer];
+    glDrawElements(GL_TRIANGLES, [_indexVBO indexCount], GL_UNSIGNED_INT, 0);
+    [_indexVBO unBindIndexBuffer];
+    [_indexVBO unBindVAO];
 }
 
 - (void)draw{

@@ -54,6 +54,7 @@
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
     //run game scene --- 
+//    [[HLDirector sharedDirector] runWithScene:[VaoVboIndexBufferTestLayer scene]];
     [[HLDirector sharedDirector] runWithScene:[VaoVboIndexBufferTestLayer scene]];
     
     NSLog(@"Game Engine Runing...");
