@@ -23,7 +23,6 @@
 		3398E0F61920683C00762FA9 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
 		3398E0F71920683C00762FA9 /* ccShader_PositionColorLengthTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */; };
-		339AC40018F951FB00864A39 /* HL3Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 339AC3FF18F951FB00864A39 /* HL3Camera.m */; };
 		33A517CF194ECEA000DD6A11 /* HLWave3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A517CE194ECEA000DD6A11 /* HLWave3D.m */; };
 		33A52252194FF0D300779080 /* HLFlipX3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A52251194FF0D300779080 /* HLFlipX3D.m */; };
 		33A9A74B195529BB00BFE052 /* HL3Vertex.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A74A195529BB00BFE052 /* HL3Vertex.mm */; };
@@ -100,7 +99,6 @@
 		33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FB190E5006007EE82B /* ccShaderWaves.frag */; };
 		33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FC190E5006007EE82B /* ccShaderWaves.vert */; };
 		33C177C61953CBDB0090405F /* HLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C51953CBDB0090405F /* HLMesh.mm */; };
-		33C177C91953CC030090405F /* HLSubMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C81953CC030090405F /* HLSubMesh.mm */; };
 		33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177CD1953DAC30090405F /* MipmapTestLayer.mm */; };
 		33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C177CF1953DD0F0090405F /* Marble_nomipmap.png */; };
 		33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D31953E5500090405F /* VBOTestLayer.mm */; };
@@ -173,6 +171,8 @@
 		33F9064C18FCD7B800E2F3F7 /* HLWireframeTorus.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */; };
 		33F9064D18FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */; };
 		33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */; };
+		99CCCED01956A6B3006A2DF6 /* HL3Frustum.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */; };
+		99CCCED41956BD19006A2DF6 /* HL3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */; };
 		99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */; };
 		99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */; };
 /* End PBXBuildFile section */
@@ -202,8 +202,6 @@
 		3393A6031914A5D000602BDA /* Tarsier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tarsier.png; sourceTree = "<group>"; };
 		339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HL3Matrix4x4.cpp; sourceTree = "<group>"; };
 		339AC3FC18F9400E00864A39 /* HL3Matrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Matrix4x4.h; sourceTree = "<group>"; };
-		339AC3FE18F951FB00864A39 /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
-		339AC3FF18F951FB00864A39 /* HL3Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Camera.m; sourceTree = "<group>"; };
 		33A517CD194ECEA000DD6A11 /* HLWave3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWave3D.h; sourceTree = "<group>"; };
 		33A517CE194ECEA000DD6A11 /* HLWave3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWave3D.m; sourceTree = "<group>"; };
 		33A52250194FF0D300779080 /* HLFlipX3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFlipX3D.h; sourceTree = "<group>"; };
@@ -540,8 +538,6 @@
 		33B616FB190E747A007EE82B /* HLDirectorMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDirectorMac.m; sourceTree = "<group>"; };
 		33C177C41953CBDB0090405F /* HLMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMesh.h; sourceTree = "<group>"; };
 		33C177C51953CBDB0090405F /* HLMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMesh.mm; sourceTree = "<group>"; };
-		33C177C71953CC030090405F /* HLSubMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSubMesh.h; sourceTree = "<group>"; };
-		33C177C81953CC030090405F /* HLSubMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLSubMesh.mm; sourceTree = "<group>"; };
 		33C177CC1953DAC30090405F /* MipmapTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MipmapTestLayer.h; sourceTree = "<group>"; };
 		33C177CD1953DAC30090405F /* MipmapTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MipmapTestLayer.mm; sourceTree = "<group>"; };
 		33C177CF1953DD0F0090405F /* Marble_nomipmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble_nomipmap.png; sourceTree = "<group>"; };
@@ -673,6 +669,11 @@
 		33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeTrefoilKnot.mm; sourceTree = "<group>"; };
 		33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframSphere.h; sourceTree = "<group>"; };
 		33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframSphere.mm; sourceTree = "<group>"; };
+		99CCCECE1956A6B3006A2DF6 /* HL3Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Frustum.h; sourceTree = "<group>"; };
+		99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Frustum.m; sourceTree = "<group>"; };
+		99CCCED11956AA66006A2DF6 /* HL3Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Plane.h; sourceTree = "<group>"; };
+		99CCCED21956BD18006A2DF6 /* HL3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3GLMatrix.h; sourceTree = "<group>"; };
+		99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3GLMatrix.m; sourceTree = "<group>"; };
 		99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestLayer.h; sourceTree = "<group>"; };
 		99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestLayer.mm; sourceTree = "<group>"; };
 		99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestObject.h; sourceTree = "<group>"; };
@@ -1387,8 +1388,6 @@
 			children = (
 				33C177C41953CBDB0090405F /* HLMesh.h */,
 				33C177C51953CBDB0090405F /* HLMesh.mm */,
-				33C177C71953CC030090405F /* HLSubMesh.h */,
-				33C177C81953CC030090405F /* HLSubMesh.mm */,
 				33C177D9195457420090405F /* HL3Identifiable.h */,
 				33C177DA195457420090405F /* HL3Identifiable.mm */,
 				33A9A749195529BB00BFE052 /* HL3Vertex.h */,
@@ -1505,6 +1504,10 @@
 		33E8D2D718E15CFB00E1D735 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				99CCCED21956BD18006A2DF6 /* HL3GLMatrix.h */,
+				99CCCED31956BD19006A2DF6 /* HL3GLMatrix.m */,
+				99CCCECE1956A6B3006A2DF6 /* HL3Frustum.h */,
+				99CCCECF1956A6B3006A2DF6 /* HL3Frustum.m */,
 				33CD6A3D18E50A05006AD2EC /* TransformUtils.h */,
 				33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */,
 				33E8D2D818E15D1500E1D735 /* HLDirector.h */,
@@ -1521,12 +1524,11 @@
 				33F45ACA18F6943E00FB5C8D /* HLCamera.m */,
 				33C7EAE218F7E35D0061D784 /* HLParametricSurface.h */,
 				33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */,
-				339AC3FE18F951FB00864A39 /* HL3Camera.h */,
-				339AC3FF18F951FB00864A39 /* HL3Camera.m */,
 				33B2518018FE77F70067533C /* HL3Model.h */,
 				33B2517F18FE77F70067533C /* HL3Model.mm */,
 				338CF6181907B5510036C4DC /* HL3Light.h */,
 				338CF6191907B5510036C4DC /* HL3Light.mm */,
+				99CCCED11956AA66006A2DF6 /* HL3Plane.h */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -1961,7 +1963,6 @@
 				33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */,
 				33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */,
 				339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */,
-				339AC40018F951FB00864A39 /* HL3Camera.m in Sources */,
 				338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */,
 				33F9064A18FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm in Sources */,
 				33F9064B18FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm in Sources */,
@@ -2011,7 +2012,6 @@
 				33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */,
 				33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */,
 				33C177C61953CBDB0090405F /* HLMesh.mm in Sources */,
-				33C177C91953CC030090405F /* HLSubMesh.mm in Sources */,
 				33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */,
 				33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */,
 				33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */,
@@ -2024,6 +2024,8 @@
 				33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */,
 				99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */,
 				99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */,
+				99CCCED01956A6B3006A2DF6 /* HL3Frustum.m in Sources */,
+				99CCCED41956BD19006A2DF6 /* HL3GLMatrix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

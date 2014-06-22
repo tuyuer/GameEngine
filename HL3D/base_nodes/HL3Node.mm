@@ -16,7 +16,6 @@
 @synthesize position3D = _position3D;
 @synthesize anchorPoint3D = _anchorPoint3D;
 @synthesize rotation3D = _rotation3D;
-@synthesize camera3D = _camera3D;
 @synthesize scale3D = _scale3D;
 @synthesize light3D = _light3D;
 
@@ -29,7 +28,6 @@
         _position3D = hl3v(0, 0, 0);
         _rotation3D = hl3v(0, 0, 0);
         _scale3D = hl3v(1.0, 1.0, 1.0);
-        _camera3D = nil;
         _transform3D = kHL3Matrix4x4Identity;
     }
     return self;

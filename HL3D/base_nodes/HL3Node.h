@@ -10,7 +10,7 @@
 #import "HLNode.h"
 #import "HL3Foundation.h"
 #import "HL3Matrix4x4.h"
-#import "HL3Camera.h"
+#import "HLCamera.h"
 #import "HL3Light.h"
 
 typedef struct _HL3NodeUniformHandles {
@@ -38,7 +38,6 @@ typedef struct _HL3NodeUniformHandles {
     HL3Matrix4x4 _transform3D;
     HL3Matrix4x4 _inverse3D;
 
-    HL3Camera * _camera3D;
     HL3Light * _light3D;
     HL3NodeUniformHandles _uniformHandles;
 }
@@ -46,7 +45,6 @@ typedef struct _HL3NodeUniformHandles {
 @property (nonatomic,assign) HL3Vector anchorPoint3D;
 @property (nonatomic,assign) HL3Vector rotation3D;
 @property (nonatomic,assign) HL3Vector scale3D;
-@property (nonatomic,assign) HL3Camera * camera3D;
 @property (nonatomic,assign) HL3Light * light3D;
 
 
