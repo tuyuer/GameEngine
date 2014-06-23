@@ -15,4 +15,8 @@
 @property (nonatomic,assign) HL3Scene        *hl3Scene;
 + (id)layer;
 
+/*
+ * 根据HL3Layer的尺寸来更新3Scene实例viewport
+ */
+- (void)updateViewport;
 @end

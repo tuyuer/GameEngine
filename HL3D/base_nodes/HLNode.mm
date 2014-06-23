@@ -391,6 +391,16 @@ static NSUInteger globalOrderOfArrival = 1;
     return _transform;
 }
 
+- (CGAffineTransform)nodeToWorldTransform{
+    CGAffineTransform t = [self nodeToParentTransform];
+
+    for (HLNode * p = _parent;  p != nil; p = p.parent) {
+        t = CGAffineTransformConcat(t, [p nodeToParentTransform]);
+    }
+    
+    return t;
+}
+
 - (void)transform{
     
     kmMat4 transfrom4x4;
@@ -478,6 +488,13 @@ static NSUInteger globalOrderOfArrival = 1;
 
 - (bool) is3DNode{
     return false;
+}
+
+-(CGRect) globalBoundingBoxInPixels {
+	CGSize cs = self.contentSize;
+	CGRect rect = CGRectMake(0, 0, cs.width, cs.height);
+	rect = CGRectApplyAffineTransform(rect, [self nodeToWorldTransform]);
+	return rect;
 }
 
 @end

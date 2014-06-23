@@ -138,8 +138,12 @@
 - (void)onEnter;
 - (void)onEnterTransitionDidFinish;
 
-//about transform ...
+//about transform , transform to parrent transform ...
 - (CGAffineTransform)nodeToParentTransform;
+
+//about transform , transform to world transform ...
+- (CGAffineTransform)nodeToWorldTransform;
+
 //performs Opengl view - matrix transformation based on position etc...
 - (void)transform;
 

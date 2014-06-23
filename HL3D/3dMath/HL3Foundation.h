@@ -29,6 +29,65 @@ typedef struct{
     GLsizei h;  /**< The height of the viewport. */
 }HL3Viewport;
 
+/* An empty or undefined viewport*/
+static const HL3Viewport kHL3ViewportZero = {0,0,0,0};
+
+/** Returns a string description of the specified CC3Viewport struct in the form "(x, y, w, h)" */
+static inline NSString* NSStringFromHL3Viewport(HL3Viewport vp) {
+	return [NSString stringWithFormat: @"(%i, %i, %i, %i)", vp.x, vp.y, vp.w, vp.h];
+}
+
+/** Returns a CC3Viewport structure constructed from the specified components. */
+static inline HL3Viewport HL3ViewportMake(GLint x, GLint y, GLint w, GLint h){
+    HL3Viewport vp;
+    vp.x = x;
+    vp.y = y;
+    vp.w = w;
+    vp.h = h;
+    return vp;
+}
+
+/** Returns whether the two viewports are equal by comparing their respective components. */
+static inline BOOL HL3ViewportsEqual(HL3Viewport vp1,HL3Viewport vp2){
+    return (vp1.x == vp2.x) && (vp1.y == vp2.y) && (vp1.w == vp2.w) && (vp1.h == vp2.h);
+}
+
+/** Returns whether the specified viewport is equal to the zero viewport, specified by kCC3ViewportZero. */
+static inline BOOL HL3ViewportIsZero(HL3Viewport vp){
+    return HL3ViewportsEqual(vp, kHL3ViewportZero);
+}
+
+/**
+ * Returns whether the specified point lies within the specified viewport.
+ * A point is considered inside the viewport if its coordinates lie inside
+ * the viewport or on the minimum X or minimum Y edge.
+ */
+static inline BOOL HL3ViewportContainsPoint(HL3Viewport vp, CGPoint point) {
+	return (point.x >= vp.x) && (point.x < vp.x + vp.w) &&
+	(point.y >= vp.y) && (point.y < vp.y + vp.h);
+}
+
+/** Returns a CC3Viewport constructed from the specified CGRect. */
+static inline HL3Viewport HL3ViewportFromCGRect(CGRect rect) {
+    HL3Viewport vp;
+    vp.x = rect.origin.x;
+    vp.y = rect.origin.y;
+    vp.w = rect.size.width;
+    vp.h = rect.size.height;
+    return vp;
+}
+
+/** Returns a CGRect constructed from the specified viewport. */
+static inline CGRect CGRectFromHL3Viewport(HL3Viewport vp) {
+	return CGRectMake(vp.x, vp.y, vp.w, vp.h);
+}
+
+
+
+
+
+
+
 typedef CGPoint HL3Vector2;
 
 
