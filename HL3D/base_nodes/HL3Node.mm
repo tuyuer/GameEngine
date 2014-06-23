@@ -19,6 +19,8 @@
 @synthesize rotation3D = _rotation3D;
 @synthesize scale3D = _scale3D;
 @synthesize light3D = _light3D;
+@synthesize isLight = _isLight;
+@synthesize isCamera = _isCamera;
 
 - (void)dealloc{
     [super dealloc];
@@ -30,6 +32,9 @@
         _rotation3D = hl3v(0, 0, 0);
         _scale3D = hl3v(1.0, 1.0, 1.0);
         _transform3D = kHL3Matrix4x4Identity;
+        
+        _isLight = NO;
+        _isCamera = NO;
     }
     return self;
 }

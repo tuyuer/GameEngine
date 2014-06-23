@@ -117,6 +117,10 @@
 		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33CEE62E1957F8C100BE339C /* HL3Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE62D1957F8C100BE339C /* HL3Camera.mm */; };
+		33CEE63119580A2200BE339C /* HL3Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63019580A2200BE339C /* HL3Scene.mm */; };
+		33CEE63419580B7B00BE339C /* HL3Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63319580B7B00BE339C /* HL3Layer.mm */; };
+		33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */; };
+		33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
@@ -574,6 +578,14 @@
 		33CEC6EE18E25F0100B889E6 /* HLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTypes.h; sourceTree = "<group>"; };
 		33CEE62C1957F8C100BE339C /* HL3Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Camera.h; sourceTree = "<group>"; };
 		33CEE62D1957F8C100BE339C /* HL3Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Camera.mm; sourceTree = "<group>"; };
+		33CEE62F19580A2200BE339C /* HL3Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Scene.h; sourceTree = "<group>"; };
+		33CEE63019580A2200BE339C /* HL3Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Scene.mm; sourceTree = "<group>"; };
+		33CEE63219580B7A00BE339C /* HL3Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Layer.h; sourceTree = "<group>"; };
+		33CEE63319580B7B00BE339C /* HL3Layer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Layer.mm; sourceTree = "<group>"; };
+		33CEE63619581A6F00BE339C /* ThreeDSceneLayerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDSceneLayerTest.h; sourceTree = "<group>"; };
+		33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThreeDSceneLayerTest.mm; sourceTree = "<group>"; };
+		33CEE63919581CD200BE339C /* ThreeDSceneTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDSceneTestScene.h; sourceTree = "<group>"; };
+		33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThreeDSceneTestScene.mm; sourceTree = "<group>"; };
 		33D76AFD191729F400549358 /* HLScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScheduler.h; sourceTree = "<group>"; };
 		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
@@ -1334,6 +1346,7 @@
 		33B6152D190E54C3007EE82B /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33CEE63519581A2500BE339C /* 3DSceneLayerTest */,
 				99E2BCD41955C1C10048E5E8 /* VaoVboIndexTest */,
 				33A9A75B19554B7B00BFE052 /* IndexBufferTest */,
 				33C177D11953E5350090405F /* VBOTest */,
@@ -1467,6 +1480,17 @@
 				339AC3FB18F9400E00864A39 /* HL3Matrix4x4.cpp */,
 			);
 			path = 3dMath;
+			sourceTree = "<group>";
+		};
+		33CEE63519581A2500BE339C /* 3DSceneLayerTest */ = {
+			isa = PBXGroup;
+			children = (
+				33CEE63619581A6F00BE339C /* ThreeDSceneLayerTest.h */,
+				33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */,
+				33CEE63919581CD200BE339C /* ThreeDSceneTestScene.h */,
+				33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */,
+			);
+			path = 3DSceneLayerTest;
 			sourceTree = "<group>";
 		};
 		33D76AFC1917273300549358 /* Schedule */ = {
@@ -1695,6 +1719,10 @@
 				33E4A67318EEB867006CBFC3 /* HLLayer.mm */,
 				33F45ABF18F66F9000FB5C8D /* HLDrawingPrimitives.h */,
 				33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */,
+				33CEE62F19580A2200BE339C /* HL3Scene.h */,
+				33CEE63019580A2200BE339C /* HL3Scene.mm */,
+				33CEE63219580B7A00BE339C /* HL3Layer.h */,
+				33CEE63319580B7B00BE339C /* HL3Layer.mm */,
 			);
 			path = base_nodes;
 			sourceTree = "<group>";
@@ -2010,6 +2038,10 @@
 				99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */,
 				99CCCED01956A6B3006A2DF6 /* HL3Frustum.mm in Sources */,
 				33CEE62E1957F8C100BE339C /* HL3Camera.mm in Sources */,
+				33CEE63119580A2200BE339C /* HL3Scene.mm in Sources */,
+				33CEE63419580B7B00BE339C /* HL3Layer.mm in Sources */,
+				33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */,
+				33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

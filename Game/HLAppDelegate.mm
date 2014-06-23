@@ -23,6 +23,10 @@
 #import "IndexBufferTestObject.h"
 #import "IndexBufferTestLayer.h"
 #import "VaoVboIndexBufferTestLayer.h"
+#import "ThreeDSceneLayerTest.h"
+#import "HL3Layer.h"
+#import "HL3Scene.h"
+#import "ThreeDSceneTestScene.h"
 
 @implementation HLAppDelegate
 
@@ -52,9 +56,16 @@
     //set projection type
     [[HLDirector sharedDirector] setProjection:kCCDirectorProjection3D];
     
+    
+    ThreeDSceneLayerTest * my3Layer = [ThreeDSceneLayerTest layer];
+    my3Layer.hl3Scene = [ThreeDSceneTestScene scene];
+    
+    HLScene * scene = [HLScene scene];
+    [scene addChild:my3Layer];
+    
     //run game scene --- 
 //    [[HLDirector sharedDirector] runWithScene:[VaoVboIndexBufferTestLayer scene]];
-    [[HLDirector sharedDirector] runWithScene:[VaoVboIndexBufferTestLayer scene]];
+    [[HLDirector sharedDirector] runWithScene:scene];
     
     NSLog(@"Game Engine Runing...");
     return YES;

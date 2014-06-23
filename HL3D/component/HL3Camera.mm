@@ -11,4 +11,8 @@
 @implementation HL3Camera
 @synthesize fieldOfView = _fieldOfView;
 
+- (BOOL)isCamera{
+    return YES;
+}
+
 @end

@@ -32,4 +32,8 @@
     return self;
 }
 
+- (BOOL)isLight{
+    return YES;
+}
+
 @end

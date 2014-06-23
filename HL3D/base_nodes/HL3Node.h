@@ -40,12 +40,18 @@ typedef struct _HL3NodeUniformHandles {
 
     HL3Light * _light3D;
     HL3NodeUniformHandles _uniformHandles;
+    
+    BOOL _isLight;
+    BOOL _isCamera;
 }
 @property (nonatomic,assign) HL3Vector position3D;
 @property (nonatomic,assign) HL3Vector anchorPoint3D;
 @property (nonatomic,assign) HL3Vector rotation3D;
 @property (nonatomic,assign) HL3Vector scale3D;
 @property (nonatomic,assign) HL3Light * light3D;
+@property (nonatomic,assign) BOOL isLight;
+@property (nonatomic,assign) BOOL isCamera;
+
 
 
 //about transform3D ...
