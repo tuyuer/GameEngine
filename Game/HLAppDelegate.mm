@@ -17,7 +17,6 @@
 #import "GameLayer.h"
 #import "BlendLayer.h"
 #import "StencilTestLayer.h"
-#import "LightTestLayer.h"
 #import "FBOTestLayer.h"
 #import "MipmapTestLayer.h"
 #import "VBOTestLayer.h"

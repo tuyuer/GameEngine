@@ -14,6 +14,7 @@
 #import "kazmath/GL/matrix.h"
 #import "HLTypes.h"
 #import "ccMacros.h"
+#import "HL3Light.h"
 #import "HLTextureCache.h"
 
 @implementation HLParametricSurface
@@ -217,7 +218,7 @@
 	[_shaderProgram setUniformsForBuiltins];
 
     //设置光照信息
-    HL3Vector v4LightPos = [_light3D position];
+    HL3Vector v4LightPos = [_light3D position3D];
     HL3Vector v4LightDir = [_light3D direction];
     
     [_shaderProgram setUniformLocation:_uniformHandles.u_lightPosition with3fv:&v4LightPos.x count:1];

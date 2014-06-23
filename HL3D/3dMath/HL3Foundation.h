@@ -16,6 +16,19 @@ typedef struct {
 	GLfloat z;			/**< The Z-componenent of the vector. */
 } HL3Vector;
 
+/**
+ * A rectangle defining a GL viewport.
+ *
+ * This can also be used for any rectangular group of pixels.
+ */
+
+typedef struct{
+    GLint x;    /**< The X-position of the bottom-left corner of the viewport. */
+    GLint y;    /**< The Y-position of the bottom-left corner of the viewport. */
+    GLsizei w;  /**< The width of the viewport. */
+    GLsizei h;  /**< The height of the viewport. */
+}HL3Viewport;
+
 typedef CGPoint HL3Vector2;
 
 

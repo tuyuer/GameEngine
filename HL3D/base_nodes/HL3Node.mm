@@ -11,6 +11,7 @@
 #import "kazmath/GL/matrix.h"
 #import "TransformUtils.h"
 #import "ccMacros.h"
+#import "HL3Node.h"
 
 @implementation HL3Node
 @synthesize position3D = _position3D;

@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "HL3Foundation.h"
+#import "HL3Node.h"
 
-@interface HL3Light : NSObject{
+@interface HL3Light : HL3Node{
     HL3Vector _direction;
-    HL3Vector _position;
     HL3Vector4 _diffuse;
     HL3Vector4 _ambient;
     HL3Vector4 _specular;
     float _shiness;
-    
 }
 @property (nonatomic,assign) HL3Vector direction;
-@property (nonatomic,assign) HL3Vector position;
 @property (nonatomic,assign) HL3Vector4 diffuse;
 @property (nonatomic,assign) HL3Vector4 ambient;
 @property (nonatomic,assign) HL3Vector4 specular;

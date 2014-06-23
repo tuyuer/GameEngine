@@ -11,8 +11,8 @@
 #import "HL3Foundation.h"
 #import "HL3Matrix4x4.h"
 #import "HLCamera.h"
-#import "HL3Light.h"
 
+@class HL3Light;
 typedef struct _HL3NodeUniformHandles {
 
     GLuint u_lightPosition;

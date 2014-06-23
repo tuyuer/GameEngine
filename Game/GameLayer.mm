@@ -15,6 +15,7 @@
 #import "HL3Sprite.h"
 #import "HLMD2Animation.h"
 #import "HLDirector.h"
+#import "HL3Light.h"
 
 @implementation GameLayer
 
@@ -68,7 +69,7 @@
         [self addChild:bottle];
         [bottle setPosition3D:hl3v(160, 240, 0)];
         
-        [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[bottle light3D] setPosition3D:hl3v(0.25, 0.25, 1)];
         [[bottle light3D] setDirection:hl3v(0, 0, 1.0)];
          
         [[bottle light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];

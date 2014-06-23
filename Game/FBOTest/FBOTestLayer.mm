@@ -14,7 +14,6 @@
 #import "HL3ClippingNode.h"
 #import "HLWireframeCone.h"
 #import "HLMoveBy.h"
-#import "HL3Light.h"
 #import "HL3Node.h"
 #import "HLMoveTo.h"
 #import "HLSequence.h"

@@ -10,7 +10,6 @@
 
 @implementation HL3Light
 @synthesize direction = _direction;
-@synthesize position = _position;
 @synthesize diffuse = _diffuse;
 @synthesize ambient = _ambient;
 @synthesize specular = _specular;
@@ -23,7 +22,7 @@
 - (id)init{
     if (self = [super init]) {
         _direction = hl3v(0, 0, 0);
-        _position = hl3v(0, 0, 0);
+        _position3D = hl3v(0, 0, 0);
         
         _diffuse = HL3Vector4Make(1, 1, 1, 1);
         _ambient = HL3Vector4Make(0, 0, 0, 1);

@@ -14,6 +14,7 @@
 #import "HL3ClippingNode.h"
 #import "HLWireframeCone.h"
 #import "HLMoveBy.h"
+#import "HL3Light.h"
 
 
 @implementation StencilTestLayer
@@ -59,7 +60,7 @@ enum {
         cone.bDisableTexture = true;
         [cone setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
         
-        [[cone light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[cone light3D] setPosition3D:hl3v(0.25, 0.25, 1)];
         [[cone light3D] setDirection:hl3v(0, 0, 1.0)];
         
         [[cone light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
@@ -72,7 +73,7 @@ enum {
         HLWireframeCone * cone2 = [HLWireframeCone coneWithHeight:5 radius:125];
         [cone2 setPosition3D:hl3v(clipper.contentSize.width / 2, clipper.contentSize.height / 2, 0)];
         
-        [[cone2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[cone2 light3D] setPosition3D:hl3v(0.25, 0.25, 1)];
         [[cone2 light3D] setDirection:hl3v(0, 0, 1.0)];
         
         [[cone2 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
@@ -82,7 +83,7 @@ enum {
         
         bottle = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
         bottle.bClearDepthWhenDrawing = true;
-        [[bottle light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[bottle light3D] setPosition3D:hl3v(0.25, 0.25, 1)];
         [[bottle light3D] setDirection:hl3v(0, 0, 1.0)];
         
         [[bottle light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];
@@ -96,7 +97,7 @@ enum {
         bottle.blendFunc = (ccBlendFunc){GL_ONE_MINUS_CONSTANT_ALPHA ,GL_DST_ALPHA};
         
         bottle2 = [HLWireframeTrefoilKnot trefoilKnotWithScale:150];
-        [[bottle2 light3D] setPosition:hl3v(0.25, 0.25, 1)];
+        [[bottle2 light3D] setPosition3D:hl3v(0.25, 0.25, 1)];
         [[bottle2 light3D] setDirection:hl3v(0, 0, 1.0)];
         
         [[bottle2 light3D] setAmbient:HL3Vector4Make(0.04, 0.04, 0.04, 1.0)];

@@ -14,6 +14,8 @@
 #import "kazmath/GL/matrix.h"
 #import "HLTypes.h"
 #import "ccMacros.h"
+#import "HL3Node.h"
+#import "HL3Light.h"
 
 @implementation HL3Sprite
 
@@ -47,7 +49,7 @@
 	[_shaderProgram setUniformsForBuiltins];
     
     //可以设置一些光照值
-    HL3Vector v4LightPos = [_light3D position];
+    HL3Vector v4LightPos = [_light3D position3D];
     HL3Vector v4LightDir = [_light3D direction];
     
     [_shaderProgram setUniformLocation:_uniformHandles.u_lightPosition with3fv:&v4LightPos.x count:1];
