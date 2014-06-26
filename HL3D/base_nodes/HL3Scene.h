@@ -7,9 +7,9 @@
 //
 
 #import "HL3Node.h"
-#import "HL3Camera.h"
 
 @class HL3Layer;
+@class HL3Camera;
 @interface HL3Scene : HL3Node{
     NSMutableArray          *_lights;
     HL3Layer                *_hl3Layer;
@@ -21,5 +21,5 @@
 + (id)scene;
 
 - (void)open;
-- (void)draw3Scene;
+
 @end

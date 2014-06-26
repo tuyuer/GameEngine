@@ -13,6 +13,8 @@
 @implementation HLCamera
 @synthesize dirty = _dirty;
 
+
+
 - (id)init
 {
 	if( (self=[super init]) )

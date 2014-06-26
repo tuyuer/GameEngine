@@ -12,6 +12,8 @@
 #import "TransformUtils.h"
 #import "ccMacros.h"
 #import "HL3Node.h"
+#import "HL3Camera.h"
+#import "HL3Scene.h"
 
 @implementation HL3Node
 @synthesize position3D = _position3D;
@@ -143,10 +145,14 @@
     kmMat4Fill(&transfrom4x4, nodeToParentTransform.getArray());
     
     kmGLMultMatrix(&transfrom4x4);
+}
 
-    if (_camera) {
-        [_camera locate];
-    }
+-(HL3Scene*) scene {
+    return _parent3D.scene;
+}
+
+-(HL3Camera*) activeCamera {
+    return self.scene.activeCamera;
 }
 
 //3d节点的绘制 , 覆盖2d节点绘制过程

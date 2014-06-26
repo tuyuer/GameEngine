@@ -8,6 +8,7 @@
 
 #import "HL3Node.h"
 #import "HLLayer.h"
+#import "HLNode.h"
 @class HL3Scene;
 @interface HL3Layer : HLLayer{
     HL3Scene        *_hl3Scene;

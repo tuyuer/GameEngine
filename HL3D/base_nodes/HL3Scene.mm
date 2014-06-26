@@ -38,9 +38,6 @@
 
 }
 
-- (void)draw3Scene{
-
-}
 
 @end
 

@@ -90,6 +90,7 @@
 @property (nonatomic,assign) BOOL ignoreAnchorPointForPosition;
 @property (nonatomic,readwrite,retain) HLScheduler *scheduler;
 @property (nonatomic,assign) ccBlendFunc blendFunc;
+
 @property (nonatomic,readonly) CGPoint anchorPointInPoints;
 
 /** The rotation (angle) of the node in degrees. 0 is the default rotation angle. Positive values rotate node CW. */

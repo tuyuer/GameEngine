@@ -10,9 +10,10 @@
 #import "HLNode.h"
 #import "HL3Foundation.h"
 #import "HL3Matrix4x4.h"
-#import "HLCamera.h"
 
 @class HL3Light;
+@class HL3Camera;
+@class HL3Scene;
 typedef struct _HL3NodeUniformHandles {
 
     GLuint u_lightPosition;
@@ -49,6 +50,17 @@ typedef struct _HL3NodeUniformHandles {
 @property (nonatomic,assign) HL3Vector rotation3D;
 @property (nonatomic,assign) HL3Vector scale3D;
 @property (nonatomic,assign) HL3Light * light3D;
+@property (nonatomic,retain, readonly) HL3Camera* activeCamera;
+/**
+ * If this node has been added to the 3D scene, either directly, or as part
+ * of a node assembly, returns the CC3Scene instance that forms the 3D scene,
+ * otherwise returns nil.
+ *
+ * Reading this property traverses up the node hierarchy. If this property
+ * is accessed frequently, it is recommended that it be cached.
+ */
+@property(nonatomic, readonly) HL3Scene * scene;
+
 @property (nonatomic,assign) BOOL isLight;
 @property (nonatomic,assign) BOOL isCamera;
 

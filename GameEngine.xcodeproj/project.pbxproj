@@ -121,6 +121,7 @@
 		33CEE63419580B7B00BE339C /* HL3Layer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63319580B7B00BE339C /* HL3Layer.mm */; };
 		33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */; };
 		33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */; };
+		33D461A5195BB99000D58CE8 /* HL3NodeVisitor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
@@ -586,6 +587,8 @@
 		33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThreeDSceneLayerTest.mm; sourceTree = "<group>"; };
 		33CEE63919581CD200BE339C /* ThreeDSceneTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDSceneTestScene.h; sourceTree = "<group>"; };
 		33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThreeDSceneTestScene.mm; sourceTree = "<group>"; };
+		33D461A3195BB98F00D58CE8 /* HL3NodeVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3NodeVisitor.h; sourceTree = "<group>"; };
+		33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3NodeVisitor.mm; sourceTree = "<group>"; };
 		33D76AFD191729F400549358 /* HLScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScheduler.h; sourceTree = "<group>"; };
 		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
@@ -1709,6 +1712,8 @@
 				33DB32E418E3FA22002EA575 /* HLScene.mm */,
 				33C7EAD218F795D50061D784 /* HL3Node.h */,
 				33C7EAD318F795D50061D784 /* HL3Node.mm */,
+				33D461A3195BB98F00D58CE8 /* HL3NodeVisitor.h */,
+				33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */,
 				33E9F06818E0332100A34046 /* HLNode.h */,
 				33E9F06918E0332100A34046 /* HLNode.mm */,
 				33E8D2D418E14B7400E1D735 /* HLSprite.h */,
@@ -2042,6 +2047,7 @@
 				33CEE63419580B7B00BE339C /* HL3Layer.mm in Sources */,
 				33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */,
 				33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */,
+				33D461A5195BB99000D58CE8 /* HL3NodeVisitor.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

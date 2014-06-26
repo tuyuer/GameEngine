@@ -30,19 +30,24 @@
     return nil;
 }
 
-- (void)draw{
-    [_hl3Scene draw3Scene];
+- (void)visit{
+    if (_hl3Scene) {
+        [_hl3Scene visit];
+    }
+    [super visit];
 }
 
 - (void)setHl3Scene:(HL3Scene *)hl3Scene{
     if (_hl3Scene) {
         [_hl3Scene release];
-        _hl3Scene = [hl3Scene retain];
     }
+    _hl3Scene = [hl3Scene retain];
+    _hl3Scene.hl3Layer = self;
 }
 
 -(void) updateViewport {
-
+//    CGSize winSize = [[HLDirector sharedDirector] winSize];
+//    CGRect gbb = [self glo]
 }
 
 /** Invoked from cocos2d when this layer is first displayed. Opens the 3D scene. */
@@ -61,6 +66,7 @@
 	[self updateViewport];			// Set the camera viewport
 	[_hl3Scene open];				// Open the scene
 }
+
 
 @end
 

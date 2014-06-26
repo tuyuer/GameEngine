@@ -31,6 +31,7 @@
 /** whether of not the camera is dirty */
 @property (nonatomic,readwrite) BOOL dirty;
 
+
 /** returns the Z eye */
 +(float) getZEye;
 

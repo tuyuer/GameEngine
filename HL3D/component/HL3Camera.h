@@ -10,6 +10,10 @@
 #import "HL3Frustum.h"
 #import "HL3Foundation.h"
 
+
+static const GLfloat kHL3DefaultFieldOfView = 45.0f;
+
+
 /**
  * HL3Camera 代表正在观察3D场景的相机
  * HL3Camera 是一个HL3Node类型，可以组装到Node结构
@@ -25,6 +29,7 @@
 }
 @property(nonatomic, assign) GLfloat fieldOfView;
 
++(id)camera;
 @end
 
 
