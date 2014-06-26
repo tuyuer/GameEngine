@@ -89,18 +89,6 @@ static HLShaderCache * s_sharedShaderCache = nil;
     [_programs setObject:p forKey:kCCShader_PositionTextureLight];
     [p release];
     
-//    //shader for global light
-//    p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_GlobalLighting.vert" fragmentShaderFilename:@"ccShader_GlobalLighting.frag"];
-//    [p addAttribute:kCCAttributeNamePosition index:kCCVertexAttrib_Position];
-//    [p addAttribute:kCCAttributeNameTexCoord index:kCCVertexAttrib_TexCoords];
-//    [p addAttribute:kCCAttributeNameNormal index:kCCVertexAttrib_Normal];
-//    
-//    [p link];
-//    [p updateUniforms];
-//    [_programs setObject:p forKey:kCCShader_GlobalLighting];
-//    [p release];
-    
-    
     
     //shader for Position uColor
     p = [[HLGLProgram alloc] initWithVertexShaderFilename:@"ccShader_Position_uColor.vert" fragmentShaderFilename:@"ccShader_Position_uColor.frag"];

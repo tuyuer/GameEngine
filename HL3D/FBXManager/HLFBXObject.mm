@@ -9,6 +9,7 @@
 #import "HLFBXObject.h"
 #import "HLShaderCache.h"
 #import "HLGLStateCache.h"
+#import "HLGLProgram.h"
 
 @implementation HLFBXObject
 @synthesize vertices = _vertices;
@@ -25,45 +26,45 @@
         _vertices = new std::vector<HL3Vector>();
         _colors = new std::vector<HL3Vector4>();
         
-        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
+//        self.shaderProgram = [[HLShaderCache sharedShaderCache] programForKey:kCCShader_PositionColor];
     }
     return self;
 }
 
 - (void)draw{
 
-    NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);
-
-    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
-    
-    [_shaderProgram use];
-    [_shaderProgram setUniformsForBuiltins];
-
-    ccGLEnableVertexAttribs( kCCVertexAttrib_Position | kCCVertexAttrib_Color);
-    
-    
-    GLfloat vertices[_vertices->size()*3];
-    GLfloat colors[_colors->size()*4];
-    
-    for (int i = 0; i<_vertices->size(); i++) {
-        HL3Vector vv = _vertices->at(i);
-        vertices[i*3] = vv.x;
-        vertices[i*3+1] = vv.y;
-        vertices[i*3+2] = vv.z;
-    }
-    
-    for (int i = 0; i<_colors->size(); i++) {
-        HL3Vector4 vv = _colors->at(i);
-        colors[i*4] = vv.x;
-        colors[i*4+1] = vv.y;
-        colors[i*4+2] = vv.z;
-        colors[i*4+3] = 1.0;
-    }
-
-    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, 0, vertices);
-    glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_FLOAT, GL_FALSE, 0, colors);
-
-    glDrawArrays(GL_TRIANGLES , 0, _vertices->size());
+//    NSAssert1(_shaderProgram, @"No shader program set for node: %@", self);
+//
+//    ccGLBlendFunc(_blendFunc.src, _blendFunc.dst);
+//    
+//    [_shaderProgram use];
+//    [_shaderProgram setUniformsForBuiltins];
+//
+//    ccGLEnableVertexAttribs( kCCVertexAttrib_Position | kCCVertexAttrib_Color);
+//    
+//    
+//    GLfloat vertices[_vertices->size()*3];
+//    GLfloat colors[_colors->size()*4];
+//    
+//    for (int i = 0; i<_vertices->size(); i++) {
+//        HL3Vector vv = _vertices->at(i);
+//        vertices[i*3] = vv.x;
+//        vertices[i*3+1] = vv.y;
+//        vertices[i*3+2] = vv.z;
+//    }
+//    
+//    for (int i = 0; i<_colors->size(); i++) {
+//        HL3Vector4 vv = _colors->at(i);
+//        colors[i*4] = vv.x;
+//        colors[i*4+1] = vv.y;
+//        colors[i*4+2] = vv.z;
+//        colors[i*4+3] = 1.0;
+//    }
+//
+//    glVertexAttribPointer(kCCVertexAttrib_Position, 3, GL_FLOAT, GL_FALSE, 0, vertices);
+//    glVertexAttribPointer(kCCVertexAttrib_Color, 4, GL_FLOAT, GL_FALSE, 0, colors);
+//
+//    glDrawArrays(GL_TRIANGLES , 0, _vertices->size());
 }
 
 @end

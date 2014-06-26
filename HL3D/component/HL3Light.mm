@@ -22,7 +22,6 @@
 - (id)init{
     if (self = [super init]) {
         _direction = hl3v(0, 0, 0);
-        _position3D = hl3v(0, 0, 0);
         
         _diffuse = HL3Vector4Make(1, 1, 1, 1);
         _ambient = HL3Vector4Make(0, 0, 0, 1);

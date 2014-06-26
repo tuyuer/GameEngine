@@ -30,12 +30,6 @@
     return nil;
 }
 
-- (void)visit{
-    if (_hl3Scene) {
-        [_hl3Scene visit];
-    }
-    [super visit];
-}
 
 - (void)setHl3Scene:(HL3Scene *)hl3Scene{
     if (_hl3Scene) {

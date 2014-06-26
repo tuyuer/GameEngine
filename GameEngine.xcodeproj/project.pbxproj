@@ -12,10 +12,7 @@
 		3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
 		33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */ = {isa = PBXBuildFile; fileRef = 3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */; };
 		3331C2171934BF210004C9C3 /* HLGrabber.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3331C2161934BF210004C9C3 /* HLGrabber.mm */; };
-		338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338A85D618FBB18900E04921 /* HL3Sprite.mm */; };
-		338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6121907775E0036C4DC /* HLMD2Animation.mm */; };
 		338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338CF6191907B5510036C4DC /* HL3Light.mm */; };
-		338E02541941EBA60005789C /* FBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338E02531941EBA60005789C /* FBOTestLayer.mm */; };
 		338E02571941F8FB0005789C /* HLGridBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 338E02561941F8FB0005789C /* HLGridBase.mm */; };
 		3393A6041914A5D000602BDA /* Tarsier.png in Resources */ = {isa = PBXBuildFile; fileRef = 3393A6031914A5D000602BDA /* Tarsier.png */; };
 		3398E0F61920683C00762FA9 /* ccShader_PositionColorLengthTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3307315D191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag */; };
@@ -27,9 +24,6 @@
 		33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A74D19552CD800BFE052 /* HL3Material.mm */; };
 		33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A750195536E600BFE052 /* HL3IndexVBO.mm */; };
 		33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */; };
-		33A9A75E19554BBA00BFE052 /* IndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */; };
-		33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */; };
-		33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AB5AE11921D21800919883 /* HLWireframeCone.mm */; };
 		33AB5AE41921D63D00919883 /* Marble.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AB5AE31921D63D00919883 /* Marble.png */; };
 		33AE1E00195165190016D17E /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AE1DF8195165190016D17E /* libfbxsdk.a */; };
 		33AE1E01195165190016D17E /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AE1DFA195165190016D17E /* libfbxsdk.a */; };
@@ -40,7 +34,6 @@
 		33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0A195167D30016D17E /* HLFBXOneLoad.mm */; };
 		33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33AE1E0C195167D30016D17E /* HLFBXStream.mm */; };
 		33AE9FB51910C079004923C3 /* Grid16.png in Resources */ = {isa = PBXBuildFile; fileRef = 33AE9FB41910C079004923C3 /* Grid16.png */; };
-		33B2517B18FE742A0067533C /* HLMD2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517918FE742A0067533C /* HLMD2.mm */; };
 		33B2518118FE77F70067533C /* HL3Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B2517F18FE77F70067533C /* HL3Model.mm */; };
 		33B614A9190E4D71007EE82B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B614A8190E4D71007EE82B /* Cocoa.framework */; };
 		33B614B3190E4D71007EE82B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33B614B1190E4D71007EE82B /* InfoPlist.strings */; };
@@ -74,11 +67,9 @@
 		33B6151C190E5006007EE82B /* weapon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614EC190E5006007EE82B /* weapon.png */; };
 		33B6152B190E5006007EE82B /* SpaceRocksAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FD190E5006007EE82B /* SpaceRocksAtlas.png */; };
 		33B6152C190E5006007EE82B /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FE190E5006007EE82B /* test.png */; };
-		33B61538190E54C3007EE82B /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B6152F190E54C3007EE82B /* GameLayer.mm */; };
 		33B6153A190E54C3007EE82B /* HLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61531190E54C3007EE82B /* HLAppDelegate.mm */; };
 		33B6153C190E54C3007EE82B /* HLEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61533190E54C3007EE82B /* HLEGLView.mm */; };
 		33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33B61535190E54C3007EE82B /* HLViewController.mm */; };
-		33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B61537190E54C3007EE82B /* ShaderTestLayer.m */; };
 		33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616F5190E7418007EE82B /* HLAppDelegate.m */; };
 		33B616F9190E7418007EE82B /* HLGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616F7190E7418007EE82B /* HLGLView.m */; };
 		33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B616FB190E747A007EE82B /* HLDirectorMac.m */; };
@@ -97,10 +88,7 @@
 		33B6170B190E7EAA007EE82B /* ccShaderWaves.frag in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FB190E5006007EE82B /* ccShaderWaves.frag */; };
 		33B6170C190E7EAA007EE82B /* ccShaderWaves.vert in Resources */ = {isa = PBXBuildFile; fileRef = 33B614FC190E5006007EE82B /* ccShaderWaves.vert */; };
 		33C177C61953CBDB0090405F /* HLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177C51953CBDB0090405F /* HLMesh.mm */; };
-		33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177CD1953DAC30090405F /* MipmapTestLayer.mm */; };
 		33C177D01953DD0F0090405F /* Marble_nomipmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C177CF1953DD0F0090405F /* Marble_nomipmap.png */; };
-		33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D31953E5500090405F /* VBOTestLayer.mm */; };
-		33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177D61953E6BD0090405F /* VBOTestObject.mm */; };
 		33C177DB195457430090405F /* HL3Identifiable.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C177DA195457420090405F /* HL3Identifiable.mm */; };
 		33C40115193580AA008B5111 /* HLActionInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C4010E193580AA008B5111 /* HLActionInterval.m */; };
 		33C40116193580AA008B5111 /* HLMoveBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C40110193580AA008B5111 /* HLMoveBy.m */; };
@@ -112,9 +100,7 @@
 		33C5465D1944010400CC95FC /* HLGridAction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C5465C1944010400CC95FC /* HLGridAction.mm */; };
 		33C5466619440AC900CC95FC /* HLGrid3DAction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C5466519440AC900CC95FC /* HLGrid3DAction.mm */; };
 		33C5466919440EB700CC95FC /* HLGrid3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C5466819440EB700CC95FC /* HLGrid3D.m */; };
-		33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAD318F795D50061D784 /* HL3Node.mm */; };
 		33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */; };
-		33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */; };
 		33CD6A3F18E50A05006AD2EC /* TransformUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */; };
 		33CEE62E1957F8C100BE339C /* HL3Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE62D1957F8C100BE339C /* HL3Camera.mm */; };
 		33CEE63119580A2200BE339C /* HL3Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63019580A2200BE339C /* HL3Scene.mm */; };
@@ -122,11 +108,16 @@
 		33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63719581A6F00BE339C /* ThreeDSceneLayerTest.mm */; };
 		33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */; };
 		33D461A5195BB99000D58CE8 /* HL3NodeVisitor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */; };
+		33D461A8195BFB7B00D58CE8 /* HL3Node.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461A7195BFB7B00D58CE8 /* HL3Node.mm */; };
+		33D461BD195C229900D58CE8 /* HL3OpenGL.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D461B6195C229300D58CE8 /* HL3OpenGL.m */; };
+		33D461BE195C229900D58CE8 /* HL3Shader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461B8195C229500D58CE8 /* HL3Shader.mm */; };
+		33D461BF195C229900D58CE8 /* HL3ShaderCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461BA195C229600D58CE8 /* HL3ShaderCache.mm */; };
+		33D461C0195C229900D58CE8 /* HL3ShaderProgram.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461BC195C229800D58CE8 /* HL3ShaderProgram.mm */; };
+		33D461C3195C233B00D58CE8 /* HL3Cache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D461C2195C233A00D58CE8 /* HL3Cache.mm */; };
 		33D76AFF191729F400549358 /* HLScheduler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33D76AFE191729F400549358 /* HLScheduler.mm */; };
 		33D76B04191763F400549358 /* Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B03191763F400549358 /* Circle.png */; };
 		33D76B09191785D700549358 /* Grille.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D76B08191785D600549358 /* Grille.png */; };
 		33DB32E518E3FA22002EA575 /* HLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DB32E418E3FA22002EA575 /* HLScene.mm */; };
-		33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */; };
 		33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E055A819239C6E00EDC09A /* HL3ClippingNode.m */; };
 		33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E4A67318EEB867006CBFC3 /* HLLayer.mm */; };
 		33E8D2D618E14B7400E1D735 /* HLSprite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E8D2D518E14B7400E1D735 /* HLSprite.mm */; };
@@ -163,21 +154,12 @@
 		33E9F07418E036A300A34046 /* HLTextureQuad.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33E9F07118E036A300A34046 /* HLTextureQuad.mm */; };
 		33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */; };
 		33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F45ACA18F6943E00FB5C8D /* HLCamera.m */; };
-		33F512271934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
-		33F512281934450800F15D29 /* BlendLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F512261934450800F15D29 /* BlendLayer.mm */; };
 		33F5122C19345D5800F15D29 /* blend_src.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122A19345D5800F15D29 /* blend_src.png */; };
 		33F5122D19345D5800F15D29 /* blend_src.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122A19345D5800F15D29 /* blend_src.png */; };
 		33F5122E19345D5800F15D29 /* blend_dst.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122B19345D5800F15D29 /* blend_dst.png */; };
 		33F5122F19345D5800F15D29 /* blend_dst.png in Resources */ = {isa = PBXBuildFile; fileRef = 33F5122B19345D5800F15D29 /* blend_dst.png */; };
 		33F9063D18FCD41700E2F3F7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F9063C18FCD41700E2F3F7 /* libiconv.dylib */; };
-		33F9064A18FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064118FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm */; };
-		33F9064B18FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064318FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm */; };
-		33F9064C18FCD7B800E2F3F7 /* HLWireframeTorus.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */; };
-		33F9064D18FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */; };
-		33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */; };
 		99CCCED01956A6B3006A2DF6 /* HL3Frustum.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99CCCECF1956A6B3006A2DF6 /* HL3Frustum.mm */; };
-		99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */; };
-		99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,14 +171,8 @@
 		3307315E191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_PositionColorLengthTexture.vert; sourceTree = "<group>"; };
 		3331C2151934BF210004C9C3 /* HLGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGrabber.h; sourceTree = "<group>"; };
 		3331C2161934BF210004C9C3 /* HLGrabber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGrabber.mm; sourceTree = "<group>"; };
-		338A85D518FBB18900E04921 /* HL3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Sprite.h; sourceTree = "<group>"; };
-		338A85D618FBB18900E04921 /* HL3Sprite.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Sprite.mm; sourceTree = "<group>"; };
-		338CF6121907775E0036C4DC /* HLMD2Animation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2Animation.mm; sourceTree = "<group>"; };
-		338CF6131907775E0036C4DC /* HLMD2Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2Animation.h; sourceTree = "<group>"; };
 		338CF6181907B5510036C4DC /* HL3Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Light.h; sourceTree = "<group>"; };
 		338CF6191907B5510036C4DC /* HL3Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Light.mm; sourceTree = "<group>"; };
-		338E02521941EBA60005789C /* FBOTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOTestLayer.h; sourceTree = "<group>"; };
-		338E02531941EBA60005789C /* FBOTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBOTestLayer.mm; sourceTree = "<group>"; };
 		338E02551941F8FB0005789C /* HLGridBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGridBase.h; sourceTree = "<group>"; };
 		338E02561941F8FB0005789C /* HLGridBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGridBase.mm; sourceTree = "<group>"; };
 		3391A2AB18EE827500783D2B /* ccMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ccMacros.h; sourceTree = "<group>"; };
@@ -215,12 +191,6 @@
 		33A9A750195536E600BFE052 /* HL3IndexVBO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexVBO.mm; sourceTree = "<group>"; };
 		33A9A75819553C1300BFE052 /* HL3IndexTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3IndexTriangle.h; sourceTree = "<group>"; };
 		33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3IndexTriangle.mm; sourceTree = "<group>"; };
-		33A9A75C19554BBA00BFE052 /* IndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBufferTestLayer.h; sourceTree = "<group>"; };
-		33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexBufferTestLayer.mm; sourceTree = "<group>"; };
-		33A9A75F19554CD200BFE052 /* IndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBufferTestObject.h; sourceTree = "<group>"; };
-		33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndexBufferTestObject.mm; sourceTree = "<group>"; };
-		33AB5AE01921D21800919883 /* HLWireframeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeCone.h; sourceTree = "<group>"; };
-		33AB5AE11921D21800919883 /* HLWireframeCone.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeCone.mm; sourceTree = "<group>"; };
 		33AB5AE31921D63D00919883 /* Marble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble.png; sourceTree = "<group>"; };
 		33AE1D04195165180016D17E /* fbxalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbxalloc.h; sourceTree = "<group>"; };
 		33AE1D05195165180016D17E /* fbxarch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fbxarch.h; sourceTree = "<group>"; };
@@ -464,8 +434,6 @@
 		33AE1E0B195167D30016D17E /* HLFBXStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFBXStream.h; sourceTree = "<group>"; };
 		33AE1E0C195167D30016D17E /* HLFBXStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLFBXStream.mm; sourceTree = "<group>"; };
 		33AE9FB41910C079004923C3 /* Grid16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid16.png; sourceTree = "<group>"; };
-		33B2517918FE742A0067533C /* HLMD2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMD2.mm; sourceTree = "<group>"; };
-		33B2517A18FE742A0067533C /* HLMD2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMD2.h; sourceTree = "<group>"; };
 		33B2517F18FE77F70067533C /* HL3Model.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Model.mm; sourceTree = "<group>"; };
 		33B2518018FE77F70067533C /* HL3Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Model.h; sourceTree = "<group>"; };
 		33B614A7190E4D71007EE82B /* GameEngine_MacOs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameEngine_MacOs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -521,16 +489,12 @@
 		33B614FC190E5006007EE82B /* ccShaderWaves.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShaderWaves.vert; sourceTree = "<group>"; };
 		33B614FD190E5006007EE82B /* SpaceRocksAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpaceRocksAtlas.png; sourceTree = "<group>"; };
 		33B614FE190E5006007EE82B /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		33B6152E190E54C3007EE82B /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
-		33B6152F190E54C3007EE82B /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
 		33B61530190E54C3007EE82B /* HLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
 		33B61531190E54C3007EE82B /* HLAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLAppDelegate.mm; sourceTree = "<group>"; };
 		33B61532190E54C3007EE82B /* HLEGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLEGLView.h; sourceTree = "<group>"; };
 		33B61533190E54C3007EE82B /* HLEGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLEGLView.mm; sourceTree = "<group>"; };
 		33B61534190E54C3007EE82B /* HLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLViewController.h; sourceTree = "<group>"; };
 		33B61535190E54C3007EE82B /* HLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLViewController.mm; sourceTree = "<group>"; };
-		33B61536190E54C3007EE82B /* ShaderTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderTestLayer.h; sourceTree = "<group>"; };
-		33B61537190E54C3007EE82B /* ShaderTestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderTestLayer.m; sourceTree = "<group>"; };
 		33B616F4190E7418007EE82B /* HLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
 		33B616F5190E7418007EE82B /* HLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; };
 		33B616F6190E7418007EE82B /* HLGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGLView.h; sourceTree = "<group>"; };
@@ -539,13 +503,7 @@
 		33B616FB190E747A007EE82B /* HLDirectorMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDirectorMac.m; sourceTree = "<group>"; };
 		33C177C41953CBDB0090405F /* HLMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMesh.h; sourceTree = "<group>"; };
 		33C177C51953CBDB0090405F /* HLMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLMesh.mm; sourceTree = "<group>"; };
-		33C177CC1953DAC30090405F /* MipmapTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MipmapTestLayer.h; sourceTree = "<group>"; };
-		33C177CD1953DAC30090405F /* MipmapTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MipmapTestLayer.mm; sourceTree = "<group>"; };
 		33C177CF1953DD0F0090405F /* Marble_nomipmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marble_nomipmap.png; sourceTree = "<group>"; };
-		33C177D21953E5500090405F /* VBOTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOTestLayer.h; sourceTree = "<group>"; };
-		33C177D31953E5500090405F /* VBOTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestLayer.mm; sourceTree = "<group>"; };
-		33C177D51953E6BD0090405F /* VBOTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOTestObject.h; sourceTree = "<group>"; };
-		33C177D61953E6BD0090405F /* VBOTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VBOTestObject.mm; sourceTree = "<group>"; };
 		33C177D9195457420090405F /* HL3Identifiable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Identifiable.h; sourceTree = "<group>"; };
 		33C177DA195457420090405F /* HL3Identifiable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Identifiable.mm; sourceTree = "<group>"; };
 		33C4010D193580AA008B5111 /* HLActionInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLActionInterval.h; sourceTree = "<group>"; };
@@ -568,12 +526,8 @@
 		33C5466519440AC900CC95FC /* HLGrid3DAction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLGrid3DAction.mm; sourceTree = "<group>"; };
 		33C5466719440EB700CC95FC /* HLGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGrid3D.h; sourceTree = "<group>"; };
 		33C5466819440EB700CC95FC /* HLGrid3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGrid3D.m; sourceTree = "<group>"; };
-		33C7EAD218F795D50061D784 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
-		33C7EAD318F795D50061D784 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
 		33C7EADF18F7DE1F0061D784 /* HL3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Foundation.h; sourceTree = "<group>"; };
 		33C7EAE018F7DE1F0061D784 /* HL3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3Foundation.m; sourceTree = "<group>"; };
-		33C7EAE218F7E35D0061D784 /* HLParametricSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLParametricSurface.h; sourceTree = "<group>"; };
-		33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLParametricSurface.mm; sourceTree = "<group>"; };
 		33CD6A3D18E50A05006AD2EC /* TransformUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformUtils.h; sourceTree = "<group>"; };
 		33CD6A3E18E50A05006AD2EC /* TransformUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TransformUtils.mm; sourceTree = "<group>"; };
 		33CEC6EE18E25F0100B889E6 /* HLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTypes.h; sourceTree = "<group>"; };
@@ -589,6 +543,18 @@
 		33CEE63A19581CD200BE339C /* ThreeDSceneTestScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ThreeDSceneTestScene.mm; sourceTree = "<group>"; };
 		33D461A3195BB98F00D58CE8 /* HL3NodeVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3NodeVisitor.h; sourceTree = "<group>"; };
 		33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3NodeVisitor.mm; sourceTree = "<group>"; };
+		33D461A6195BFB7B00D58CE8 /* HL3Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Node.h; sourceTree = "<group>"; };
+		33D461A7195BFB7B00D58CE8 /* HL3Node.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Node.mm; sourceTree = "<group>"; };
+		33D461B5195C229300D58CE8 /* HL3OpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3OpenGL.h; sourceTree = "<group>"; };
+		33D461B6195C229300D58CE8 /* HL3OpenGL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3OpenGL.m; sourceTree = "<group>"; };
+		33D461B7195C229400D58CE8 /* HL3Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Shader.h; sourceTree = "<group>"; };
+		33D461B8195C229500D58CE8 /* HL3Shader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Shader.mm; sourceTree = "<group>"; };
+		33D461B9195C229600D58CE8 /* HL3ShaderCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3ShaderCache.h; sourceTree = "<group>"; };
+		33D461BA195C229600D58CE8 /* HL3ShaderCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3ShaderCache.mm; sourceTree = "<group>"; };
+		33D461BB195C229700D58CE8 /* HL3ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3ShaderProgram.h; sourceTree = "<group>"; };
+		33D461BC195C229800D58CE8 /* HL3ShaderProgram.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3ShaderProgram.mm; sourceTree = "<group>"; };
+		33D461C1195C233A00D58CE8 /* HL3Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Cache.h; sourceTree = "<group>"; };
+		33D461C2195C233A00D58CE8 /* HL3Cache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Cache.mm; sourceTree = "<group>"; };
 		33D76AFD191729F400549358 /* HLScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScheduler.h; sourceTree = "<group>"; };
 		33D76AFE191729F400549358 /* HLScheduler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScheduler.mm; sourceTree = "<group>"; };
 		33D76B0119172A7C00549358 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
@@ -597,8 +563,6 @@
 		33D76B08191785D600549358 /* Grille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grille.png; sourceTree = "<group>"; };
 		33DB32E318E3FA22002EA575 /* HLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScene.h; sourceTree = "<group>"; };
 		33DB32E418E3FA22002EA575 /* HLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLScene.mm; sourceTree = "<group>"; };
-		33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StencilTestLayer.h; sourceTree = "<group>"; };
-		33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StencilTestLayer.mm; sourceTree = "<group>"; };
 		33E055A719239C6E00EDC09A /* HL3ClippingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3ClippingNode.h; sourceTree = "<group>"; };
 		33E055A819239C6E00EDC09A /* HL3ClippingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HL3ClippingNode.m; sourceTree = "<group>"; };
 		33E4A67218EEB867006CBFC3 /* HLLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLayer.h; sourceTree = "<group>"; };
@@ -666,29 +630,12 @@
 		33F45AC018F66F9000FB5C8D /* HLDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDrawingPrimitives.m; sourceTree = "<group>"; };
 		33F45AC918F6943D00FB5C8D /* HLCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCamera.h; sourceTree = "<group>"; };
 		33F45ACA18F6943E00FB5C8D /* HLCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCamera.m; sourceTree = "<group>"; };
-		33F512251934450800F15D29 /* BlendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendLayer.h; sourceTree = "<group>"; };
-		33F512261934450800F15D29 /* BlendLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlendLayer.mm; sourceTree = "<group>"; };
 		33F5122A19345D5800F15D29 /* blend_src.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blend_src.png; sourceTree = "<group>"; };
 		33F5122B19345D5800F15D29 /* blend_dst.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blend_dst.png; sourceTree = "<group>"; };
 		33F9063C18FCD41700E2F3F7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		33F9063F18FCD7B800E2F3F7 /* HLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSurface.h; sourceTree = "<group>"; };
-		33F9064018FCD7B800E2F3F7 /* HLWireframeKleinBottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeKleinBottle.h; sourceTree = "<group>"; };
-		33F9064118FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeKleinBottle.mm; sourceTree = "<group>"; };
-		33F9064218FCD7B800E2F3F7 /* HLWireframeMobiusStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeMobiusStrip.h; sourceTree = "<group>"; };
-		33F9064318FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeMobiusStrip.mm; sourceTree = "<group>"; };
-		33F9064418FCD7B800E2F3F7 /* HLWireframeTorus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeTorus.h; sourceTree = "<group>"; };
-		33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeTorus.mm; sourceTree = "<group>"; };
-		33F9064618FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframeTrefoilKnot.h; sourceTree = "<group>"; };
-		33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframeTrefoilKnot.mm; sourceTree = "<group>"; };
-		33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWireframSphere.h; sourceTree = "<group>"; };
-		33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HLWireframSphere.mm; sourceTree = "<group>"; };
 		99CCCECE1956A6B3006A2DF6 /* HL3Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Frustum.h; sourceTree = "<group>"; };
 		99CCCECF1956A6B3006A2DF6 /* HL3Frustum.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HL3Frustum.mm; sourceTree = "<group>"; };
 		99CCCED11956AA66006A2DF6 /* HL3Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HL3Plane.h; sourceTree = "<group>"; };
-		99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestLayer.h; sourceTree = "<group>"; };
-		99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestLayer.mm; sourceTree = "<group>"; };
-		99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaoVboIndexBufferTestObject.h; sourceTree = "<group>"; };
-		99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VaoVboIndexBufferTestObject.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -744,26 +691,6 @@
 				33C5466819440EB700CC95FC /* HLGrid3D.m */,
 			);
 			path = grid;
-			sourceTree = "<group>";
-		};
-		338E02511941EB510005789C /* FBOTest */ = {
-			isa = PBXGroup;
-			children = (
-				338E02521941EBA60005789C /* FBOTestLayer.h */,
-				338E02531941EBA60005789C /* FBOTestLayer.mm */,
-			);
-			path = FBOTest;
-			sourceTree = "<group>";
-		};
-		33A9A75B19554B7B00BFE052 /* IndexBufferTest */ = {
-			isa = PBXGroup;
-			children = (
-				33A9A75C19554BBA00BFE052 /* IndexBufferTestLayer.h */,
-				33A9A75D19554BBA00BFE052 /* IndexBufferTestLayer.mm */,
-				33A9A75F19554CD200BFE052 /* IndexBufferTestObject.h */,
-				33A9A76019554CD200BFE052 /* IndexBufferTestObject.mm */,
-			);
-			path = IndexBufferTest;
 			sourceTree = "<group>";
 		};
 		33AE1CFF1951644B0016D17E /* FBX */ = {
@@ -1205,17 +1132,6 @@
 			path = FBXManager;
 			sourceTree = "<group>";
 		};
-		33B2517718FE73400067533C /* MD2 */ = {
-			isa = PBXGroup;
-			children = (
-				33B2517A18FE742A0067533C /* HLMD2.h */,
-				33B2517918FE742A0067533C /* HLMD2.mm */,
-				338CF6131907775E0036C4DC /* HLMD2Animation.h */,
-				338CF6121907775E0036C4DC /* HLMD2Animation.mm */,
-			);
-			path = MD2;
-			sourceTree = "<group>";
-		};
 		33B614AA190E4D71007EE82B /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,24 +1266,12 @@
 			isa = PBXGroup;
 			children = (
 				33CEE63519581A2500BE339C /* 3DSceneLayerTest */,
-				99E2BCD41955C1C10048E5E8 /* VaoVboIndexTest */,
-				33A9A75B19554B7B00BFE052 /* IndexBufferTest */,
-				33C177D11953E5350090405F /* VBOTest */,
-				33C177CB1953DAAF0090405F /* MipmapTest */,
-				338E02511941EB510005789C /* FBOTest */,
-				33F512241934450800F15D29 /* BlendTest */,
-				33B6152E190E54C3007EE82B /* GameLayer.h */,
-				33B6152F190E54C3007EE82B /* GameLayer.mm */,
 				33B61530190E54C3007EE82B /* HLAppDelegate.h */,
 				33B61531190E54C3007EE82B /* HLAppDelegate.mm */,
 				33B61532190E54C3007EE82B /* HLEGLView.h */,
 				33B61533190E54C3007EE82B /* HLEGLView.mm */,
 				33B61534190E54C3007EE82B /* HLViewController.h */,
 				33B61535190E54C3007EE82B /* HLViewController.mm */,
-				33B61536190E54C3007EE82B /* ShaderTestLayer.h */,
-				33B61537190E54C3007EE82B /* ShaderTestLayer.m */,
-				33DF15A6191B9F4C00F99187 /* StencilTestLayer.h */,
-				33DF15A7191B9F4C00F99187 /* StencilTestLayer.mm */,
 			);
 			path = Game;
 			sourceTree = SOURCE_ROOT;
@@ -1402,26 +1306,6 @@
 				33A9A75919553C1300BFE052 /* HL3IndexTriangle.mm */,
 			);
 			path = mesh;
-			sourceTree = "<group>";
-		};
-		33C177CB1953DAAF0090405F /* MipmapTest */ = {
-			isa = PBXGroup;
-			children = (
-				33C177CC1953DAC30090405F /* MipmapTestLayer.h */,
-				33C177CD1953DAC30090405F /* MipmapTestLayer.mm */,
-			);
-			path = MipmapTest;
-			sourceTree = "<group>";
-		};
-		33C177D11953E5350090405F /* VBOTest */ = {
-			isa = PBXGroup;
-			children = (
-				33C177D51953E6BD0090405F /* VBOTestObject.h */,
-				33C177D61953E6BD0090405F /* VBOTestObject.mm */,
-				33C177D21953E5500090405F /* VBOTestLayer.h */,
-				33C177D31953E5500090405F /* VBOTestLayer.mm */,
-			);
-			path = VBOTest;
 			sourceTree = "<group>";
 		};
 		33C4010C193580AA008B5111 /* actionInterval */ = {
@@ -1533,8 +1417,6 @@
 				3391A2AB18EE827500783D2B /* ccMacros.h */,
 				33F45AC918F6943D00FB5C8D /* HLCamera.h */,
 				33F45ACA18F6943E00FB5C8D /* HLCamera.m */,
-				33C7EAE218F7E35D0061D784 /* HLParametricSurface.h */,
-				33C7EAE318F7E35D0061D784 /* HLParametricSurface.mm */,
 				33B2518018FE77F70067533C /* HL3Model.h */,
 				33B2517F18FE77F70067533C /* HL3Model.mm */,
 				338CF6181907B5510036C4DC /* HL3Light.h */,
@@ -1618,8 +1500,6 @@
 				33073156191F507E001A7487 /* clipping */,
 				33D76B0019172A7C00549358 /* uthash */,
 				33D76AFC1917273300549358 /* Schedule */,
-				33B2517718FE73400067533C /* MD2 */,
-				33F9063E18FCD7B800E2F3F7 /* wireframe */,
 				33C7EADB18F7DB620061D784 /* 3dMath */,
 				33E8D2D718E15CFB00E1D735 /* component */,
 				33E9F06B18E0367C00A34046 /* texture */,
@@ -1708,18 +1588,26 @@
 		33E9F06218E02D5800A34046 /* base_nodes */ = {
 			isa = PBXGroup;
 			children = (
+				33D461B5195C229300D58CE8 /* HL3OpenGL.h */,
+				33D461B6195C229300D58CE8 /* HL3OpenGL.m */,
+				33D461C1195C233A00D58CE8 /* HL3Cache.h */,
+				33D461C2195C233A00D58CE8 /* HL3Cache.mm */,
+				33D461B7195C229400D58CE8 /* HL3Shader.h */,
+				33D461B8195C229500D58CE8 /* HL3Shader.mm */,
+				33D461B9195C229600D58CE8 /* HL3ShaderCache.h */,
+				33D461BA195C229600D58CE8 /* HL3ShaderCache.mm */,
+				33D461BB195C229700D58CE8 /* HL3ShaderProgram.h */,
+				33D461BC195C229800D58CE8 /* HL3ShaderProgram.mm */,
 				33DB32E318E3FA22002EA575 /* HLScene.h */,
 				33DB32E418E3FA22002EA575 /* HLScene.mm */,
-				33C7EAD218F795D50061D784 /* HL3Node.h */,
-				33C7EAD318F795D50061D784 /* HL3Node.mm */,
 				33D461A3195BB98F00D58CE8 /* HL3NodeVisitor.h */,
 				33D461A4195BB98F00D58CE8 /* HL3NodeVisitor.mm */,
 				33E9F06818E0332100A34046 /* HLNode.h */,
 				33E9F06918E0332100A34046 /* HLNode.mm */,
+				33D461A6195BFB7B00D58CE8 /* HL3Node.h */,
+				33D461A7195BFB7B00D58CE8 /* HL3Node.mm */,
 				33E8D2D418E14B7400E1D735 /* HLSprite.h */,
 				33E8D2D518E14B7400E1D735 /* HLSprite.mm */,
-				338A85D518FBB18900E04921 /* HL3Sprite.h */,
-				338A85D618FBB18900E04921 /* HL3Sprite.mm */,
 				33E4A67218EEB867006CBFC3 /* HLLayer.h */,
 				33E4A67318EEB867006CBFC3 /* HLLayer.mm */,
 				33F45ABF18F66F9000FB5C8D /* HLDrawingPrimitives.h */,
@@ -1745,15 +1633,6 @@
 			path = texture;
 			sourceTree = "<group>";
 		};
-		33F512241934450800F15D29 /* BlendTest */ = {
-			isa = PBXGroup;
-			children = (
-				33F512251934450800F15D29 /* BlendLayer.h */,
-				33F512261934450800F15D29 /* BlendLayer.mm */,
-			);
-			path = BlendTest;
-			sourceTree = "<group>";
-		};
 		33F5122919345D5800F15D29 /* BlendTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1761,37 +1640,6 @@
 				33F5122B19345D5800F15D29 /* blend_dst.png */,
 			);
 			path = BlendTest;
-			sourceTree = "<group>";
-		};
-		33F9063E18FCD7B800E2F3F7 /* wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				33F9063F18FCD7B800E2F3F7 /* HLSurface.h */,
-				33F9064018FCD7B800E2F3F7 /* HLWireframeKleinBottle.h */,
-				33F9064118FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm */,
-				33F9064218FCD7B800E2F3F7 /* HLWireframeMobiusStrip.h */,
-				33F9064318FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm */,
-				33F9064418FCD7B800E2F3F7 /* HLWireframeTorus.h */,
-				33F9064518FCD7B800E2F3F7 /* HLWireframeTorus.mm */,
-				33F9064618FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.h */,
-				33F9064718FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm */,
-				33F9064818FCD7B800E2F3F7 /* HLWireframSphere.h */,
-				33F9064918FCD7B800E2F3F7 /* HLWireframSphere.mm */,
-				33AB5AE01921D21800919883 /* HLWireframeCone.h */,
-				33AB5AE11921D21800919883 /* HLWireframeCone.mm */,
-			);
-			path = wireframe;
-			sourceTree = "<group>";
-		};
-		99E2BCD41955C1C10048E5E8 /* VaoVboIndexTest */ = {
-			isa = PBXGroup;
-			children = (
-				99E2BCD51955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.h */,
-				99E2BCD61955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm */,
-				99E2BCD81955C30F0048E5E8 /* VaoVboIndexBufferTestObject.h */,
-				99E2BCD91955C30F0048E5E8 /* VaoVboIndexBufferTestObject.mm */,
-			);
-			path = VaoVboIndexTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1942,7 +1790,6 @@
 				33B616F8190E7418007EE82B /* HLAppDelegate.m in Sources */,
 				33B616F9190E7418007EE82B /* HLGLView.m in Sources */,
 				33B616FC190E747A007EE82B /* HLDirectorMac.m in Sources */,
-				33F512281934450800F15D29 /* BlendLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1977,38 +1824,23 @@
 				33E4A67418EEB867006CBFC3 /* HLLayer.mm in Sources */,
 				33F45AC118F66F9000FB5C8D /* HLDrawingPrimitives.m in Sources */,
 				33F45ACB18F6943E00FB5C8D /* HLCamera.m in Sources */,
-				33C7EAD418F795D60061D784 /* HL3Node.mm in Sources */,
 				33C7EAE118F7DE1F0061D784 /* HL3Foundation.m in Sources */,
-				33C7EAE418F7E35D0061D784 /* HLParametricSurface.mm in Sources */,
 				339AC3FD18F9400E00864A39 /* HL3Matrix4x4.cpp in Sources */,
-				338A85D718FBB18900E04921 /* HL3Sprite.mm in Sources */,
-				33F9064A18FCD7B800E2F3F7 /* HLWireframeKleinBottle.mm in Sources */,
-				33F9064B18FCD7B800E2F3F7 /* HLWireframeMobiusStrip.mm in Sources */,
-				33F9064C18FCD7B800E2F3F7 /* HLWireframeTorus.mm in Sources */,
-				33F9064D18FCD7B800E2F3F7 /* HLWireframeTrefoilKnot.mm in Sources */,
-				33F9064E18FCD7B800E2F3F7 /* HLWireframSphere.mm in Sources */,
-				33B2517B18FE742A0067533C /* HLMD2.mm in Sources */,
 				33B2518118FE77F70067533C /* HL3Model.mm in Sources */,
-				338CF6141907775E0036C4DC /* HLMD2Animation.mm in Sources */,
 				338CF61A1907B5510036C4DC /* HL3Light.mm in Sources */,
 				33B61514190E5006007EE82B /* main.m in Sources */,
-				33B61538190E54C3007EE82B /* GameLayer.mm in Sources */,
 				33B6153A190E54C3007EE82B /* HLAppDelegate.mm in Sources */,
 				33B6153C190E54C3007EE82B /* HLEGLView.mm in Sources */,
 				33B6153E190E54C3007EE82B /* HLViewController.mm in Sources */,
-				33B61540190E54C3007EE82B /* ShaderTestLayer.m in Sources */,
 				33D76AFF191729F400549358 /* HLScheduler.mm in Sources */,
-				33DF15A8191B9F4C00F99187 /* StencilTestLayer.mm in Sources */,
 				3307315B191F507E001A7487 /* HLClippingNode.m in Sources */,
 				3307315C191F507E001A7487 /* HLDrawNode.m in Sources */,
 				3307315F191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.frag in Sources */,
 				33073160191F6BCF001A7487 /* ccShader_PositionColorLengthTexture.vert in Sources */,
-				33AB5AE21921D21800919883 /* HLWireframeCone.mm in Sources */,
 				33E055A919239C6F00EDC09A /* HL3ClippingNode.m in Sources */,
 				33E98E0C192C726E005029E8 /* HLAction.m in Sources */,
 				33E98E0F192C783F005029E8 /* HLFiniteTimeAction.m in Sources */,
 				33E98E18192C8759005029E8 /* HLActionManager.m in Sources */,
-				33F512271934450800F15D29 /* BlendLayer.mm in Sources */,
 				3331C2171934BF210004C9C3 /* HLGrabber.mm in Sources */,
 				33C40115193580AA008B5111 /* HLActionInterval.m in Sources */,
 				33C40116193580AA008B5111 /* HLMoveBy.m in Sources */,
@@ -2017,7 +1849,6 @@
 				33C4011C19358126008B5111 /* HLScaleBy.m in Sources */,
 				33C4011F193581C2008B5111 /* HLScaleTo.m in Sources */,
 				33C401261935938C008B5111 /* HLProgressTimer.m in Sources */,
-				338E02541941EBA60005789C /* FBOTestLayer.mm in Sources */,
 				338E02571941F8FB0005789C /* HLGridBase.mm in Sources */,
 				33C5465D1944010400CC95FC /* HLGridAction.mm in Sources */,
 				33C5466619440AC900CC95FC /* HLGrid3DAction.mm in Sources */,
@@ -2029,18 +1860,11 @@
 				33AE1E0F195167D30016D17E /* HLFBXOneLoad.mm in Sources */,
 				33AE1E10195167D30016D17E /* HLFBXStream.mm in Sources */,
 				33C177C61953CBDB0090405F /* HLMesh.mm in Sources */,
-				33C177CE1953DAC30090405F /* MipmapTestLayer.mm in Sources */,
-				33C177D41953E5500090405F /* VBOTestLayer.mm in Sources */,
-				33C177D71953E6BD0090405F /* VBOTestObject.mm in Sources */,
 				33C177DB195457430090405F /* HL3Identifiable.mm in Sources */,
 				33A9A74B195529BB00BFE052 /* HL3Vertex.mm in Sources */,
 				33A9A74E19552CD800BFE052 /* HL3Material.mm in Sources */,
 				33A9A751195536E600BFE052 /* HL3IndexVBO.mm in Sources */,
 				33A9A75A19553C1300BFE052 /* HL3IndexTriangle.mm in Sources */,
-				33A9A75E19554BBA00BFE052 /* IndexBufferTestLayer.mm in Sources */,
-				33A9A76119554CD200BFE052 /* IndexBufferTestObject.mm in Sources */,
-				99E2BCD71955C1DA0048E5E8 /* VaoVboIndexBufferTestLayer.mm in Sources */,
-				99E2BCDA1955C3100048E5E8 /* VaoVboIndexBufferTestObject.mm in Sources */,
 				99CCCED01956A6B3006A2DF6 /* HL3Frustum.mm in Sources */,
 				33CEE62E1957F8C100BE339C /* HL3Camera.mm in Sources */,
 				33CEE63119580A2200BE339C /* HL3Scene.mm in Sources */,
@@ -2048,6 +1872,12 @@
 				33CEE63819581A6F00BE339C /* ThreeDSceneLayerTest.mm in Sources */,
 				33CEE63B19581CD200BE339C /* ThreeDSceneTestScene.mm in Sources */,
 				33D461A5195BB99000D58CE8 /* HL3NodeVisitor.mm in Sources */,
+				33D461A8195BFB7B00D58CE8 /* HL3Node.mm in Sources */,
+				33D461BD195C229900D58CE8 /* HL3OpenGL.m in Sources */,
+				33D461BE195C229900D58CE8 /* HL3Shader.mm in Sources */,
+				33D461BF195C229900D58CE8 /* HL3ShaderCache.mm in Sources */,
+				33D461C0195C229900D58CE8 /* HL3ShaderProgram.mm in Sources */,
+				33D461C3195C233B00D58CE8 /* HL3Cache.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

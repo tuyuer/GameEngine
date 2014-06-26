@@ -2,55 +2,56 @@
 //  HL3Node.h
 //  GameEngine
 //
-//  Created by tuyuer on 14-4-11.
-//  Copyright (c) 2014年 hitjoy. All rights reserved.
+//  Created by huxiaozhou on 14-6-26.
+//  Copyright (c) 2014年 Hoolai. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "HLNode.h"
+#import "HL3Identifiable.h"
 #import "HL3Foundation.h"
-#import "HL3Matrix4x4.h"
 
-@class HL3Light;
+/**
+ * CC3Node and its subclasses form the basis of all 3D artifacts in the 3D scene, including
+   HL3Node 和它的所有子类构成了3D场景中的反有3D事物，其中包括 
+ * visible meshes, structures, cameras, lights, resources, and the 3D scene itself.
+   visible meshes, structures, cameras, lights, resources, and the 3D scene itself.
+
+ * Nodes can be moved, rotated and scaled. Rotation can be specified via Euler angles,
+   节点可以移动，旋转和缩放。其中旋转可以通过 欧拉角，四元组，旋转轴和角度 
+ * quaternions, rotation axis and angle, or changes to any of these properties.
+   亦或者改变其中的任意属性
+ */
+
+
+
 @class HL3Camera;
 @class HL3Scene;
-typedef struct _HL3NodeUniformHandles {
 
-    GLuint u_lightPosition;
-    GLuint u_lightDirection;
+@interface HL3Node : HL3Identifiable{
+    NSMutableArray * _children;
+    HL3Node * _parent;
     
-    GLuint u_lightAmbient;
-    GLuint u_lightDiffuse;
-    GLuint u_lightSpecular;
+    HL3Vector _location;
+    HL3Vector _scale;
     
-    GLuint u_lightShiness;
-    
-    GLuint u_normalMatrix;
-    GLuint u_sampler;
-}HL3NodeUniformHandles;
-
-@interface HL3Node : HLNode{
-    HL3Node * _parent3D;
-    HL3Vector _position3D;
-    HL3Vector _anchorPoint3D;
-    HL3Vector _rotation3D;
-    HL3Vector _scale3D;
-    
-    HL3Matrix4x4 _transform3D;
-    HL3Matrix4x4 _inverse3D;
-
-    HL3Light * _light3D;
-    HL3NodeUniformHandles _uniformHandles;
-    
-    BOOL _isLight;
-    BOOL _isCamera;
+    BOOL _isTransformDirty : 1;
+    BOOL _isTransformInvertedDirty : 1;
+    BOOL _visible : 1;
+	BOOL _isRunning : 1;
 }
-@property (nonatomic,assign) HL3Vector position3D;
-@property (nonatomic,assign) HL3Vector anchorPoint3D;
-@property (nonatomic,assign) HL3Vector rotation3D;
-@property (nonatomic,assign) HL3Vector scale3D;
-@property (nonatomic,assign) HL3Light * light3D;
-@property (nonatomic,retain, readonly) HL3Camera* activeCamera;
+
+/**
+ * If this node has been added to the 3D scene, either directly, or as part
+   如果这个节点被添加到3D场景，不管是直接还是做为节点的一部分
+ * of a node assembly, returns the activeCamera property of the CC3Scene instance,
+   都将返回HL3Scene的activeCamera实例
+ * as accessed via the scene property, otherwise returns nil.
+ *
+ * Reading this property traverses up the node hierarchy. If this property
+ * is accessed frequently, it is recommended that it be cached.
+ */
+@property(nonatomic, retain, readonly) HL3Camera* activeCamera;
+
+
 /**
  * If this node has been added to the 3D scene, either directly, or as part
  * of a node assembly, returns the CC3Scene instance that forms the 3D scene,
@@ -59,20 +60,42 @@ typedef struct _HL3NodeUniformHandles {
  * Reading this property traverses up the node hierarchy. If this property
  * is accessed frequently, it is recommended that it be cached.
  */
-@property(nonatomic, readonly) HL3Scene * scene;
+@property(nonatomic, readonly) HL3Scene* scene;
 
-@property (nonatomic,assign) BOOL isLight;
-@property (nonatomic,assign) BOOL isCamera;
+@property(nonatomic, readonly) NSMutableArray * children;
+
+@property(nonatomic, readonly) HL3Node * parent;
+
+@property(nonatomic, assign) HL3Vector location;
+
+@property(nonatomic, assign) HL3Vector scale;
+
+@property(nonatomic, assign) HL3Vector rotation;
+
+@property(nonatomic, readonly) BOOL isTransformDirty;
+
+@property(nonatomic, assign) BOOL visible;
+
+@property(nonatomic,assign) BOOL isRunning;
 
 
 
-//about transform3D ...
-- (HL3Matrix4x4)nodeToParentTransform3D;
-//performs Opengl view - matrix transformation based on position etc...
-- (void)transform3D;
-//遍历节点
-- (void)visit;
-//重载绘制方法
-- (void)draw;
++(id) node;
++(id) nodeWithTag: (GLuint) aTag;
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
